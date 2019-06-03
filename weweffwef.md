@@ -149,38 +149,37 @@ static的另一个作用，就是修饰成员方法。相比于修饰成员属�
 ### <a name="t3"></a>3.静态块
 
 在说明static关键字的第三个用法时，我们有必要重新梳理一下一个对象的初始化过程。以下面的代码为例：
-<pre>
-<div class="cnblogs_code" style="margin:5px 0px;padding:5px;background-color:rgb(245,245,245);border:1px solid rgb(204,204,204);color:rgb(0,0,0);text-align:left;font-family:'Courier New';font-size:12px;"><pre style="margin-bottom:0px;padding-right:0px;padding-left:0px;white-space:pre-wrap;font-family:'Courier New';"><span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">package</span><span style="margin:0px;padding:0px;line-height:1.5;"> com.dotgua.study;
+package com.dotgua.study;
 
-</span><span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">class</span><span style="margin:0px;padding:0px;line-height:1.5;"> Book{
-    </span><span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">public</span><span style="margin:0px;padding:0px;line-height:1.5;"> Book(String msg) {
+class Book{
+    public Book(String msg) {
         System.out.println(msg);
     }
 }
 
-</span><span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">public</span> <span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">class</span><span style="margin:0px;padding:0px;line-height:1.5;"> Person {
+public class Person {
 
-    Book book1 </span>= <span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">new</span> Book("book1成员变量初始化"<span style="margin:0px;padding:0px;line-height:1.5;">);
-    </span><span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">static</span> Book book2 = <span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">new</span> Book("static成员book2成员变量初始化"<span style="margin:0px;padding:0px;line-height:1.5;">);
-
-    </span><span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">public</span><span style="margin:0px;padding:0px;line-height:1.5;"> Person(String msg) {
+    Book book1 = new Book("book1成员变量初始化");
+    static Book book2 = new Book("static成员book2成员变量初始化");
+    
+    public Person(String msg) {
         System.out.println(msg);
     }
-
-    Book book3 </span>= <span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">new</span> Book("book3成员变量初始化"<span style="margin:0px;padding:0px;line-height:1.5;">);
-    </span><span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">static</span> Book book4 = <span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">new</span> Book("static成员book4成员变量初始化"<span style="margin:0px;padding:0px;line-height:1.5;">);
-
-    </span><span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">public</span> <span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">static</span> <span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">void</span><span style="margin:0px;padding:0px;line-height:1.5;"> main(String[] args) {
-        Person p1 </span>= <span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">new</span> Person("p1初始化"<span style="margin:0px;padding:0px;line-height:1.5;">);
+    
+    Book book3 = new Book("book3成员变量初始化");
+    static Book book4 = new Book("static成员book4成员变量初始化");
+    
+    public static void main(String[] args) {
+        Person p1 = new Person("p1初始化");
     }
-    </span><span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,128,0);">/**</span><span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,128,0);">Output
+    /**Output
      * static成员book2成员变量初始化
      * static成员book4成员变量初始化
      * book1成员变量初始化
      * book3成员变量初始化
      * p1初始化
-     </span><span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,128,0);">*///</span><span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,128,0);">~</span>
-}</pre></div>
+     *///~
+}
 
 &nbsp;上面的例子中，Person类中组合了四个Book成员变量，两个是普通成员，两个是static修饰的类成员。我们可以看到，当我们new一个Person对象时，static修饰的成员变量首先被初始化，随后是普通成员，最后调用Person类的构造方法完成初始化。也就是说，在创建对象时，static修饰的成员会首先被初始化，而且我们还可以看到，如果有多个static修饰的成员，那么会按照他们的先后位置进行初始化。
 
