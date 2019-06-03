@@ -1,4 +1,26 @@
-<div id="article_content" class="article_content clearfix csdn-tracking-statistics" data-pid="blog" data-mod="popu_307" data-dsm="post">
+<main>
+        <div class="blog-content-box">
+  <div class="article-header-box">
+    <div class="article-header">
+      <div class="article-title-box">
+        <span class="article-type type-2 float-left">转</span>        
+
+# [java]static关键字的四种用法和void的用法
+
+      </div>
+      <div class="article-info-box">
+        <div class="article-bar-top">
+                                                  <span class="time">2018年05月30日 11:16:25</span>
+          [xxm0720](https://me.csdn.net/xxm0720)
+          <span class="read-count">阅读数：2119</span>
+                  </div>
+        <div class="operating">
+                  </div>
+      </div>
+    </div>
+  </div>
+  <article class="baidu_pl">
+    <div id="article_content" class="article_content clearfix csdn-tracking-statistics" data-pid="blog" data-mod="popu_307" data-dsm="post">
             <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/ck_htmledit_views-f57960eb32.css">
                               <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/ck_htmledit_views-f57960eb32.css">
           <div class="htmledit_views" id="content_views">
@@ -295,3 +317,2147 @@ static是java中非常重要的一个关键字，而且它的用法也很丰富�
 4.  静态导包用法，将类的方法直接导入到当前类中，从而直接使用<span style="margin:0px;padding:0px;">“方法名”</span>即可调用类方法，更加方便。
           </div>
                   </div>
+  </article>
+</div>
+
+<script>
+  $(".MathJax").remove();
+  if ($('div.markdown_views pre.prettyprint code.hljs').length > 0) {
+    $('div.markdown_views')[0].className = 'markdown_views';
+  }
+</script>        <div id="dmp_ad_58"><div id="kp_box_58" data-pid="58" data-track-click="{&quot;mod&quot;:&quot;kp_popu_58-386&quot;,&quot;con&quot;:&quot;,,&quot;}"><div style="width:100%;background:#fff;">
+<div id="_qkxaoqxn7p"><iframe width="900" frameborder="0" height="104" scrolling="no" src="https://pos.baidu.com/s?hei=104&amp;wid=900&amp;di=u3501897&amp;ltu=https%3A%2F%2Fblog.csdn.net%2Fxxm0720%2Farticle%2Fdetails%2F80507334&amp;psi=0bf5880a364c1fd6f7df5fca903c37b9&amp;ari=2&amp;exps=111000,119008,110011&amp;drs=1&amp;dri=0&amp;cfv=0&amp;pcs=2031x994&amp;cec=UTF-8&amp;tcn=1559596615&amp;dc=3&amp;tpr=1559596615205&amp;cja=false&amp;pis=-1x-1&amp;dai=1&amp;ccd=24&amp;psr=2048x1152&amp;chi=1&amp;ant=0&amp;cmi=4&amp;ti=%5Bjava%5Dstatic%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E5%9B%9B%E7%A7%8D%E7%94%A8%E6%B3%95%E5%92%8Cvoid%E7%9A%84%E7%94%A8%E6%B3%95%20-%20%E7%BA%A2%E5%B0%98%E7%B4%AB%E9%99%8C%E5%8D%9A%E5%AE%A2%20-%20CSDN%E5%8D%9A%E5%AE%A2&amp;par=2048x1112&amp;col=en-US&amp;pss=2031x8589&amp;prot=2&amp;cpl=3&amp;tlm=1559596615&amp;ps=7105x664&amp;dtm=HTML_POST&amp;dis=0&amp;cce=true&amp;ltr=https%3A%2F%2Fi.csdn.net%2F&amp;cdo=-1"></iframe></div><script type="text/javascript" src="//rabc1.iteye.com/production/resource/web/6xwm4l.js?lg=ydmpioh"></script>
+</div></div></div>        <a id="commentBox"></a>
+<div class="comment-box">
+
+	<div class="comment-edit-box d-flex">
+		<a id="commentsedit"></a>
+		<div class="user-img">
+			[
+				![](https://avatar.csdn.net/6/F/7/3_weixin_44094314.jpg)
+			](//me.csdn.net/weixin_44094314)
+		</div>
+		<form id="commentform">
+			<input type="hidden" id="comment_replyId">
+			<textarea class="comment-content" name="comment_content" id="comment_content" placeholder="想对作者说点什么"></textarea>
+			<div class="opt-box"> <!-- d-flex -->
+				<div id="ubbtools" class="add_code">
+					[](#insertcode)
+				</div>
+				<input type="hidden" id="comment_replyId" name="comment_replyId">
+				<input type="hidden" id="article_id" name="article_id" value="80507334">
+				<input type="hidden" id="comment_userId" name="comment_userId" value="">
+				<input type="hidden" id="commentId" name="commentId" value="">
+				<div style="display: none;" class="csdn-tracking-statistics tracking-click" data-mod="popu_384">[发表评论](#)</div>
+				<div class="dropdown" id="myDrap">
+					<a class="dropdown-face d-flex align-items-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+					<div class="txt-selected text-truncate">添加代码片</div>
+					<svg class="icon d-block" aria-hidden="true">
+						<use xlink:href="#csdnc-triangledown"></use>
+					</svg>
+					</a>
+
+*   <a data-code="html">HTML/XML</a>
+*   <a data-code="objc">objective-c</a>
+*   <a data-code="ruby">Ruby</a>
+*   <a data-code="php">PHP</a>
+*   <a data-code="csharp">C</a>
+*   <a data-code="cpp">C++</a>
+*   <a data-code="javascript">JavaScript</a>
+*   <a data-code="python">Python</a>
+*   <a data-code="java">Java</a>
+*   <a data-code="css">CSS</a>
+*   <a data-code="sql">SQL</a>
+*   <a data-code="plain">其它</a>
+				</div>  
+				<div class="right-box">
+					<span id="tip_comment" class="tip">还能输入_1000_个字符</span>
+					<input type="submit" class="btn btn-sm btn-red btn-comment" value="发表评论">
+				</div>
+			</div>
+		</form>
+	</div>
+
+		<div class="comment-list-container">
+		<a id="comments"></a>
+		<div class="comment-list-box" style="max-height: none;">
+
+*   [![xxm0720](https://avatar.csdn.net/6/E/7/3_xxm0720.jpg)](https://me.csdn.net/xxm0720)          <div class="right-box ">            <div class="info-box">              [<span class="name ">xxm0720：</span>](https://me.csdn.net/xxm0720)              <span class="comment">静态变量并不是说其就不能改变值，不能改变值的量叫常量。 其拥有的值是可变的 ，而且它会保持最新的值。说其静态，是因为它不会随着函数的调用和退出而发生变化。即上次调用函数的时候，如果我们给静态变量赋予某个值的话，下次函数调用时，这个值保持不变。</span><span class="date" title="2018-05-30 15:57:29">(1年前</span><span class="floor-num">#1楼)</span><span class="opt-box"><a class="btn btn-link-blue btn-report" data-type="report">举报</a><a class="btn btn-link-blue btn-reply" data-type="reply">回复</a></span></div><div class="comment-like " data-commentid="8007057"><svg class="icon "><use xlink:href="#csdnc-thumbsup"></use></svg><span></span></div></div></div>
+		<div id="commentPage" class="pagination-box d-none" style="display: block;"><div id="Paging_08825113808969443" class="ui-paging-container">
+
+**   上一页
+*   1
+*   下一页
+*</div></div>
+
+	</div>
+</div>
+        <div class="recommend-box">
+                            <div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/qq_36802648/article/details/79505830,BlogCommendFromThirdServiceAll_0&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				static _void_和_void_区别（转）		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">03-10</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					7716</span>
+
+			</div>
+		](https://blog.csdn.net/qq_36802648/article/details/79505830 "static void和void区别（转）")
+
+			[
+				<span class="desc oneline">static关键字　　1．作用于变量：　　用static声明局部变量-------局部变量指在代码块{}内部定义的变量，只在代码块内部有效（作用域），其缺省的存储方式是自动变量或说是动态存储的，即指令...</span>
+			](https://blog.csdn.net/qq_36802648/article/details/79505830 "static void和void区别（转）")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> qq_36802648的博客</span>](https://blog.csdn.net/qq_36802648)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/yaomingyang/article/details/80180813,BlogCommendFromThirdServiceAll_1&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				_Java_中_void_方法深入讲解		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">05-03</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					6502</span>
+
+			</div>
+		](https://blog.csdn.net/yaomingyang/article/details/80180813 "Java中void方法深入讲解")
+
+			[
+				<span class="desc oneline">1.1基本简介void是java中的关键字，它代表的意思是什么也不返回，我们在开发过程中经常会用到，如一个方法不需要返回值时可以使用void关键字，在main方法中也是void关键字。publicst...</span>
+			](https://blog.csdn.net/yaomingyang/article/details/80180813 "Java中void方法深入讲解")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> 明洋的专栏</span>](https://blog.csdn.net/yaomingyang)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/shuyizhi/article/details/79700054,BlogCommendFromThirdServiceAll_2&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				_static关键字_的_四种__用法_		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">03-26</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					3254</span>
+
+			</div>
+		](https://blog.csdn.net/shuyizhi/article/details/79700054 "static关键字的四种用法")
+
+			[
+				<span class="desc oneline">在java的关键字中，static和final是两个我们必须掌握的关键字。不同于其他关键字，他们都有多种用法，而且在一定环境下使用，可以提高程序的运行性能，优化程序的结构。下面我们先来了解一下stat...</span>
+			](https://blog.csdn.net/shuyizhi/article/details/79700054 "static关键字的四种用法")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> Mars的专栏</span>](https://blog.csdn.net/shuyizhi)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/wuchengzeng/article/details/50037611,BlogCommendFromThirdServiceAll_3&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				jquery/js实现一个网页同时调用多个倒计时(最新的)		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">11-25</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					53万+</span>
+
+			</div>
+		](https://blog.csdn.net/wuchengzeng/article/details/50037611 "jquery/js实现一个网页同时调用多个倒计时(最新的)")
+
+			[
+				<span class="desc oneline">jquery/js实现一个网页同时调用多个倒计时(最新的)最近需要网页添加多个倒计时.查阅网络,基本上都是千遍一律的不好用.自己按需写了个.希望对大家有用.有用请赞一个哦!//js//js2varpl...</span>
+			](https://blog.csdn.net/wuchengzeng/article/details/50037611 "jquery/js实现一个网页同时调用多个倒计时(最新的)")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> Websites</span>](https://blog.csdn.net/wuchengzeng)
+												</span>
+
+	</div>
+	</div>
+
+	<div class="recommend-item-box recommend-ad-box"><div id="kp_box_59" data-pid="59" data-track-click="{&quot;mod&quot;:&quot;kp_popu_59-78&quot;,&quot;con&quot;:&quot;,,&quot;}"><script type="text/javascript">
+    (function() {
+        var s = "_" + Math.random().toString(36).slice(2);
+        document.write('<div style="" id="' + s + '"></div>');
+        (window.slotbydup = window.slotbydup || []).push({
+            id: "u3491668",
+            container:  s
+        });
+    })();
+</script><div style="" id="_20r2qxk84ng"><iframe id="iframeu3491668_1" name="iframeu3491668_1" src="https://pos.baidu.com/gcnm?conwid=852&amp;conhei=60&amp;rdid=3491668&amp;dc=3&amp;exps=110011&amp;psi=0bf5880a364c1fd6f7df5fca903c37b9&amp;di=u3491668&amp;dri=1&amp;dis=0&amp;dai=3&amp;ps=7648x688&amp;enu=encoding&amp;dcb=___adblockplus&amp;dtm=HTML_POST&amp;dvi=0.0&amp;dci=-1&amp;dpt=none&amp;tsr=0&amp;tpr=1559596615420&amp;ti=%5Bjava%5Dstatic%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E5%9B%9B%E7%A7%8D%E7%94%A8%E6%B3%95%E5%92%8Cvoid%E7%9A%84%E7%94%A8%E6%B3%95%20-%20%E7%BA%A2%E5%B0%98%E7%B4%AB%E9%99%8C%E5%8D%9A%E5%AE%A2%20-%20CSDN%E5%8D%9A%E5%AE%A2&amp;ari=2&amp;dbv=2&amp;drs=1&amp;pcs=2031x994&amp;pss=2031x11411&amp;cfv=0&amp;cpl=3&amp;chi=1&amp;cce=true&amp;cec=UTF-8&amp;tlm=1559596615&amp;prot=2&amp;rw=994&amp;ltu=https%3A%2F%2Fblog.csdn.net%2Fxxm0720%2Farticle%2Fdetails%2F80507334&amp;ltr=https%3A%2F%2Fi.csdn.net%2F&amp;ecd=1&amp;uc=2048x1112&amp;pis=-1x-1&amp;sr=2048x1152&amp;tcn=1559596615&amp;qn=6cf38f1234a77c80&amp;dpv=6cf38f1234a77c80&amp;tt=1559596615404.19.19.21" width="852" height="60" align="center,center" vspace="0" hspace="0" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" style="border:0;vertical-align:bottom;margin:0;width:852px;height:60px" allowtransparency="true"></iframe></div>
+<!-- 多条广告如下脚本只需引入一次 -->
+<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js" async="async" defer="defer"></script></div></div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/u010931123/article/details/60772423,BlogCommendFromThirdServiceAll_4&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				_Java_中static的作用详解		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">03-07</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2万+</span>
+
+			</div>
+		](https://blog.csdn.net/u010931123/article/details/60772423 "Java中static的作用详解")
+
+			[
+				<span class="desc oneline">static表示“全局”或者“静态”的意思，用来修饰成员变量和成员方法，也可以形成静态static代码块，但是Java语言中没有全局变量的概念。被static修饰的成员变量和成员方法独立于该类的任何对...</span>
+			](https://blog.csdn.net/u010931123/article/details/60772423 "Java中static的作用详解")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> 麦子的博客</span>](https://blog.csdn.net/u010931123)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box  recommend-other-item-box" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://bbs.csdn.net/topics/210018499,BlogCommendFromBaidu_5&quot;}" data-flg="true">
+	[
+
+#### 
+				多选：下列哪些方法与方法public _void_ add(int a) {}  为合理的重载方法（）		
+
+		<div class="info-box d-flex align-content-center">
+				<span class="date">03-10</span>
+		</div>
+
+			<span class="desc oneline">多选：下列哪些方法与方法public void add(int a) {} 为合理的重载方法（） A public int add(int a) B public void add(long a) C</span>
+							<span class="type-show type-show-bbs">论坛</span>
+
+	](https://bbs.csdn.net/topics/210018499)
+
+</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/chenbang110/article/details/8102464,BlogCommendFromBaidu_6&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				static _void_		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">10-23</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					3829</span>
+
+			</div>
+		](https://blog.csdn.net/chenbang110/article/details/8102464 "static void")
+
+			[
+				<span class="desc oneline">用static声明局部变量，使其变为静态存储方式，作用域不变；用static声明外部变量，其本身就是静态变量，这只会改变其连接方式，使其只在本文件内部有效，而其他文件不可连接或引用该变量。　　　　st...</span>
+			](https://blog.csdn.net/chenbang110/article/details/8102464 "static void")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> 萧瑟一笑的专栏</span>](https://blog.csdn.net/chenbang110)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/csdn9988680/article/details/80807736,BlogCommendFromBaidu_7&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				Mockito调用静态方法和_void_方法		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">06-25</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					3839</span>
+
+			</div>
+		](https://blog.csdn.net/csdn9988680/article/details/80807736 "Mockito调用静态方法和void方法")
+
+			[
+				<span class="desc oneline">1mock静态方法mockito库并不能mock静态方法，需要依赖powermock第一步：给类添加注解//静态类优先加载，所以需要提前告诉powermock哪些静态类需要mock@ContextCo...</span>
+			](https://blog.csdn.net/csdn9988680/article/details/80807736 "Mockito调用静态方法和void方法")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> 非同凡响的博客</span>](https://blog.csdn.net/csdn9988680)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/weixin_41484240/article/details/82055697,BlogCommendFromBaidu_8&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				static _void_和_void_的区别		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">08-25</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					423</span>
+
+			</div>
+		](https://blog.csdn.net/weixin_41484240/article/details/82055697 "static void和void的区别")
+
+			[
+				<span class="desc oneline">static关键字　　1．作用于变量：　　用static声明局部变量-------局部变量指在代码块{}内部定义的变量，只在代码块内部有效（作用域），其缺省的存储方式是自动变量或说是动态存储的，即指令...</span>
+			](https://blog.csdn.net/weixin_41484240/article/details/82055697 "static void和void的区别")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> weixin_41484240的博客</span>](https://blog.csdn.net/weixin_41484240)
+												</span>
+
+	</div>
+	</div><div class="recommend-item-box baiduSearch recommend-box-ident" data-track-view="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/yanglusheng/article/details/51895463,searchFromBaidu1_0,-&quot;}" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/yanglusheng/article/details/51895463,searchFromBaidu1_0,-&quot;}" data-flg="true">                [              		
+
+#### _Static关键字_所有_用法_详解 - yanglusheng的专栏 - CSDN博客
+                  <div class="info-box d-flex align-content-center">                    
+
+                      <span class="date">3-28</span>                    
+                  </div>              		
+
+[java]static关键字的四种用法和void的用法  05-30 阅读数 1479  void关键字...博文 来自: 红尘紫陌博客  C++ 静态变量和静态方法  05-11 阅读数 1850  参考...
+                ](https://blog.csdn.net/yanglusheng/article/details/51895463)            	</div><div class="recommend-item-box baiduSearch recommend-box-ident" data-track-view="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/newabcc/article/details/80427869,searchFromBaidu1_1,-&quot;}" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/newabcc/article/details/80427869,searchFromBaidu1_1,-&quot;}" data-flg="true">                [              		
+
+#### _Java_之static 关键字的使用 - 闲暇时光 - CSDN博客
+                  <div class="info-box d-flex align-content-center">                    
+
+                      <span class="date">11-23</span>                    
+                  </div>              		
+
+[java]static关键字的四种用法和void的用法 - 红尘紫陌博客  05-30 635  void关键字表示函数没有返回结果,是java中的一个关键字。Void作为函数的返回结果表示函数...
+                ](https://blog.csdn.net/newabcc/article/details/80427869)            	</div>
+
+	<div class="recommend-item-box recommend-ad-box"><div id="kp_box_60" data-pid="60" data-track-view="{&quot;mod&quot;:&quot;kp_popu_60-894&quot;,&quot;con&quot;:&quot;2171875117330676860,https://edu.csdn.net/course/detail/10643,&quot;}" data-track-click="{&quot;mod&quot;:&quot;kp_popu_60-894&quot;,&quot;con&quot;:&quot;2171875117330676860,https://edu.csdn.net/course/detail/10643,&quot;}"><link rel="stylesheet" href="https://www.csdn.net/company/css/edu-recommend-1.0.1.css">
+  <div class="edu-ad-list">
+    <div class="recommend-item-box type_blog clearfix">
+      <div class="content" style="width: 852px;">
+        [
+
+#### 《c语言深度解析》第3、4章 存储类、生命周期、作用域、链接域，指针与函数
+
+        ](https://edu.csdn.net/course/detail/10643?utm_source=baidutj "《c语言深度解析》第3、4章 存储类、生命周期、作用域、链接域，指针与函数")
+
+          [
+            <span class="desc oneline">课程内容：rn第3章：rn存储类与auto、static、register关键字rn指令、常量、变量的生命周期rn变量与函数的作用域rn链接域与extern、static关键字rn声明的意义rnrn第4章：rn存储空间、符号、地址rn一级指针与多级指针rn野指针与段错误rnvoid *指针类型rnconst与指针rn函数指针 rn函数调用—栈的使用过程rn回调函数和函数指针数组rn指针与函数传参rn递归函数rn内联函数</span>
+          ](https://edu.csdn.net/course/detail/10643?utm_source=baidutj "《c语言深度解析》第3、4章 存储类、生命周期、作用域、链接域，指针与函数")
+          <span class="blog_title_box oneline ">
+            <span class="type-show type-show-edu type-show-after">学院</span>
+            讲师： <span class="blog_title"> 张先凤</span>
+          </span>
+
+      </div>
+    </div>
+  </div></div></div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/qq_38800089/article/details/75174428,BlogCommendFromBaidu_9&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				static _void_ SetSysClockTo72(_void_)的一些理解		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">07-15</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					368</span>
+
+			</div>
+		](https://blog.csdn.net/qq_38800089/article/details/75174428 "static void SetSysClockTo72(void)的一些理解")
+
+			[
+				<span class="desc oneline">staticvoidSetSysClockTo72(void){&nbsp;&nbsp;__IOuint32_tStartUpCounter=0,HSEStatus=0;&nbsp;&nbsp;&nbsp;&nbsp;/*SYSCLK,HCLK,PCLK2an...</span>
+			](https://blog.csdn.net/qq_38800089/article/details/75174428 "static void SetSysClockTo72(void)的一些理解")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> qq_38800089的博客</span>](https://blog.csdn.net/qq_38800089)
+												</span>
+
+	</div>
+	</div><div class="recommend-item-box baiduSearch recommend-box-ident" data-track-view="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/findyoulucky/article/details/88653152,searchFromBaidu1_2,-&quot;}" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/findyoulucky/article/details/88653152,searchFromBaidu1_2,-&quot;}" data-flg="true">                [              		
+
+#### _Java_ Static 关键字详解 - IamCerian的博客 - CSDN博客
+                  <div class="info-box d-flex align-content-center">                    
+
+                      <span class="date">3-20</span>                    
+                  </div>              		
+
+[java]static关键字的四种用法和void的用法  05-30 阅读数 1374  void关键字...博文 来自: 红尘紫陌博客  浅谈static,final 关键字的作用  01-20 阅读数 4773...
+                ](https://blog.csdn.net/findyoulucky/article/details/88653152)            	</div><div class="recommend-item-box baiduSearch recommend-box-ident" data-track-view="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/damienzhong/article/details/82625271,searchFromBaidu1_3,-&quot;}" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/damienzhong/article/details/82625271,searchFromBaidu1_3,-&quot;}" data-flg="true">                [              		
+
+#### [_Java_教程 29] _static关键字_详解 - 呆萌钟的博客 - CSDN博客
+                  <div class="info-box d-flex align-content-center">                    
+
+                      <span class="date">5-20</span>                    
+                  </div>              		
+
+[java]static关键字的四种用法和void的用法  05-30 阅读数 1980  void关键字...博文 来自: 红尘紫陌博客  Java中static关键字的作用与用法  09-03 阅读数 532...
+                ](https://blog.csdn.net/damienzhong/article/details/82625271)            	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/weiyi556/article/details/51938467,BlogCommendFromThirdServiceAll_10&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				MyEclipse与在线SVN（taocode）的使用（二）		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">07-18</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					8878</span>
+
+			</div>
+		](https://blog.csdn.net/weiyi556/article/details/51938467 "MyEclipse与在线SVN（taocode）的使用（二）")
+
+			[
+				<span class="desc oneline">使用taocode作为SVN的服务器，地址http://code.taobao.org/在网站上注册和登录新建一个项目输入相关信息复制这个地址，一会要用下一步在MyEclipse中向SVN中导入项目点...</span>
+			](https://blog.csdn.net/weiyi556/article/details/51938467 "MyEclipse与在线SVN（taocode）的使用（二）")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> weiyi556的博客</span>](https://blog.csdn.net/weiyi556)
+												</span>
+
+	</div>
+	</div>
+
+			<div class="recommend-item-box blog-expert-recommend-box" style="">
+			<div class="d-flex">
+				<div class="blog-expert-recommend">
+					<div class="blog-expert">
+						<div class="blog-expert-flexbox"></div>
+					</div>
+				</div>
+			</div>
+		</div><div class="recommend-item-box baiduSearch recommend-box-ident" data-track-view="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/weixin_42235488/article/details/80806282,searchFromBaidu1_4,-&quot;}" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/weixin_42235488/article/details/80806282,searchFromBaidu1_4,-&quot;}" data-flg="true">                [              		
+
+#### 关键字_void_的使用 - qin_sunshine的博客 - CSDN博客
+                  <div class="info-box d-flex align-content-center">                    
+
+                      <span class="date">11-11</span>                    
+                  </div>              		
+
+[java]static关键字的四种用法和void的用法 - 红尘紫陌博客  05-30 557  void关键字表示函数没有返回结果,是java中的一个关键字。Void作为函数的返回结果表示函数...
+                ](https://blog.csdn.net/weixin_42235488/article/details/80806282)            	</div><div class="recommend-item-box baiduSearch recommend-box-ident" data-track-view="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,http://blog.csdn.net/qq_34626097/article/details/83247576,searchFromBaidu1_5,-&quot;}" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,http://blog.csdn.net/qq_34626097/article/details/83247576,searchFromBaidu1_5,-&quot;}" data-flg="true">                [              		
+
+#### _java_ _static关键字_经典的应用 - 码农回顾 - CSDN博客
+                  <div class="info-box d-flex align-content-center">                    
+
+                      <span class="date">5-10</span>                    
+                  </div>              		                ](http://blog.csdn.net/qq_34626097/article/details/83247576)            	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/xu__cg/article/details/52970885,BlogCommendFromThirdServiceAll_11&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				_Java_设计模式学习06——静态代理与动态代理		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">10-30</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2万+</span>
+
+			</div>
+		](https://blog.csdn.net/xu__cg/article/details/52970885 "Java设计模式学习06——静态代理与动态代理")
+
+			[
+				<span class="desc oneline">一、代理模式为某个对象提供一个代理，从而控制这个代理的访问。代理类和委托类具有共同的父类或父接口，这样在任何使用委托类对象的地方都可以使用代理类对象替代。代理类负责请求的预处理、过滤、将请求分配给委托...</span>
+			](https://blog.csdn.net/xu__cg/article/details/52970885 "Java设计模式学习06——静态代理与动态代理")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> 小小本科生成长之路</span>](https://blog.csdn.net/xu__cg)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/Apheal/article/details/79274647,BlogCommendFromThirdServiceAll_12&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				Keil 主题（配色方案）选择器 自带多适用主题		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">02-06</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1万+</span>
+
+			</div>
+		](https://blog.csdn.net/Apheal/article/details/79274647 "Keil 主题（配色方案）选择器 自带多适用主题")
+
+			[
+				<span class="desc oneline">&nbsp;花了一天！因为要用Keil，又苦于主题不好看，一个个换主题又嫌麻烦，就写了这个东西。代码有点多，先放出配置步骤，源码在文末。V1.0，没有图片预览功能，但是随插件附赠几个类似VS的配色方案。&nbsp;本是按...</span>
+			](https://blog.csdn.net/Apheal/article/details/79274647 "Keil 主题（配色方案）选择器 自带多适用主题")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> Q1275918492</span>](https://blog.csdn.net/Apheal)
+												</span>
+
+	</div>
+	</div><div class="recommend-item-box baiduSearch recommend-box-ident" data-track-view="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,http://blog.csdn.net/yaomingyang/article/details/80180813,searchFromBaidu1_6,-&quot;}" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,http://blog.csdn.net/yaomingyang/article/details/80180813,searchFromBaidu1_6,-&quot;}" data-flg="true">                [              		
+
+#### _Java_中_void_方法深入讲解 - 明洋的专栏 - CSDN博客
+                  <div class="info-box d-flex align-content-center">                    
+
+                      <span class="date">5-24</span>                    
+                  </div>              		                ](http://blog.csdn.net/yaomingyang/article/details/80180813)            	</div><div class="recommend-item-box baiduSearch recommend-box-ident" data-track-view="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/hxllhhy/article/details/79552453,searchFromBaidu1_7,-&quot;}" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/hxllhhy/article/details/79552453,searchFromBaidu1_7,-&quot;}" data-flg="true">                [              		
+
+#### [每日一问]---“static”关键字是什么意思?_Java_中可以..._CSDN博客
+                  <div class="info-box d-flex align-content-center">                    
+
+                      <span class="date">11-12</span>                    
+                  </div>              		                ](https://blog.csdn.net/hxllhhy/article/details/79552453)            	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/keyeagle/article/details/6708077,BlogCommendFromThirdServiceAll_13&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				C语言中的static 详细分析		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">08-22</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					17万+</span>
+
+			</div>
+		](https://blog.csdn.net/keyeagle/article/details/6708077 "C语言中的static 详细分析")
+
+			[
+				<span class="desc oneline">google了近三页的关于C语言中static的内容，发现可用的信息很少，要么长篇大论不知所云要么在关键之处几个字略过，对于想挖掘底层原理的初学者来说参考性不是很大。所以，我这篇博文博采众家之长，把互...</span>
+			](https://blog.csdn.net/keyeagle/article/details/6708077 "C语言中的static 详细分析")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> Cobing Liu</span>](https://blog.csdn.net/keyeagle)
+												</span>
+
+	</div>
+	</div>
+
+	<div class="recommend-item-box recommend-ad-box"><div id="_p6usduv6dt9" style=""><iframe width="852" frameborder="0" height="60" scrolling="no" src="https://pos.baidu.com/s?hei=60&amp;wid=852&amp;di=u3491668&amp;ltu=https%3A%2F%2Fblog.csdn.net%2Fxxm0720%2Farticle%2Fdetails%2F80507334&amp;psi=0bf5880a364c1fd6f7df5fca903c37b9&amp;dri=0&amp;dai=2&amp;chi=1&amp;pis=-1x-1&amp;drs=1&amp;tpr=1559596615205&amp;ari=2&amp;pss=2031x8698&amp;ant=0&amp;dc=3&amp;ccd=24&amp;tlm=1559596615&amp;pcs=2031x994&amp;dtm=HTML_POST&amp;tcn=1559596615&amp;ti=%5Bjava%5Dstatic%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E5%9B%9B%E7%A7%8D%E7%94%A8%E6%B3%95%E5%92%8Cvoid%E7%9A%84%E7%94%A8%E6%B3%95%20-%20%E7%BA%A2%E5%B0%98%E7%B4%AB%E9%99%8C%E5%8D%9A%E5%AE%A2%20-%20CSDN%E5%8D%9A%E5%AE%A2&amp;cja=false&amp;psr=2048x1152&amp;ps=8522x688&amp;cec=UTF-8&amp;prot=2&amp;par=2048x1112&amp;ltr=https%3A%2F%2Fi.csdn.net%2F&amp;cmi=4&amp;cce=true&amp;cpl=3&amp;col=en-US&amp;exps=111000,118008,110011&amp;cdo=-1&amp;dis=0&amp;cfv=0"></iframe></div><script type="text/javascript" src="//rabc1.iteye.com/production/res/rxjg.js?pkcgstj=jm"></script></div><div class="recommend-item-box baiduSearch recommend-box-ident" data-track-view="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/qq_28761767/article/details/80994445,searchFromBaidu1_8,-&quot;}" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/qq_28761767/article/details/80994445,searchFromBaidu1_8,-&quot;}" data-flg="true">                [              		
+
+#### _java_ 中的static _用法_ - 我不是大王强的博客 - CSDN博客
+                  <div class="info-box d-flex align-content-center">                    
+
+                      <span class="date">5-11</span>                    
+                  </div>              		
+
+[java]static关键字的四种用法和void的用法  05-30 阅读数 1896  void关键字...博文 来自: 红尘紫陌博客  Java中继承的定义与使用  10-21 阅读数 1497  文章...
+                ](https://blog.csdn.net/qq_28761767/article/details/80994445)            	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/gefangshuai/article/details/50328451,BlogCommendFromThirdServiceAll_14&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				关于SpringBoot bean无法注入的问题（与文件包位置有关）		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">12-16</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					25万+</span>
+
+			</div>
+		](https://blog.csdn.net/gefangshuai/article/details/50328451 "关于SpringBoot bean无法注入的问题（与文件包位置有关）")
+
+			[
+				<span class="desc oneline">问题场景描述整个项目通过Maven构建，大致结构如下：核心Spring框架一个modulespring-boot-baseservice和dao一个moduleserver-core提供系统后台数据管...</span>
+			](https://blog.csdn.net/gefangshuai/article/details/50328451 "关于SpringBoot bean无法注入的问题（与文件包位置有关）")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> 开发随笔</span>](https://blog.csdn.net/gefangshuai)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/u013457167/article/details/80682926,BlogCommendFromBaidu_15&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				Zynq中 PS接收PL中断		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">06-13</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2771</span>
+
+			</div>
+		](https://blog.csdn.net/u013457167/article/details/80682926 "Zynq中 PS接收PL中断")
+
+			[
+				<span class="desc oneline">参考：https://blog.csdn.net/RZJMPB/article/details/50736918https://www.cnblogs.com/milinker/p/5906004.h...</span>
+			](https://blog.csdn.net/u013457167/article/details/80682926 "Zynq中 PS接收PL中断")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> 我的梦</span>](https://blog.csdn.net/u013457167)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/satiling/article/details/7873023,BlogCommendFromBaidu_16&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				C#中static _void_ Main(string[ ] args)中的作用及解释		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">08-16</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1万+</span>
+
+			</div>
+		](https://blog.csdn.net/satiling/article/details/7873023 "C#中static void Main(string[ ] args)中的作用及解释")
+
+			[
+				<span class="desc oneline">C#中staticvoidMain(string[]args)中的作用及解释static表示方法是静态的就是说方法在程序被编译的时候就被分配了内存，使用的时候不用生成某个类型的对象，直到程序退出才释放...</span>
+			](https://blog.csdn.net/satiling/article/details/7873023 "C#中static void Main(string[ ] args)中的作用及解释")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> satiling的专栏</span>](https://blog.csdn.net/satiling)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/henhen2002/article/details/4747344,BlogCommendFromBaidu_17&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				关于static _void_ 函数		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">10-30</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1725</span>
+
+			</div>
+		](https://blog.csdn.net/henhen2002/article/details/4747344 "关于static void 函数")
+
+			[
+				<span class="desc oneline">有些函数声明为staticvoid，目的是不会出现在编译成obj文件的符号表中.obj之外的程序就无法链接到这个obj文件的函数。也就是其它文件链接此obj文件时是无法使用此函数的。&nbsp;static&nbsp;&nbsp;...</span>
+			](https://blog.csdn.net/henhen2002/article/details/4747344 "关于static void 函数")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> 左超 </span>](https://blog.csdn.net/henhen2002)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/huanglei1234567890/article/details/51567632,BlogCommendFromBaidu_18&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				public static _void_ 可以写成 static public _void_		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">06-02</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1658</span>
+
+			</div>
+		](https://blog.csdn.net/huanglei1234567890/article/details/51567632 "public static void 可以写成 static public void")
+
+			[
+				<span class="desc oneline">publicstaticvoid可以写成staticpublicvoid&nbsp;&nbsp;&nbsp;但不能写成&nbsp;publicvoidstatic</span>
+			](https://blog.csdn.net/huanglei1234567890/article/details/51567632 "public static void 可以写成 static public void")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> huanglei1234567890的专栏</span>](https://blog.csdn.net/huanglei1234567890)
+												</span>
+
+	</div>
+	</div>
+
+	<div class="recommend-item-box recommend-ad-box"><div id="kp_box_62" data-pid="62" data-track-view="{&quot;mod&quot;:&quot;kp_popu_62-1062&quot;,&quot;con&quot;:&quot;,,&quot;}" data-track-click="{&quot;mod&quot;:&quot;kp_popu_62-1062&quot;,&quot;con&quot;:&quot;,,&quot;}"><iframe src="https://kunpeng-sc.csdnimg.cn/#/preview/237?positionId=62&amp;queryWord=" frameborder="0" width="100%" height="75px" scrolling="no"></iframe></div></div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/on_1y/article/details/24290985,BlogCommendFromBaidu_19&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				对C语言中的_static关键字_的深入理解		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">04-22</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1万+</span>
+
+			</div>
+		](https://blog.csdn.net/on_1y/article/details/24290985 "对C语言中的static关键字的深入理解")
+
+			[
+				<span class="desc oneline">通过对static关键字的解析，讲述了其背后与编译，链接相关的原理。</span>
+			](https://blog.csdn.net/on_1y/article/details/24290985 "对C语言中的static关键字的深入理解")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> on_1y</span>](https://blog.csdn.net/on_1y)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/guotianqing/article/details/79828100,BlogCommendFromThirdServiceAll_20&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				c语言中_static关键字__用法_详解		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">04-05</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					4万+</span>
+
+			</div>
+		](https://blog.csdn.net/guotianqing/article/details/79828100 "c语言中static关键字用法详解")
+
+			[
+				<span class="desc oneline">概述static关键字在c语言中比较常用，使用恰当能够大大提高程序的模块化特性，有利于扩展和维护。但是对于c语言初学者，static由于使用灵活，并不容易掌握。本文就static在c语言中的应用进行总...</span>
+			](https://blog.csdn.net/guotianqing/article/details/79828100 "c语言中static关键字用法详解")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> guotianqing的博客</span>](https://blog.csdn.net/guotianqing)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/DUANJIEFEI/article/details/46461049,BlogCommendFromThirdServiceAll_21&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				算法经典面试题整理（_java_实现）		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">06-11</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2万+</span>
+
+			</div>
+		](https://blog.csdn.net/DUANJIEFEI/article/details/46461049 "算法经典面试题整理（java实现）")
+
+			[
+				<span class="desc oneline">以下从Java角度解释面试常见的算法和数据结构：字符串，链表，树，图，排序，递归vs.迭代，动态规划，位操作，概率问题，排列组合，以及一些需要寻找规律的题目。1.字符串和数组字符串和数组是最常见的面试...</span>
+			](https://blog.csdn.net/DUANJIEFEI/article/details/46461049 "算法经典面试题整理（java实现）")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> DUANJIEFEI的专栏</span>](https://blog.csdn.net/DUANJIEFEI)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/babailong/article/details/83546135,BlogCommendFromThirdServiceAll_22&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				【漫谈】 _Java_ 中的 _Void_ 和 _void_		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">10-30</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2125</span>
+
+			</div>
+		](https://blog.csdn.net/babailong/article/details/83546135 "【漫谈】 Java 中的 Void 和 void")
+
+			[
+				<span class="desc oneline">Java中，大家对void应该是相当熟悉了。它表示“空”，所有无返回值的方法都使用它表示返回类型。publicstaticvoidmain(String[]args){	//...}void是一种基本...</span>
+			](https://blog.csdn.net/babailong/article/details/83546135 "【漫谈】 Java 中的 Void 和 void")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> 八白龙的专栏</span>](https://blog.csdn.net/babailong)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/yesyes120/article/details/79519753,BlogCommendFromThirdServiceAll_23&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				static修饰的函数作用与意义		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">03-11</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2万+</span>
+
+			</div>
+		](https://blog.csdn.net/yesyes120/article/details/79519753 "static修饰的函数作用与意义")
+
+			[
+				<span class="desc oneline">static修饰的函数叫做静态函数，静态函数有两种，根据其出现的地方来分类：如果这个静态函数出现在类里，那么它是一个静态成员函数；&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;静态成员函数的作用在于：调用这个函数不会访问或者修改任...</span>
+			](https://blog.csdn.net/yesyes120/article/details/79519753 "static修饰的函数作用与意义")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> Cookie1997的小屋</span>](https://blog.csdn.net/yesyes120)
+												</span>
+
+	</div>
+	</div>
+
+	<div class="recommend-item-box recommend-ad-box"><div id="kp_box_63" data-pid="63" data-track-view="{&quot;mod&quot;:&quot;kp_popu_63-1059&quot;,&quot;con&quot;:&quot;,,&quot;}" data-track-click="{&quot;mod&quot;:&quot;kp_popu_63-1059&quot;,&quot;con&quot;:&quot;,,&quot;}"><iframe src="https://kunpeng-sc.csdnimg.cn/#/preview/234?positionId=63&amp;queryWord=" frameborder="0" width="100%" height="75px" scrolling="no"></iframe></div></div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/chenyijun/article/details/81938287,BlogCommendFromThirdServiceAll_24&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				c++中static的_用法_详解		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">08-22</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					3207</span>
+
+			</div>
+		](https://blog.csdn.net/chenyijun/article/details/81938287 "c++中static的用法详解")
+
+			[
+				<span class="desc oneline">https://blog.csdn.net/majianfei1023/article/details/45290467C语言的static关键字有三种（具体来说是两种）用途：1.静态局部变量：用于函...</span>
+			](https://blog.csdn.net/chenyijun/article/details/81938287 "c++中static的用法详解")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> chenyijun的专栏</span>](https://blog.csdn.net/chenyijun)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/u013695230/article/details/21244421,BlogCommendFromBaidu_25&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				static _void_和_void_区别		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">03-14</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2310</span>
+
+			</div>
+		](https://blog.csdn.net/u013695230/article/details/21244421 "static void和void区别")
+
+			[
+				<span class="desc oneline">static关键字　　1．作用于变量：　　用static声明局部变量-------局部变量指在代码块{}内部定义的变量，只在代码块内部有效（作用域），其缺省的存储方式是自动变量或说是动态存储的，即指令...</span>
+			](https://blog.csdn.net/u013695230/article/details/21244421 "static void和void区别")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> u013695230的专栏</span>](https://blog.csdn.net/u013695230)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/Revivedsun/article/details/71076463,BlogCommendFromBaidu_26&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				_java_.lang._Void_ 与 _void_的比较及使用		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">05-02</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1万+</span>
+
+			</div>
+		](https://blog.csdn.net/Revivedsun/article/details/71076463 "java.lang.Void 与 void的比较及使用")
+
+			[
+				<span class="desc oneline">void关键字表示函数没有返回结果，是java中的一个关键字。java.lang.Void是一种类型。例如给Void引用赋值null。Voidnil=null;通过Void类的代码可以看到，Void类...</span>
+			](https://blog.csdn.net/Revivedsun/article/details/71076463 "java.lang.Void 与 void的比较及使用")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> Revivedsun的专栏</span>](https://blog.csdn.net/Revivedsun)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/longzhoufeng/article/details/88868617,BlogCommendFromBaidu_27&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				_java_中_void_的_用法_		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">03-28</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					29</span>
+
+			</div>
+		](https://blog.csdn.net/longzhoufeng/article/details/88868617 "java中void的用法")
+
+			[
+				<span class="desc oneline">void关键字void关键字，它代表的意思是什么也不返回，我们在开发过程中经常会用到，如一个方法不需要返回值时可以使用void关键字，在main方法中也是void关键字。publicstaticvoi...</span>
+			](https://blog.csdn.net/longzhoufeng/article/details/88868617 "java中void的用法")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> 知行合一</span>](https://blog.csdn.net/longzhoufeng)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/lmarster/article/details/84646511,BlogCommendFromBaidu_28&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				_Java_ 方法中加_void_和不加_void_的 区别		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">11-30</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2456</span>
+
+			</div>
+		](https://blog.csdn.net/lmarster/article/details/84646511 "Java 方法中加void和不加void的 区别")
+
+			[
+				<span class="desc oneline">只要记住void即无返回值就OK了，如果不用void，那么这个地方一定是被一个其它的类型所替代，比如下面用的是String，当然也可能是int或者Boolean等等，那么此时我们下面就要有一个retu...</span>
+			](https://blog.csdn.net/lmarster/article/details/84646511 "Java 方法中加void和不加void的 区别")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> lmarster的博客</span>](https://blog.csdn.net/lmarster)
+												</span>
+
+	</div>
+	</div>
+
+	<div class="recommend-item-box recommend-ad-box"><div id="kp_box_64" data-pid="64" data-track-view="{&quot;mod&quot;:&quot;kp_popu_64-1060&quot;,&quot;con&quot;:&quot;,,&quot;}" data-track-click="{&quot;mod&quot;:&quot;kp_popu_64-1060&quot;,&quot;con&quot;:&quot;,,&quot;}"><iframe src="https://kunpeng-sc.csdnimg.cn/#/preview/235?positionId=64&amp;queryWord=" frameborder="0" width="100%" height="75px" scrolling="no"></iframe></div></div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/Tiaaaaa/article/details/58116346,BlogCommendFromThirdServiceAll_29&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				R语言逻辑回归、ROC曲线和十折交叉验证		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">02-27</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					8万+</span>
+
+			</div>
+		](https://blog.csdn.net/Tiaaaaa/article/details/58116346 "R语言逻辑回归、ROC曲线和十折交叉验证")
+
+			[
+				<span class="desc oneline">自己整理编写的逻辑回归模板，作为学习笔记记录分享。数据集用的是14个自变量Xi，一个因变量Y的australian数据集。1.测试集和训练集3、7分组australian...</span>
+			](https://blog.csdn.net/Tiaaaaa/article/details/58116346 "R语言逻辑回归、ROC曲线和十折交叉验证")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> Tiaaaaa的博客</span>](https://blog.csdn.net/Tiaaaaa)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/t595180928/article/details/80448249,BlogCommendFromThirdServiceAll_30&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				C语言static 关键字总结		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">05-25</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					7954</span>
+
+			</div>
+		](https://blog.csdn.net/t595180928/article/details/80448249 "C语言static 关键字总结")
+
+			[
+				<span class="desc oneline">static关键字总结：变量可以被static修饰，意义有发生变化吗？下面我们看个例子：（1）变量不加static修饰#include&amp;amp;lt;stdio.h&amp;amp;gt;voidtest()...</span>
+			](https://blog.csdn.net/t595180928/article/details/80448249 "C语言static 关键字总结")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> IT小书生的博客</span>](https://blog.csdn.net/t595180928)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/realzuile/article/details/80015936,BlogCommendFromThirdServiceAll_31&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				static的作用与_用法_		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">04-20</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2913</span>
+
+			</div>
+		](https://blog.csdn.net/realzuile/article/details/80015936 "static的作用与用法")
+
+			[
+				<span class="desc oneline">1、什么是static?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;static&nbsp;是C++中很常用的修饰符，它被用来控制变量的存储方式和可见性。&nbsp;&nbsp;&nbsp;2、为什么要引入static?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;函数内部定义的变量，在程序执行到它的定...</span>
+			](https://blog.csdn.net/realzuile/article/details/80015936 "static的作用与用法")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> realzuile的博客</span>](https://blog.csdn.net/realzuile)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/u013224148/article/details/46400969,BlogCommendFromThirdServiceAll_32&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				php+MySQL图书管理系统(二)		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">06-07</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2万+</span>
+
+			</div>
+		](https://blog.csdn.net/u013224148/article/details/46400969 "php+MySQL图书管理系统(二)")
+
+			[
+				<span class="desc oneline">第五添加数据库管理员数据与用户数据这个比较无聊用java拼接了一下sql语句然后写入数据库这个放在附件上传就好了第六管理员与用户的登入验证1、验证码。验证码一般就是服务器产生一个随机数，保存在sess...</span>
+			](https://blog.csdn.net/u013224148/article/details/46400969 "php+MySQL图书管理系统(二)")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> 得之我幸--失之我命</span>](https://blog.csdn.net/u013224148)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/qq_41976288/article/details/82926310,BlogCommendFromThirdServiceAll_33&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				_Java_（static实际运用）		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">10-02</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1003</span>
+
+			</div>
+		](https://blog.csdn.net/qq_41976288/article/details/82926310 "Java（static实际运用）")
+
+			[
+				<span class="desc oneline">Java（static实际运用）检测生成对象的个数。提示：共用变量与构造方法classA{	privatestaticinti=0;//静态变量是共用的。		//i是私有的是为了防止有其他方式更改i的...</span>
+			](https://blog.csdn.net/qq_41976288/article/details/82926310 "Java（static实际运用）")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> 海未梨子</span>](https://blog.csdn.net/qq_41976288)
+												</span>
+
+	</div>
+	</div>
+
+	<div class="recommend-item-box recommend-ad-box"><div id="kp_box_65" data-pid="65" data-track-view="{&quot;mod&quot;:&quot;kp_popu_65-1061&quot;,&quot;con&quot;:&quot;,,&quot;}" data-track-click="{&quot;mod&quot;:&quot;kp_popu_65-1061&quot;,&quot;con&quot;:&quot;,,&quot;}"><iframe src="https://kunpeng-sc.csdnimg.cn/#/preview/236?positionId=65&amp;queryWord=" frameborder="0" width="100%" height="75px" scrolling="no"></iframe></div></div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/xuanzhizoubiw/article/details/52556409,BlogCommendFromBaidu_34&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				_java_  中_void_的使用		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">09-16</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					505</span>
+
+			</div>
+		](https://blog.csdn.net/xuanzhizoubiw/article/details/52556409 "java  中void的使用")
+
+			[
+				<span class="desc oneline">void是无返回值的意思。比方说publicvoidwalk(){System.out.print("你好!");}如果别的地方调用这个方法就会打印出你好！再看这里:publicStringwalk(...</span>
+			](https://blog.csdn.net/xuanzhizoubiw/article/details/52556409 "java  中void的使用")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> xuanzhizoubiw的博客</span>](https://blog.csdn.net/xuanzhizoubiw)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/waiwai4701/article/details/38706493,BlogCommendFromBaidu_35&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				_java_中_void_方法return的_用法_		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">08-20</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					7442</span>
+
+			</div>
+		](https://blog.csdn.net/waiwai4701/article/details/38706493 "java中void方法return的用法")
+
+			[
+				<span class="desc oneline">用来终止运行方法。</span>
+			](https://blog.csdn.net/waiwai4701/article/details/38706493 "java中void方法return的用法")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> waiwai4701</span>](https://blog.csdn.net/waiwai4701)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/FX_SKY/article/details/51531403,BlogCommendFromBaidu_36&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				_Java_ _void_关键字		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">05-29</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					9167</span>
+
+			</div>
+		](https://blog.csdn.net/FX_SKY/article/details/51531403 "Java void关键字")
+
+			[
+				<span class="desc oneline">概述void是Java中的关键字，日常开发中经常遇到，Javamain方法的定义中就有void的身影，如下：publicstaticvoidmain(String[]args){}学过Java的人都知...</span>
+			](https://blog.csdn.net/FX_SKY/article/details/51531403 "Java void关键字")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> Ricky</span>](https://blog.csdn.net/FX_SKY)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/hewenjing8168/article/details/80839221,BlogCommendFromBaidu_37&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				_java_讲义(static 参数传递 包装类）		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">06-28</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					194</span>
+
+			</div>
+		](https://blog.csdn.net/hewenjing8168/article/details/80839221 "java讲义(static 参数传递 包装类）")
+
+			[
+				<span class="desc oneline">1.为什么static修饰的方法不能访问非static修饰的普通成员变量申明为非静态的成员变量是一个对象属性,它只有在对象存在时引用,因此如果在对象未创建实例时我们在静态方法中调用了非静态成员方法自然...</span>
+			](https://blog.csdn.net/hewenjing8168/article/details/80839221 "java讲义(static 参数传递 包装类）")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> hewenjing8168的博客</span>](https://blog.csdn.net/hewenjing8168)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/Luck_ZZ/article/details/79361497,BlogCommendFromThirdServiceAll_38&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				thymeleaf模板实现html5标签的非严格检查		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">02-24</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					5万+</span>
+
+			</div>
+		](https://blog.csdn.net/Luck_ZZ/article/details/79361497 "thymeleaf模板实现html5标签的非严格检查")
+
+			[
+				<span class="desc oneline">一、概述最近在springboot项目引入thymeleaf模板时，使用非严格标签时，运行会报错。默认thymeleaf模板对html5标签是严格检查的。二、在项目中加NekoHTML库在Maven中...</span>
+			](https://blog.csdn.net/Luck_ZZ/article/details/79361497 "thymeleaf模板实现html5标签的非严格检查")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> Luck_ZZ的博客</span>](https://blog.csdn.net/Luck_ZZ)
+												</span>
+
+	</div>
+	</div>
+
+	<div class="recommend-item-box recommend-ad-box"><div id="kp_box_66" data-pid="66" data-track-view="{&quot;mod&quot;:&quot;kp_popu_66-87&quot;,&quot;con&quot;:&quot;,,&quot;}" data-track-click="{&quot;mod&quot;:&quot;kp_popu_66-87&quot;,&quot;con&quot;:&quot;,,&quot;}"><div id="three_ad38" class="mediav_ad"></div>
+<script>
+                                               NEWS_FEED({
+                w: 852,
+                h : 60,
+                showid : 'Afihld',
+                placeholderId: "three_ad38",
+                inject : 'define',
+                define : {
+                    imagePosition : 'left',
+                    imageBorderRadius : 3,
+                    imageWidth: 90,
+                    imageHeight: 60,
+                    imageFill : 'clip',
+                    displayImage : true,
+                    displayTitle : true,
+                    titleFontSize: 18,
+                    titleFontColor: '#000',
+                    titleFontFamily : 'Lato,-apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif',
+                    titleFontWeight: 'bold',
+                    titlePaddingTop : 0,
+                    titlePaddingRight : 0,
+                    titlePaddingBottom : 5,
+                    titlePaddingLeft : 16,
+                    displayDesc : true,
+                    descFontSize: 14,
+                    descFontColor: '#8e959a',
+                    descFontFamily : 'Microsoft Yahei',
+                    paddingTop : 0,
+                    paddingRight : 0,
+                    paddingBottom : 0,
+                    paddingLeft : 0,
+                    backgroundColor: '#fff',
+                    hoverColor: '#000'
+                      }
+                  })
+                                        </script></div></div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/yanhaoliqian/article/details/6039164,BlogCommendFromThirdServiceAll_39&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				public _void_ startManagingCursor (Cursor c)的作用		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">11-27</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2935</span>
+
+			</div>
+		](https://blog.csdn.net/yanhaoliqian/article/details/6039164 "public void startManagingCursor (Cursor c)的作用")
+
+			[
+				<span class="desc oneline">我们将获得的Cursor对象交与Activity来管理，这样Cursor对象的生命周期便能与当前的Activity自动同步，省去了自己管理Cursor。&nbsp;&nbsp;...</span>
+			](https://blog.csdn.net/yanhaoliqian/article/details/6039164 "public void startManagingCursor (Cursor c)的作用")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> yanhaoliqian的专栏</span>](https://blog.csdn.net/yanhaoliqian)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/happydecai/article/details/80610962,BlogCommendFromThirdServiceAll_40&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				【_java_基础】import static 静态导入		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">06-07</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1658</span>
+
+			</div>
+		](https://blog.csdn.net/happydecai/article/details/80610962 "【java基础】import static 静态导入")
+
+			[
+				<span class="desc oneline">importstatic是静态导入，是jdk1.5的新特征.利用importstatic可以不通过调用包名，直接使用包里的静态方法。我这里举个例子：用import的情况：publicstaticvoi...</span>
+			](https://blog.csdn.net/happydecai/article/details/80610962 "【java基础】import static 静态导入")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> happydecai的博客</span>](https://blog.csdn.net/happydecai)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/qq_42708183/article/details/82871444,BlogCommendFromThirdServiceAll_41&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				public _void_ display(){}	与public String display(){}区别		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">09-27</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					425</span>
+
+			</div>
+		](https://blog.csdn.net/qq_42708183/article/details/82871444 "public void display(){}	与public String display(){}区别")
+
+			[
+				<span class="desc oneline">这两个方法的名字是一样的就是返回类型不同一个是void一个是String			我们先来说void,void的话也就是没有返回值,不用return这个关键字在方法里直接可以用system语句在控制台输出...</span>
+			](https://blog.csdn.net/qq_42708183/article/details/82871444 "public void display(){}	与public String display(){}区别")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> qq_42708183的博客</span>](https://blog.csdn.net/qq_42708183)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/clover_lily/article/details/79975722,BlogCommendFromThirdServiceAll_42&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[ void method()，void前面的泛型T是什么">
+
+#### 
+				public &lt;T&gt; _void_ method()，_void_前面的泛型T是什么		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">04-17</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					901</span>
+
+			</div>
+		](https://blog.csdn.net/clover_lily/article/details/79975722 "public <T")
+
+			[ void method()，void前面的泛型T是什么">
+				<span class="desc oneline">public&amp;amp;lt;T&amp;amp;gt;这个T是个修饰符的功能，表示是个泛型方法，就像有static修饰的方法是个静态方法一样。注意&amp;amp;lt;T&amp;amp;gt;不是返回值，此处的返回值是v...</span>
+			](https://blog.csdn.net/clover_lily/article/details/79975722 "public <T")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> 进阶的科技花园~</span>](https://blog.csdn.net/clover_lily)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/qq_35654900/article/details/79187073,BlogCommendFromBaidu_43&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				【科普】为什么main方法是public static _void_？		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">01-28</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					238</span>
+
+			</div>
+		](https://blog.csdn.net/qq_35654900/article/details/79187073 "【科普】为什么main方法是public static void？")
+
+			[
+				<span class="desc oneline">Main方法是我们学习Java编程语言时知道的第一个方法，你是否曾经想过为什么main方法是public、static、void的。当然，很多人首先学的是C和C++，但是在Java中main方法与前者...</span>
+			](https://blog.csdn.net/qq_35654900/article/details/79187073 "【科普】为什么main方法是public static void？")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> qq_35654900的博客</span>](https://blog.csdn.net/qq_35654900)
+												</span>
+
+	</div>
+	</div>
+
+	<div class="recommend-item-box recommend-ad-box"><div id="kp_box_67" data-pid="67" data-track-view="{&quot;mod&quot;:&quot;kp_popu_67-882&quot;,&quot;con&quot;:&quot;,,&quot;}" data-track-click="{&quot;mod&quot;:&quot;kp_popu_67-882&quot;,&quot;con&quot;:&quot;,,&quot;}"><script src="https://nbrecsys.4paradigm.com/resource/cus/csdn/sdk-csdn-render.js"></script>
+<div id="_4paradigm_T43_render" class="_paradigm_T_ads_render _4paradigm_box recommend-item-box clearfix"></div>
+<script>
+  //  渲染T43  传入 渲染位置的id和渲染位置的标记
+  p4CSDNRender_T("_4paradigm_T43_render", "T43");
+</script></div></div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/weixin_38719347/article/details/80907588,BlogCommendFromBaidu_44&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				关于public static _void_ main()		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">07-04</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1944</span>
+
+			</div>
+		](https://blog.csdn.net/weixin_38719347/article/details/80907588 "关于public static void main()")
+
+			[
+				<span class="desc oneline">刷《Java程序员面试宝典》P42题时候遇到一个问题是关于publicstaticvoidmain(String[]args){}public关键字，这个好理解，声明主函数为public就是告诉其他的...</span>
+			](https://blog.csdn.net/weixin_38719347/article/details/80907588 "关于public static void main()")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> weixin_38719347的博客</span>](https://blog.csdn.net/weixin_38719347)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box  recommend-other-item-box" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,http://ask.csdn.net/questions/747613,BlogCommendFromBaidu_45&quot;}" data-flg="true">
+	[
+
+#### 
+				c语言static加与不加的区别		
+
+		<div class="info-box d-flex align-content-center">
+				<span class="date">01-22</span>
+		</div>
+
+			<span class="desc oneline">-</span>
+							<span class="type-show type-show-ask">问答</span>
+
+	](http://ask.csdn.net/questions/747613)
+
+</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/Kendiv/article/details/675941,BlogCommendFromBaidu_46&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				static_用法_小结		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">04-25</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					8万+</span>
+
+			</div>
+		](https://blog.csdn.net/Kendiv/article/details/675941 "static用法小结")
+
+			[
+				<span class="desc oneline">static用法小结static关键字是C,C++中都存在的关键字,它主要有三种使用方式,其中前两种只指在C语言中使用,第三种在C++中使用(C,C++中具体细微操作不尽相同,本文以C++为准).(1...</span>
+			](https://blog.csdn.net/Kendiv/article/details/675941 "static用法小结")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> Kendiv's Box</span>](https://blog.csdn.net/Kendiv)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/xuanfuhuo4769/article/details/81707522,BlogCommendFromBaidu_47&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				对_static关键字_的理解		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">08-15</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					554</span>
+
+			</div>
+		](https://blog.csdn.net/xuanfuhuo4769/article/details/81707522 "对static关键字的理解")
+
+			[
+				<span class="desc oneline">static关键字修饰的方法和变量是全局唯一的，不会因为new而新创建一个，jvm类加载的时，为静态的提前初始化：Class文件中的“类”从加载到JVM内存中，到卸载出内存过程有七个生命周期阶段。类加...</span>
+			](https://blog.csdn.net/xuanfuhuo4769/article/details/81707522 "对static关键字的理解")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> xuanfuhuo4769的博客</span>](https://blog.csdn.net/xuanfuhuo4769)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/CSDN_LSD/article/details/77992902,BlogCommendFromThirdServiceAll_48&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				static		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">09-15</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					380</span>
+
+			</div>
+		](https://blog.csdn.net/CSDN_LSD/article/details/77992902 "static")
+
+			[
+				<span class="desc oneline">static</span>
+			](https://blog.csdn.net/CSDN_LSD/article/details/77992902 "static")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> csdn_walter的博客</span>](https://blog.csdn.net/CSDN_LSD)
+												</span>
+
+	</div>
+	</div>
+
+	<div class="recommend-item-box recommend-ad-box"><div id="kp_box_68" data-pid="68" data-track-view="{&quot;mod&quot;:&quot;kp_popu_68-883&quot;,&quot;con&quot;:&quot;,,&quot;}" data-track-click="{&quot;mod&quot;:&quot;kp_popu_68-883&quot;,&quot;con&quot;:&quot;,,&quot;}"><!-- T48 位置 -->
+<script src="https://nbrecsys.4paradigm.com/resource/cus/csdn/sdk-csdn-render.js"></script>
+<div id="_4paradigm_T48_render" class="_paradigm_T_ads_render _4paradigm_box recommend-item-box clearfix"></div>
+<script>
+  //  渲染T48  传入 渲染位置的id和渲染位置的标记
+  p4CSDNRender_T("_4paradigm_T48_render", "T48");
+</script></div></div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/qq_34337272/article/details/82766943,BlogCommendFromBaidu_49&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				static 关键字详解		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">09-19</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1030</span>
+
+			</div>
+		](https://blog.csdn.net/qq_34337272/article/details/82766943 "static 关键字详解")
+
+			[
+				<span class="desc oneline">static关键字static关键字主要有以下四种使用场景修饰成员变量和成员方法静态代码块修饰类(只能修饰内部类)静态导包(用来导入类中的静态资源，1.5之后的新特性)修饰成员变量和成员方法(常用)被...</span>
+			](https://blog.csdn.net/qq_34337272/article/details/82766943 "static 关键字详解")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> 不忘初心</span>](https://blog.csdn.net/qq_34337272)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/yangtiang/article/details/46483999,BlogCommendHotData_0&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				IOS不用AutoLayout也能实现自动布局的类(1)----MyLinearLayout横空出世		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">06-14</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2万+</span>
+
+			</div>
+		](https://blog.csdn.net/yangtiang/article/details/46483999 "IOS不用AutoLayout也能实现自动布局的类(1)----MyLinearLayout横空出世")
+
+			[
+				<span class="desc oneline">MyLinearLayout是一个IOS不用AutoLayout就可以实现的自动流式布局解决方案，他同时支持XIB以及代码编写两种模式，使用简单，简洁，易用，而且功能强大。...</span>
+			](https://blog.csdn.net/yangtiang/article/details/46483999 "IOS不用AutoLayout也能实现自动布局的类(1)----MyLinearLayout横空出世")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> 欧阳大哥的专栏</span>](https://blog.csdn.net/yangtiang)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/qq_36892341/article/details/73918672,BlogCommendHotData_1&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				linux上安装Docker(非常简单的安装方法)		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">06-29</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					27万+</span>
+
+			</div>
+		](https://blog.csdn.net/qq_36892341/article/details/73918672 "linux上安装Docker(非常简单的安装方法)")
+
+			[
+				<span class="desc oneline">最近比较有空，大四出来实习几个月了，作为实习狗的我，被叫去研究Docker了，汗汗！
+
+Docker的三大核心概念：镜像、容器、仓库
+镜像：类似虚拟机的镜像、用俗话说就是安装文件。
+容器：类似一个轻量...</span>
+			](https://blog.csdn.net/qq_36892341/article/details/73918672 "linux上安装Docker(非常简单的安装方法)")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> 我走小路的博客</span>](https://blog.csdn.net/qq_36892341)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/yuzhiqiang_1993/article/details/76152454,BlogCommendHotData_2&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				fragment清除页面数据（重新加载布局）		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">07-27</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2万+</span>
+
+			</div>
+		](https://blog.csdn.net/yuzhiqiang_1993/article/details/76152454 "fragment清除页面数据（重新加载布局）")
+
+			[
+				<span class="desc oneline">上一篇博客介绍了如何解决Fragment重叠的问题，有需要的同学可以看一下，底部有demo下载。 
+直通车：完美解决Fragment重叠本篇博客我们来说一下怎么让fragment重新加载布局资源文件。...</span>
+			](https://blog.csdn.net/yuzhiqiang_1993/article/details/76152454 "fragment清除页面数据（重新加载布局）")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> 喻志强的博客</span>](https://blog.csdn.net/yuzhiqiang_1993)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/kajweb/article/details/76474376,BlogCommendHotData_3&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				[CTF]利用CRC32绕过RAR密码（适合于小文本文件）		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">08-01</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2万+</span>
+
+			</div>
+		](https://blog.csdn.net/kajweb/article/details/76474376 "[CTF]利用CRC32绕过RAR密码（适合于小文本文件）")
+
+			[
+				<span class="desc oneline">利用CRC32绕过RAR密码（适合于小文本文件）原文标题：教你绕过rar密码
+  文章仅作rar密码破解的探讨，如有高见还望提出。 
+　　题目有点夸大其词，事实是我也没能想出一个更好的描述来总结这篇文...</span>
+			](https://blog.csdn.net/kajweb/article/details/76474376 "[CTF]利用CRC32绕过RAR密码（适合于小文本文件）")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> 林毅洋</span>](https://blog.csdn.net/kajweb)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/diandianxiyu/article/details/53068012,BlogCommendHotData_4&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				【小程序】微信小程序开发实践		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">11-07</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					31万+</span>
+
+			</div>
+		](https://blog.csdn.net/diandianxiyu/article/details/53068012 "【小程序】微信小程序开发实践")
+
+			[
+				<span class="desc oneline">帐号相关流程注册范围
+企业
+政府
+媒体
+其他组织换句话讲就是不让个人开发者注册。 :)填写企业信息不能使用和之前的公众号账户相同的邮箱,也就是说小程序是和微信公众号一个层级的。填写公司机构信息,对公账...</span>
+			](https://blog.csdn.net/diandianxiyu/article/details/53068012 "【小程序】微信小程序开发实践")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> 小雨同学的技术博客</span>](https://blog.csdn.net/diandianxiyu)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/yangtiang/article/details/48011431,BlogCommendHotData_5&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				IOS不用AutoLayout也能实现自动布局的类(4)----MyTableLayout横空出世		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">08-27</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1万+</span>
+
+			</div>
+		](https://blog.csdn.net/yangtiang/article/details/48011431 "IOS不用AutoLayout也能实现自动布局的类(4)----MyTableLayout横空出世")
+
+			[
+				<span class="desc oneline">表格布局MyTableLayout，是继线性布局MyLinearLayout, 相对布局MyRelativeLayout, 框架布局MyFrameLayout后又推出的一个以表格为展示风格的布局类，我...</span>
+			](https://blog.csdn.net/yangtiang/article/details/48011431 "IOS不用AutoLayout也能实现自动布局的类(4)----MyTableLayout横空出世")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> 欧阳大哥的专栏</span>](https://blog.csdn.net/yangtiang)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/wangjun_pfc/article/details/3827631,BlogCommendHotData_6&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				修改mysql数据库的默认编码方式		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">01-18</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					7万+</span>
+
+			</div>
+		](https://blog.csdn.net/wangjun_pfc/article/details/3827631 "修改mysql数据库的默认编码方式")
+
+			[
+				<span class="desc oneline">修改my.ini文件加上default-character-set=gb2312设定数据库字符集alter database da_name default character set charset...</span>
+			](https://blog.csdn.net/wangjun_pfc/article/details/3827631 "修改mysql数据库的默认编码方式")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> 血色残阳的专栏</span>](https://blog.csdn.net/wangjun_pfc)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/jnulzl/article/details/49894041,BlogCommendHotData_7&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				史上最好的LDA(线性判别分析)教程		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">11-17</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					5万+</span>
+
+			</div>
+		](https://blog.csdn.net/jnulzl/article/details/49894041 "史上最好的LDA(线性判别分析)教程")
+
+			[
+				<span class="desc oneline">一、前言最近由于研究需要，要用到线性判别分析(LDA)。于是找了很多资料来看，结果发现大部分讲的都是理论知识，因此最后还是看的一知半解，后来终于找到了个英文的文档，作者由PCA引入LDA，看过后豁然开...</span>
+			](https://blog.csdn.net/jnulzl/article/details/49894041 "史上最好的LDA(线性判别分析)教程")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> jnulzl的专栏</span>](https://blog.csdn.net/jnulzl)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/themagickeyjianan/article/details/52386981,BlogCommendHotData_8&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				python图片处理类之~PIL.Image模块(ios android icon图标自动生成处理)		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">08-31</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					11万+</span>
+
+			</div>
+		](https://blog.csdn.net/themagickeyjianan/article/details/52386981 "python图片处理类之~PIL.Image模块(ios android icon图标自动生成处理)")
+
+			[
+				<span class="desc oneline">1.从pyCharm提示下载PIL包
+
+&nbsp;http://www.pythonware.com/products/pil/
+
+&nbsp;
+
+2.解压后，进入到目录下
+
+cd /Users/jianan/Dow...</span>
+			](https://blog.csdn.net/themagickeyjianan/article/details/52386981 "python图片处理类之~PIL.Image模块(ios android icon图标自动生成处理)")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> 专注于cocos+unity+服务器全栈</span>](https://blog.csdn.net/themagickeyjianan)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/haitao111313/article/details/7875392,BlogCommendHotData_10&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				基于PCA的人脸检测（Matlab版代码）		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">08-16</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					3万+</span>
+
+			</div>
+		](https://blog.csdn.net/haitao111313/article/details/7875392 "基于PCA的人脸检测（Matlab版代码）")
+
+			[
+				<span class="desc oneline">花了几天，终于把matlab版的人脸检测运行成功了，虽然正确率不是很高，看着各种论文上的人脸检测正确率都出奇的高，我是不怎么相信的，有的论文连基于平均脸的人脸检测正确率都能达到98%，汗啊～～ &nbsp;也许...</span>
+			](https://blog.csdn.net/haitao111313/article/details/7875392 "基于PCA的人脸检测（Matlab版代码）")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> 海海人生</span>](https://blog.csdn.net/haitao111313)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/lsx991947534/article/details/45499205,BlogCommendHotData_11&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				servlet+jsp实现过滤器，防止用户未登录访问		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">05-05</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					4万+</span>
+
+			</div>
+		](https://blog.csdn.net/lsx991947534/article/details/45499205 "servlet+jsp实现过滤器，防止用户未登录访问")
+
+			[
+				<span class="desc oneline">我们可能经常会用到这一功能，比如有时，我们不希望用户没有进行登录访问后台的操作页面，而且这样的非法访问会让系统极为的不安全，所以我们常常需要进行登录才授权访问其它页面，否则只会出现登录页面，当然我的思...</span>
+			](https://blog.csdn.net/lsx991947534/article/details/45499205 "servlet+jsp实现过滤器，防止用户未登录访问")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> 沉默的鲨鱼的专栏</span>](https://blog.csdn.net/lsx991947534)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/qq574857122/article/details/16361033,BlogCommendHotData_12&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				强连通分量及缩点tarjan算法解析		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">11-16</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					65万+</span>
+
+			</div>
+		](https://blog.csdn.net/qq574857122/article/details/16361033 "强连通分量及缩点tarjan算法解析")
+
+			[
+				<span class="desc oneline">强连通分量：
+简言之 就是找环（每条边只走一次，两两可达）
+孤立的一个点也是一个连通分量 
+&nbsp;
+使用tarjan算法 在嵌套的多个环中优先得到最大环( 最小环就是每个孤立点）
+&nbsp;
+定义：
+int Ti...</span>
+			](https://blog.csdn.net/qq574857122/article/details/16361033 "强连通分量及缩点tarjan算法解析")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> 九野的博客</span>](https://blog.csdn.net/qq574857122)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/chunqiuwei/article/details/48765007,BlogCommendHotData_14&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				ListView乱谈之ListView中View重用的简单解析		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">10-10</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					3793</span>
+
+			</div>
+		](https://blog.csdn.net/chunqiuwei/article/details/48765007 "ListView乱谈之ListView中View重用的简单解析")
+
+			[
+				<span class="desc oneline">简单分析ListView的回收机制</span>
+			](https://blog.csdn.net/chunqiuwei/article/details/48765007 "ListView乱谈之ListView中View重用的简单解析")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> 菜鸟博客</span>](https://blog.csdn.net/chunqiuwei)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/zml_2015/article/details/46662809,BlogCommendHotData_15&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				Linux虚拟机与外面系统ping不通，或者连不上网		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">06-27</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1万+</span>
+
+			</div>
+		](https://blog.csdn.net/zml_2015/article/details/46662809 "Linux虚拟机与外面系统ping不通，或者连不上网")
+
+			[
+				<span class="desc oneline">很多人在做linux课程设计的时候，用的linux虚拟机与外面的系统ping不通，或者虚拟机里面上不了网，这个主要是与系统的默认设置有关，下面让我帮你们解决这个问题吧
+1.首先打开虚拟机的 &nbsp; &nbsp;“编...</span>
+			](https://blog.csdn.net/zml_2015/article/details/46662809 "Linux虚拟机与外面系统ping不通，或者连不上网")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> 云淡风轻的博客</span>](https://blog.csdn.net/zml_2015)
+												</span>
+
+	</div>
+	</div>
+
+<div class="recommend-item-box type_blog clearfix" data-track-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;con&quot;:&quot;,https://blog.csdn.net/zd0303/article/details/7058457,BlogCommendHotData_16&quot;}" data-flg="true">
+	<div class="content" style="width: 852px;">
+		[
+
+#### 
+				MATLAB中注释一段程序		
+
+		<div class="info-box d-flex align-content-center">
+
+				<span class="date hover-show">12-09</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					4万+</span>
+
+			</div>
+		](https://blog.csdn.net/zd0303/article/details/7058457 "MATLAB中注释一段程序")
+
+			[
+				<span class="desc oneline">在MATLAB中，可以注释一段程序。
+使用“%{”和“%}”。
+例如
+%{
+。。。
+%}
+即可。
+经典方法是用 if 0，但缺点是不够直观，注释掉的内容仍然保持代码的颜色。现在可以用
+...</span>
+			](https://blog.csdn.net/zd0303/article/details/7058457 "MATLAB中注释一段程序")
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											[来自：	<span class="blog_title"> 知识小屋</span>](https://blog.csdn.net/zd0303)
+												</span>
+
+	</div>
+	</div>
+
+                <div class="recommend-item-box type_hot_word">
+                                <div class="content clearfix" style="width: 852px;">
+                    <div class="word float-left">
+                                                            <span>
+                        [
+                        设计制作学习                    ](https://edu.csdn.net/combos/o363_l0_t )</span>
+                                                                                <span>
+                        [
+                        机器学习教程                    ](https://edu.csdn.net/courses/o5329_s5330_k )</span>
+                                                                                <span>
+                        [
+                        Objective-C培训                    ](https://edu.csdn.net/courses/o280_s351_k )</span>
+                                                                                <span>
+                        [
+                        交互设计视频教程                    ](https://edu.csdn.net/combos/o7115_s388_l0_t )</span>
+                                                                                <span>
+                        [
+                        颜色模型                    ](https://edu.csdn.net/course/play/5599/104252 )</span>
+                                                            </div>
+                </div>
+                                                <div class="content clearfix" style="width: 852px;">
+                    <div class="float-left">
+                                        <span>
+                        [
+                        mysql关联查询两次本表](https://www.csdn.net/gather_24/MtTaEg3sMDM5MS1ibG9n.html)
+                    </span>
+                                        <span>
+                        [
+                        native底部 react](https://www.csdn.net/gather_10/MtjaIg3sMTUzMy1kb3dubG9hZAO0O0OO0O0O.html)
+                    </span>
+                                        <span>
+                        [
+                        extjs glyph 图标](https://www.csdn.net/gather_1b/Ntzagg1sOTU3LWRvd25sb2Fk.html)
+                    </span>
+                                        <span>
+                        [
+                        java 的学习方法](https://www.csdn.net/gather_4a/Ntjacg2sODctZWR1.html)
+                    </span>
+                                        <span>
+                        [
+                        java高级班](https://www.csdn.net/gather_4a/NtzaEg3sODUtZWR1.html)
+                    </span>
+                                        </div>
+                </div>
+                                </div>
+                            <div class="recommend-loading-box">
+                ![](https://csdnimg.cn/release/phoenix/images/feedLoading.gif)
+            </div>
+            <div class="recommend-end-box">
+
+没有更多推荐了，[返回首页](https://blog.csdn.net/)
+
+            </div>
+        </div>
+    </main>
