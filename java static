@@ -1,5 +1,4 @@
-<article class="baidu_pl">
-    <div id="article_content" class="article_content clearfix csdn-tracking-statistics" data-pid="blog" data-mod="popu_307" data-dsm="post">
+<div id="article_content" class="article_content clearfix csdn-tracking-statistics" data-pid="blog" data-mod="popu_307" data-dsm="post">
             <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/ck_htmledit_views-f57960eb32.css">
                               <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/ck_htmledit_views-f57960eb32.css">
           <div class="htmledit_views" id="content_views">
@@ -296,4 +295,3 @@ static是java中非常重要的一个关键字，而且它的用法也很丰富�
 4.  静态导包用法，将类的方法直接导入到当前类中，从而直接使用<span style="margin:0px;padding:0px;">“方法名”</span>即可调用类方法，更加方便。
           </div>
                   </div>
-  </article>
