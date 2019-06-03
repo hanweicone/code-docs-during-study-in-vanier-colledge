@@ -1,0 +1,3124 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="canonical" href="https://blog.csdn.net/jianyuerensheng/article/details/51200274"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="referrer" content="always">
+    <meta http-equiv="Cache-Control" content="no-siteapp" /><link rel="alternate" media="handheld" href="#" />
+    <meta name="shenma-site-verification" content="5a59773ab8077d4a62bf469ab966a63b_1497598848">
+        <meta name="csdn-baidu-search"  content='{"autorun":true,"install":true,"keyword":"【数据结构】链表的原理及java实现 - 简约人生的博客"}'>
+    
+    <link href="https://csdnimg.cn/public/favicon.ico" rel="SHORTCUT ICON">
+    <title>【数据结构】链表的原理及java实现 - 简约人生的博客 - CSDN博客</title>
+
+        
+                    <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/detail-7fc618a1d6.min.css">
+            
+            <script type="application/ld+json">{"@context":"https:\/\/ziyuan.baidu.com\/contexts\/cambrian.jsonld","@id":"https:\/\/blog.csdn.net\/jianyuerensheng\/article\/details\/51200274","appid":"1563894916825412","title":"\u3010\u6570\u636e\u7ed3\u6784\u3011\u94fe\u8868\u7684\u539f\u7406\u53cajava\u5b9e\u73b0 - \u7b80\u7ea6\u4eba\u751f\u7684\u535a\u5ba2","images":["https:\/\/img-blog.csdn.net\/20160420141138723","https:\/\/img-blog.csdn.net\/20160420134010570","https:\/\/img-blog.csdn.net\/20160420134000174"],"pubDate":"2019-06-04T04:07:35"}</script>
+        
+            <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/themes/skin3-template/skin3-template-9b39979775.min.css">
+        <script type="text/javascript">
+        var username = "jianyuerensheng";
+        var blog_address = "https://blog.csdn.net/jianyuerensheng";
+        var static_host = "https://csdnimg.cn/release/phoenix/";
+        var currentUserName = "weixin_44094314";
+        var isShowAds = true;
+        var isOwner = false;
+        var loginUrl = "http://passport.csdn.net/account/login?from=https://blog.csdn.net/jianyuerensheng/article/details/51200274"
+        var blogUrl = "https://blog.csdn.net/";
+
+        var curSkin = "skin3-template";
+        // 第四范式所需数据
+        var articleTitles = "【数据结构】链表的原理及java实现 - 简约人生的博客";
+        
+        var nickName = "jianyuerensheng";
+        var isCorporate = false;
+        var subDomainBlogUrl = "https://blog.csdn.net/"
+        var digg_base_url = "https://blog.csdn.net/jianyuerensheng/phoenix/comment";
+        var articleDetailUrl = "https://blog.csdn.net/jianyuerensheng/article/details/51200274";
+    </script>
+    <script src="https://csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="https://csdnimg.cn/rabbit/exposure-click/main-1.0.6.js"></script>
+    <script src="//g.csdnimg.cn/??fixed-sidebar/1.1.3/fixed-sidebar.js,track/1.2.6/track.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://csdnimg.cn/public/sandalstrap/1.4/css/sandalstrap.min.css">
+    <style>
+        .MathJax, .MathJax_Message, .MathJax_Preview{
+            display: none
+        }
+    </style>
+</head>
+<body class="nodata " > 
+    <link rel="stylesheet" href="https://csdnimg.cn/public/common/toolbar/content_toolbar_css/content_toolbar.css">
+    <script id="toolbar-tpl-scriptId" src="https://csdnimg.cn/public/common/toolbar/js/content_toolbar.js" type="text/javascript" domain="https://blog.csdn.net/"></script>
+<div id="kp_box_476" data-pid="476" data-track-view='{"mod":"kp_popu_476-923","con":",,"}' data-track-click='{"mod":"kp_popu_476-923","con":",,"}'><script src="//csdnimg.cn/public/common/indexSuperise/1.0.7/indexSuperise.js?20190508180304"></script>
+<script>
+window.csdn.indexSuperise({
+zIndex:11000,
+      smallMoveImg: '//img-ads.csdn.net/2019/201905051104467314.png',
+      bigMoveImg: '//img-ads.csdn.net/2019/201905051104363598.png',
+     link:'//edu.csdn.net/topic/ai30?utm_source=blogpopup',
+boxStyle:140,
+trackSuperId:476,
+smallMove:'notMove',  
+trackSId:923
+    });
+</script></div><link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/blog_code-c3a0c33d5c.css">
+<link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/vendor/pagination/paging.css">
+<script type="text/javascript">
+	var NEWS_FEED = function(){}
+</script>
+
+<link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/chart-3456820cac.css" />
+<div class="container clearfix" id="mainBox">
+			<div class="recommend-right">
+  <ul class="recommend-fixed-box">
+    
+  </ul>
+</div>	    <main>
+        <div class="blog-content-box">
+  <div class="article-header-box">
+    <div class="article-header">
+      <div class="article-title-box">
+        <span class="article-type type-1 float-left">原</span>        <h1 class="title-article">【数据结构】链表的原理及java实现</h1>
+      </div>
+      <div class="article-info-box">
+        <div class="article-bar-top">
+                                                  <span class="time">2016年04月20日 13:57:30</span>
+          <a class="follow-nickName" href="https://me.csdn.net/jianyuerensheng" target="_blank">jianyuerensheng</a>
+          <span class="read-count">阅读数：61054</span>
+          
+                          <span class="tags-box artic-tag-box">
+                <span class="label">标签：</span>
+                                  <a data-track-click='{"mod":"popu_626","con":"链表"}' data-track-view='{"mod":"popu_626","con":"链表"}' class="tag-link" href="https://so.csdn.net/so/search/s.do?q=链表&t=blog" target="_blank">链表                                    <a data-track-click='{"mod":"popu_626","con":"数据结构"}' data-track-view='{"mod":"popu_626","con":"数据结构"}' class="tag-link" href="https://so.csdn.net/so/search/s.do?q=数据结构&t=blog" target="_blank">数据结构                                    <a data-track-click='{"mod":"popu_626","con":"java"}' data-track-view='{"mod":"popu_626","con":"java"}' class="tag-link" href="https://so.csdn.net/so/search/s.do?q=java&t=blog" target="_blank">java                                  </a>
+              </span>
+                                      <div class="tags-box space">
+                <span class="label">个人分类：</span>
+                                  <a class="tag-link" href="https://blog.csdn.net/jianyuerensheng/article/category/6192034" target="_blank">数据结构与java集合框架                                  </a>
+              </div>
+                                          </div>
+        <div class="operating">
+                  </div>
+      </div>
+    </div>
+  </div>
+  <article class="baidu_pl">
+    <div id="article_content" class="article_content clearfix csdn-tracking-statistics" data-pid="blog" data-mod=popu_307 data-dsm="post">
+              <div class="article-copyright">
+          
+          版权声明：本文为博主原创文章，未经博主允许不得转载。          https://blog.csdn.net/jianyuerensheng/article/details/51200274        </div>
+            <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/ck_htmledit_views-f57960eb32.css" />
+                              <div id="content_views" class="markdown_views prism-atom-one-dark">
+            <!-- flowchart 箭头图标 勿删 -->
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+              <path stroke-linecap="round" d="M5,0 0,2.5 5,5z" id="raphael-marker-block" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
+            </svg>
+            <h2 id="一单向链表基本介绍">一：单向链表基本介绍</h2>
+
+<p>链表是一种数据结构，和数组同级。比如，Java中我们使用的ArrayList，其实现原理是数组。而LinkedList的实现原理就是链表了。链表在进行循环遍历时效率不高，但是插入和删除时优势明显。下面对单向链表做一个介绍。</p>
+
+<p>单向链表是一种线性表，实际上是由节点（Node）组成的，一个链表拥有不定数量的节点。其数据在内存中存储是不连续的，它存储的数据分散在内存中，每个结点只能也只有它能知道下一个结点的存储位置。由N各节点（Node）组成单向链表，每一个Node记录本Node的数据及下一个Node。向外暴露的只有一个头节点（Head），我们对链表的所有操作，都是直接或者间接地通过其头节点来进行的。 <br>
+<img src="https://img-blog.csdn.net/20160420141138723" alt="这里写图片描述" title=""> <br>
+上图中最左边的节点即为头结点（Head），但是添加节点的顺序是从右向左的，添加的新节点会被作为新节点。最先添加的节点对下一节点的引用可以为空。引用是引用下一个节点而非下一个节点的对象。因为有着不断的引用，所以头节点就可以操作所有节点了。 <br>
+ 下图描述了单向链表存储情况。存储是分散的，每一个节点只要记录下一节点，就把所有数据串了起来，形成了一个单向链表。 <br>
+<img src="https://img-blog.csdn.net/20160420134010570" alt="这里写图片描述" title=""> <br>
+节点（Node）是由一个需要储存的对象及对下一个节点的引用组成的。也就是说，节点拥有两个成员：储存的对象、对下一个节点的引用。下面图是具体的说明：</p>
+
+<p><img src="https://img-blog.csdn.net/20160420134000174" alt="这里写图片描述" title=""></p>
+
+
+
+<h2 id="二单项链表的实现">二、单项链表的实现</h2>
+
+
+
+<pre class="prettyprint"><code class=" hljs java"><span class="hljs-keyword">package</span> com.zjn.LinkAndQueue;
+
+<span class="hljs-javadoc">/**
+ * 自定义链表设计
+ * 
+ *<span class="hljs-javadoctag"> @author</span> zjn
+ *
+ */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyLink</span> {</span>
+    Node head = <span class="hljs-keyword">null</span>; <span class="hljs-comment">// 头节点</span>
+
+    <span class="hljs-javadoc">/**
+     * 链表中的节点，data代表节点的值，next是指向下一个节点的引用
+     * 
+     *<span class="hljs-javadoctag"> @author</span> zjn
+     *
+     */</span>
+    class Node {
+        Node next = <span class="hljs-keyword">null</span>;<span class="hljs-comment">// 节点的引用，指向下一个节点</span>
+        <span class="hljs-keyword">int</span> data;<span class="hljs-comment">// 节点的对象，即内容</span>
+
+        <span class="hljs-keyword">public</span> <span class="hljs-title">Node</span>(<span class="hljs-keyword">int</span> data) {
+            <span class="hljs-keyword">this</span>.data = data;
+        }
+    }
+
+    <span class="hljs-javadoc">/**
+     * 向链表中插入数据
+     * 
+     *<span class="hljs-javadoctag"> @param</span> d
+     */</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addNode</span>(<span class="hljs-keyword">int</span> d) {
+        Node newNode = <span class="hljs-keyword">new</span> Node(d);<span class="hljs-comment">// 实例化一个节点</span>
+        <span class="hljs-keyword">if</span> (head == <span class="hljs-keyword">null</span>) {
+            head = newNode;
+            <span class="hljs-keyword">return</span>;
+        }
+        Node tmp = head;
+        <span class="hljs-keyword">while</span> (tmp.next != <span class="hljs-keyword">null</span>) {
+            tmp = tmp.next;
+        }
+        tmp.next = newNode;
+    }
+
+    <span class="hljs-javadoc">/**
+     * 
+     *<span class="hljs-javadoctag"> @param</span> index:删除第index个节点
+     *<span class="hljs-javadoctag"> @return</span>
+     */</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">deleteNode</span>(<span class="hljs-keyword">int</span> index) {
+        <span class="hljs-keyword">if</span> (index &lt; <span class="hljs-number">1</span> || index &gt; length()) {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+        }
+        <span class="hljs-keyword">if</span> (index == <span class="hljs-number">1</span>) {
+            head = head.next;
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+        }
+        <span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>;
+        Node preNode = head;
+        Node curNode = preNode.next;
+        <span class="hljs-keyword">while</span> (curNode != <span class="hljs-keyword">null</span>) {
+            <span class="hljs-keyword">if</span> (i == index) {
+                preNode.next = curNode.next;
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+            }
+            preNode = curNode;
+            curNode = curNode.next;
+            i++;
+        }
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+    }
+
+    <span class="hljs-javadoc">/**
+     * 
+     *<span class="hljs-javadoctag"> @return</span> 返回节点长度
+     */</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">length</span>() {
+        <span class="hljs-keyword">int</span> length = <span class="hljs-number">0</span>;
+        Node tmp = head;
+        <span class="hljs-keyword">while</span> (tmp != <span class="hljs-keyword">null</span>) {
+            length++;
+            tmp = tmp.next;
+        }
+        <span class="hljs-keyword">return</span> length;
+    }
+
+    <span class="hljs-javadoc">/**
+     * 在不知道头指针的情况下删除指定节点
+     * 
+     *<span class="hljs-javadoctag"> @param</span> n
+     *<span class="hljs-javadoctag"> @return</span>
+     */</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">deleteNode11</span>(Node n) {
+        <span class="hljs-keyword">if</span> (n == <span class="hljs-keyword">null</span> || n.next == <span class="hljs-keyword">null</span>)
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+        <span class="hljs-keyword">int</span> tmp = n.data;
+        n.data = n.next.data;
+        n.next.data = tmp;
+        n.next = n.next.next;
+        System.out.println(<span class="hljs-string">"删除成功！"</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printList</span>() {
+        Node tmp = head;
+        <span class="hljs-keyword">while</span> (tmp != <span class="hljs-keyword">null</span>) {
+            System.out.println(tmp.data);
+            tmp = tmp.next;
+        }
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span>(String[] args) {
+        MyLink list = <span class="hljs-keyword">new</span> MyLink();
+        list.addNode(<span class="hljs-number">5</span>);
+        list.addNode(<span class="hljs-number">3</span>);
+        list.addNode(<span class="hljs-number">1</span>);
+        list.addNode(<span class="hljs-number">2</span>);
+        list.addNode(<span class="hljs-number">55</span>);
+        list.addNode(<span class="hljs-number">36</span>);
+        System.out.println(<span class="hljs-string">"linkLength:"</span> + list.length());
+        System.out.println(<span class="hljs-string">"head.data:"</span> + list.head.data);
+        list.printList();
+        list.deleteNode(<span class="hljs-number">4</span>);
+        System.out.println(<span class="hljs-string">"After deleteNode(4):"</span>);
+        list.printList();
+    }
+}
+</code></pre>
+
+
+
+<h2 id="三链表相关的常用操作实现方法">三、链表相关的常用操作实现方法</h2>
+
+<p><strong>1. 链表反转</strong></p>
+
+
+
+<pre class="prettyprint"><code class=" hljs java"><span class="hljs-javadoc">/**
+     * 链表反转
+     * 
+     *<span class="hljs-javadoctag"> @param</span> head
+     *<span class="hljs-javadoctag"> @return</span>
+     */</span>
+    <span class="hljs-keyword">public</span> Node <span class="hljs-title">ReverseIteratively</span>(Node head) {
+        Node pReversedHead = head;
+        Node pNode = head;
+        Node pPrev = <span class="hljs-keyword">null</span>;
+        <span class="hljs-keyword">while</span> (pNode != <span class="hljs-keyword">null</span>) {
+            Node pNext = pNode.next;
+            <span class="hljs-keyword">if</span> (pNext == <span class="hljs-keyword">null</span>) {
+                pReversedHead = pNode;
+            }
+            pNode.next = pPrev;
+            pPrev = pNode;
+            pNode = pNext;
+        }
+        <span class="hljs-keyword">this</span>.head = pReversedHead;
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.head;
+    }</code></pre>
+
+<p><strong>2. 查找单链表的中间节点</strong></p>
+
+<p>采用快慢指针的方式查找单链表的中间节点，快指针一次走两步，慢指针一次走一步，当快指针走完时，慢指针刚好到达中间节点。</p>
+
+
+
+<pre class="prettyprint"><code class=" hljs java"><span class="hljs-javadoc">/**
+     * 查找单链表的中间节点
+     * 
+     *<span class="hljs-javadoctag"> @param</span> head
+     *<span class="hljs-javadoctag"> @return</span>
+     */</span>
+    <span class="hljs-keyword">public</span> Node <span class="hljs-title">SearchMid</span>(Node head) {
+        Node p = <span class="hljs-keyword">this</span>.head, q = <span class="hljs-keyword">this</span>.head;
+        <span class="hljs-keyword">while</span> (p != <span class="hljs-keyword">null</span> &amp;&amp; p.next != <span class="hljs-keyword">null</span> &amp;&amp; p.next.next != <span class="hljs-keyword">null</span>) {
+            p = p.next.next;
+            q = q.next;
+        }
+        System.out.println(<span class="hljs-string">"Mid:"</span> + q.data);
+        <span class="hljs-keyword">return</span> q;
+    }</code></pre>
+
+<p><strong>3.  查找倒数第k个元素</strong></p>
+
+<p>采用两个指针P1,P2，P1先前移K步，然后P1、P2同时移动，当p1移动到尾部时，P2所指位置的元素即倒数第k个元素 。</p>
+
+
+
+<pre class="prettyprint"><code class=" hljs java"><span class="hljs-javadoc">/**
+     * 查找倒数 第k个元素
+     * 
+     *<span class="hljs-javadoctag"> @param</span> head
+     *<span class="hljs-javadoctag"> @param</span> k
+     *<span class="hljs-javadoctag"> @return</span>
+     */</span>
+    <span class="hljs-keyword">public</span> Node <span class="hljs-title">findElem</span>(Node head, <span class="hljs-keyword">int</span> k) {
+        <span class="hljs-keyword">if</span> (k &lt; <span class="hljs-number">1</span> || k &gt; <span class="hljs-keyword">this</span>.length()) {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
+        }
+        Node p1 = head;
+        Node p2 = head;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; k; i++)<span class="hljs-comment">// 前移k步</span>
+            p1 = p1.next;
+        <span class="hljs-keyword">while</span> (p1 != <span class="hljs-keyword">null</span>) {
+            p1 = p1.next;
+            p2 = p2.next;
+        }
+        <span class="hljs-keyword">return</span> p2;
+    }</code></pre>
+
+<p><strong>4. 对链表进行排序</strong></p>
+
+
+
+<pre class="prettyprint"><code class=" hljs java"><span class="hljs-javadoc">/**
+     * 排序
+     * 
+     *<span class="hljs-javadoctag"> @return</span>
+     */</span>
+    <span class="hljs-keyword">public</span> Node <span class="hljs-title">orderList</span>() {
+        Node nextNode = <span class="hljs-keyword">null</span>;
+        <span class="hljs-keyword">int</span> tmp = <span class="hljs-number">0</span>;
+        Node curNode = head;
+        <span class="hljs-keyword">while</span> (curNode.next != <span class="hljs-keyword">null</span>) {
+            nextNode = curNode.next;
+            <span class="hljs-keyword">while</span> (nextNode != <span class="hljs-keyword">null</span>) {
+                <span class="hljs-keyword">if</span> (curNode.data &gt; nextNode.data) {
+                    tmp = curNode.data;
+                    curNode.data = nextNode.data;
+                    nextNode.data = tmp;
+                }
+                nextNode = nextNode.next;
+            }
+            curNode = curNode.next;
+        }
+        <span class="hljs-keyword">return</span> head;
+    }</code></pre>
+
+<p><strong>5. 删除链表中的重复节点</strong></p>
+
+
+
+<pre class="prettyprint"><code class=" hljs java"><span class="hljs-javadoc">/**
+     * 删除重复节点
+     */</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">deleteDuplecate</span>(Node head) {
+        Node p = head;
+        <span class="hljs-keyword">while</span> (p != <span class="hljs-keyword">null</span>) {
+            Node q = p;
+            <span class="hljs-keyword">while</span> (q.next != <span class="hljs-keyword">null</span>) {
+                <span class="hljs-keyword">if</span> (p.data == q.next.data) {
+                    q.next = q.next.next;
+                } <span class="hljs-keyword">else</span>
+                    q = q.next;
+            }
+            p = p.next;
+        }
+
+    }</code></pre>
+
+<p><strong>6. 从尾到头输出单链表，采用递归方式实现</strong></p>
+
+
+
+<pre class="prettyprint"><code class=" hljs java"><span class="hljs-javadoc">/**
+     * 从尾到头输出单链表，采用递归方式实现
+     * 
+     *<span class="hljs-javadoctag"> @param</span> pListHead
+     */</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printListReversely</span>(Node pListHead) {
+        <span class="hljs-keyword">if</span> (pListHead != <span class="hljs-keyword">null</span>) {
+            printListReversely(pListHead.next);
+            System.out.println(<span class="hljs-string">"printListReversely:"</span> + pListHead.data);
+        }
+    }</code></pre>
+
+<p><strong>7. 判断链表是否有环，有环情况下找出环的入口节点</strong></p>
+
+
+
+<pre class="prettyprint"><code class=" hljs java"><span class="hljs-javadoc">/**
+     * 判断链表是否有环，单向链表有环时，尾节点相同
+     * 
+     *<span class="hljs-javadoctag"> @param</span> head
+     *<span class="hljs-javadoctag"> @return</span>
+     */</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">IsLoop</span>(Node head) {
+        Node fast = head, slow = head;
+        <span class="hljs-keyword">if</span> (fast == <span class="hljs-keyword">null</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+        }
+        <span class="hljs-keyword">while</span> (fast != <span class="hljs-keyword">null</span> &amp;&amp; fast.next != <span class="hljs-keyword">null</span>) {
+            fast = fast.next.next;
+            slow = slow.next;
+            <span class="hljs-keyword">if</span> (fast == slow) {
+                System.out.println(<span class="hljs-string">"该链表有环"</span>);
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+            }
+        }
+        <span class="hljs-keyword">return</span> !(fast == <span class="hljs-keyword">null</span> || fast.next == <span class="hljs-keyword">null</span>);
+    }
+
+    <span class="hljs-javadoc">/**
+     * 找出链表环的入口
+     * 
+     *<span class="hljs-javadoctag"> @param</span> head
+     *<span class="hljs-javadoctag"> @return</span>
+     */</span>
+    <span class="hljs-keyword">public</span> Node <span class="hljs-title">FindLoopPort</span>(Node head) {
+        Node fast = head, slow = head;
+        <span class="hljs-keyword">while</span> (fast != <span class="hljs-keyword">null</span> &amp;&amp; fast.next != <span class="hljs-keyword">null</span>) {
+            slow = slow.next;
+            fast = fast.next.next;
+            <span class="hljs-keyword">if</span> (slow == fast)
+                <span class="hljs-keyword">break</span>;
+        }
+        <span class="hljs-keyword">if</span> (fast == <span class="hljs-keyword">null</span> || fast.next == <span class="hljs-keyword">null</span>)
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
+        slow = head;
+        <span class="hljs-keyword">while</span> (slow != fast) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+        <span class="hljs-keyword">return</span> slow;
+    }
+</code></pre>          </div>
+          <link href="https://csdnimg.cn/release/phoenix/mdeditor/markdown_views-258a4616f7.css" rel="stylesheet">
+                  </div>
+  </article>
+</div>
+
+<div class="hide-article-box hide-article-pos text-center">
+      <a class="" id="btn-readmore" data-track-view='{"mod":"popu_376","con":",https://blog.csdn.net/jianyuerensheng/article/details/51200274,"}' data-track-click='{"mod":"popu_376","con":",https://blog.csdn.net/jianyuerensheng/article/details/51200274,"}'>
+    展开阅读全文
+    <svg class="icon chevrondown" aria-hidden="true">
+        <use xlink:href="#csdnc-chevrondown"></use>
+      </svg>
+    </a>
+    </div>
+<script>
+  $(".MathJax").remove();
+  if ($('div.markdown_views pre.prettyprint code.hljs').length > 0) {
+    $('div.markdown_views')[0].className = 'markdown_views';
+  }
+</script>        <div id="dmp_ad_58"><div id="kp_box_58" data-pid="58" data-track-view='{"mod":"kp_popu_58-386","con":",,"}' data-track-click='{"mod":"kp_popu_58-386","con":",,"}'><div style="width:100%;background:#fff;">
+<script type="text/javascript" src="//rabc1.iteye.com/production/resource/web/6xwm4l.js?lg=ydmpioh"></script>
+</div></div></div>        <a id="commentBox"></a>
+<div class="comment-box">
+	
+	<div class="comment-edit-box d-flex">
+		<a id="commentsedit"></a>
+		<div class="user-img">
+			<a href="//me.csdn.net/weixin_44094314" target="_blank">
+				<img class="" src="https://avatar.csdn.net/6/F/7/3_weixin_44094314.jpg">
+			</a>
+		</div>
+		<form id="commentform">
+			<input type="hidden" id="comment_replyId">
+			<textarea class="comment-content" name="comment_content" id="comment_content" placeholder="想对作者说点什么"></textarea>
+			<div class="opt-box"> <!-- d-flex -->
+				<div id="ubbtools" class="add_code">
+					<a href="#insertcode" code="code" target="_self"><i class="icon iconfont icon-daima"></i></a>
+				</div>
+				<input type="hidden" id="comment_replyId" name="comment_replyId">
+				<input type="hidden" id="article_id" name="article_id" value="51200274">
+				<input type="hidden" id="comment_userId" name="comment_userId" value="">
+				<input type="hidden" id="commentId" name="commentId" value="">
+				<div style="display: none;" class="csdn-tracking-statistics tracking-click" data-mod="popu_384"><a href="#" target="_blank" class="comment_area_btn">发表评论</a></div>
+				<div class="dropdown" id="myDrap">
+					<a class="dropdown-face d-flex align-items-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+					<div class="txt-selected text-truncate">添加代码片</div>
+					<svg class="icon d-block" aria-hidden="true">
+						<use xlink:href="#csdnc-triangledown"></use>
+					</svg>
+					</a>
+					<ul class="dropdown-menu" id="commentCode" aria-labelledby="drop4">
+						<li><a data-code="html">HTML/XML</a></li>
+						<li><a data-code="objc">objective-c</a></li>
+						<li><a data-code="ruby">Ruby</a></li>
+						<li><a data-code="php">PHP</a></li>
+						<li><a data-code="csharp">C</a></li>
+						<li><a data-code="cpp">C++</a></li>
+						<li><a data-code="javascript">JavaScript</a></li>
+						<li><a data-code="python">Python</a></li>
+						<li><a data-code="java">Java</a></li>
+						<li><a data-code="css">CSS</a></li>
+						<li><a data-code="sql">SQL</a></li>
+						<li><a data-code="plain">其它</a></li>
+					</ul>
+				</div>  
+				<div class="right-box">
+					<span id="tip_comment" class="tip">还能输入<em>1000</em>个字符</span>
+					<input type="submit" class="btn btn-sm btn-red btn-comment" value="发表评论">
+				</div>
+			</div>
+		</form>
+	</div>
+
+		<div class="comment-list-container">
+		<a id="comments"></a>
+		<div class="comment-list-box">
+		</div>
+		<div id="commentPage" class="pagination-box d-none"></div>
+		<div class="opt-box text-center">
+			<div class="btn btn-sm btn-link-blue" id="btnMoreComment"></div>
+		</div>
+	</div>
+</div>
+        <div class="recommend-box">
+                            <div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/jianyuerensheng/article/details/51204598,BlogCommendFromThirdServiceAll_14"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/jianyuerensheng/article/details/51204598" target="_blank" title="【数据结构】LinkedList原理及实现学习总结">
+		<h4 class="text-truncate oneline">
+				【<em>数据结构</em>】LinkedList<em>原理</em>及<em>实现</em>学习总结		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">04-20</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/jianyuerensheng/article/details/51204598" target="_blank" title="【数据结构】LinkedList原理及实现学习总结">
+				<span class="desc oneline">LinkedList和ArrayList一样，都实现了List接口，但其内部的数据结构有本质的不同。LinkedList是基于链表实现的（通过名字也能区分开来），所以它的插入和删除操作比ArrayLi...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/jianyuerensheng">来自：	<span class="blog_title"> 简约人生的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/a19881029/article/details/22695289,BlogCommendFromThirdServiceAll_0"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/a19881029/article/details/22695289" target="_blank" title="Java单链表、双端链表、有序链表实现">
+		<h4 class="text-truncate oneline">
+				<em>Java</em>单<em>链表</em>、双端<em>链表</em>、有序<em>链表</em><em>实现</em>		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">03-31</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					8万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/a19881029/article/details/22695289" target="_blank" title="Java单链表、双端链表、有序链表实现">
+				<span class="desc oneline">单链表：insertFirst：在表头插入一个新的链接点，时间复杂度为O(1)deleteFirst：在表头插入一个新的链接点，时间复杂度为O(1)有了这两个方法，就可以用单链表来实现一个栈了，见ht...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/a19881029">来自：	<span class="blog_title"> 怀揣梦想，努力前行</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/qq_29631809/article/details/72599708,BlogCommendFromThirdServiceAll_1"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/qq_29631809/article/details/72599708" target="_blank" title="JAVA常用数据结构及原理分析(面试总结)">
+		<h4 class="text-truncate oneline">
+				<em>JAVA</em>常用<em>数据结构</em>及<em>原理</em>分析(面试总结)		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">05-21</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					6万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/qq_29631809/article/details/72599708" target="_blank" title="JAVA常用数据结构及原理分析(面试总结)">
+				<span class="desc oneline">最近准备面试，因此整理一份Java中常用的数据结构资料，方便面试；java.util包中三个重要的接口及特点：List（列表）、Set（保证集合中元素唯一）、Map（维护多个key-value键值对，...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/qq_29631809">来自：	<span class="blog_title"> 一叶扁舟的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/Enl0ve/article/details/80890225,BlogCommendFromThirdServiceAll_2"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/Enl0ve/article/details/80890225" target="_blank" title="数据结构---链表（java实现）">
+		<h4 class="text-truncate oneline">
+				<em>数据结构</em>---<em>链表</em>（<em>java</em><em>实现</em>）		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">07-02</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1971</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/Enl0ve/article/details/80890225" target="_blank" title="数据结构---链表（java实现）">
+				<span class="desc oneline">近来越来越感觉数据结构和算法的重要性，于是决定花时间整理一下数据结构，一来希望自己能够更加深刻地理解数据结构，二来也希望和大家认真分享一下自己的理解，希望能够一起学习，一起进步，开心每一天。今天先复习...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/Enl0ve">来自：	<span class="blog_title"> Enl0ve的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	<div class="recommend-item-box recommend-ad-box"><div id="kp_box_59" data-pid="59" data-track-view='{"mod":"kp_popu_59-78","con":",,"}' data-track-click='{"mod":"kp_popu_59-78","con":",,"}'><script type="text/javascript">
+    (function() {
+        var s = "_" + Math.random().toString(36).slice(2);
+        document.write('<div style="" id="' + s + '"></div>');
+        (window.slotbydup = window.slotbydup || []).push({
+            id: "u3491668",
+            container:  s
+        });
+    })();
+</script>
+<!-- 多条广告如下脚本只需引入一次 -->
+<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js" async="async" defer="defer" ></script></div></div>
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/weixin_39471249/article/details/79729065,BlogCommendFromThirdServiceAll_3"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/weixin_39471249/article/details/79729065" target="_blank" title="java实现单链表(最清晰)">
+		<h4 class="text-truncate oneline">
+				<em>java</em><em>实现</em>单<em>链表</em>(最清晰)		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">03-28</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					6994</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/weixin_39471249/article/details/79729065" target="_blank" title="java实现单链表(最清晰)">
+				<span class="desc oneline">本文主要内容：1、单链表理解的最痛点2、单链表编写的最痛点3、单链表实现代码1、单链表理解的最痛点所谓的临时节点，又有人称为可以移动的节点。其实这些名字都不形象也不利于让别人理解。我们以在链表中添加元...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/weixin_39471249">来自：	<span class="blog_title"> 长风破浪会有时</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/wangkr111/article/details/7884322,BlogCommendFromThirdServiceAll_4"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/wangkr111/article/details/7884322" target="_blank" title="Java实现链表结构">
+		<h4 class="text-truncate oneline">
+				<em>Java</em><em>实现</em><em>链表</em>结构		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">08-19</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					4万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/wangkr111/article/details/7884322" target="_blank" title="Java实现链表结构">
+				<span class="desc oneline">Java实现链表结构这里主要记录了一下学习用Java实现链表的方法。假设你有一点Java基础，了解接口、内部类的内容，同时也学过数据结构中链表的内容，对设计模式中的工厂方法和迭代方法知道一些，（因为这...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/wangkr111">来自：	<span class="blog_title"> wangkr的专栏</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/zjsxxzh/article/details/75102058,BlogCommendFromBaidu_5"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/zjsxxzh/article/details/75102058" target="_blank" title="链表——Java实现">
+		<h4 class="text-truncate oneline">
+				<em>链表</em>——<em>Java</em><em>实现</em>		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">07-14</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					3861</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/zjsxxzh/article/details/75102058" target="_blank" title="链表——Java实现">
+				<span class="desc oneline">链表的基本结构publicclassLNode{publicStringdata;//节点数据LNodenext;//下一个节点}这是最基本的链表结构，还有双向链表和循环链表会在文章最后提到。建立单链...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/zjsxxzh">来自：	<span class="blog_title"> 小X的书屋</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/weixin_38481963/article/details/83823712,BlogCommendFromBaidu_6"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/weixin_38481963/article/details/83823712" target="_blank" title="Java中链表的实现及其原理">
+		<h4 class="text-truncate oneline">
+				<em>Java</em>中<em>链表</em>的<em>实现</em>及其<em>原理</em>		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">11-07</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					437</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/weixin_38481963/article/details/83823712" target="_blank" title="Java中链表的实现及其原理">
+				<span class="desc oneline">链表有很多种类，这里总结双向链表publicclassSingleList&amp;amp;amp;lt;E&amp;amp;amp;gt;{		privateNode&amp;amp;amp;lt;E&amp;amp;amp;gt...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/weixin_38481963">来自：	<span class="blog_title"> Medlen</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/qq_42512179/article/details/82458370,BlogCommendFromBaidu_7"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/qq_42512179/article/details/82458370" target="_blank" title="Java中自定义单链表">
+		<h4 class="text-truncate oneline">
+				<em>Java</em>中自定义单<em>链表</em>		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">09-06</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					543</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/qq_42512179/article/details/82458370" target="_blank" title="Java中自定义单链表">
+				<span class="desc oneline">首先我们先了解一下什么是链表： 链表是一种数据结构，它是一种物理存储单元上非连续，非顺序的存储单元，只是在逻辑上是连续的，链表逻辑形态和铁链相识，链表是由一系列结点组成，结点在运行时动态生成，每个结点...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/qq_42512179">来自：	<span class="blog_title"> qq_42512179的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	<div class="recommend-item-box recommend-ad-box"><div id="kp_box_60" data-pid="60" data-track-view='{"mod":"kp_popu_60-894","con":"1975376529521808736,https://edu.csdn.net/course/detail/4899,"}' data-track-click='{"mod":"kp_popu_60-894","con":"1975376529521808736,https://edu.csdn.net/course/detail/4899,"}'><link rel="stylesheet" href="https://www.csdn.net/company/css/edu-recommend-1.0.1.css">
+  <div class="edu-ad-list">
+    <div class="recommend-item-box type_blog clearfix">
+      <div class="content">
+        <a href="https://edu.csdn.net/course/detail/4899?utm_source=baidutj" target="_blank" title="从入门开始学<em>JAVA</em>第二章<em>JAVA</em>语言基础">
+          <h4 class="text-truncate oneline">从入门开始学<em>JAVA</em>第二章<em>JAVA</em>语言基础</h4>
+        </a>
+        <p class="content">
+          <a href="https://edu.csdn.net/course/detail/4899?utm_source=baidutj" target="_blank" title="从入门开始学<em>JAVA</em>第二章<em>JAVA</em>语言基础">
+            <span class="desc oneline">学习JAVA之路的第二章，主要讲解java开发工具eclipse以及Java的一个语言基础以及二进制的一个讲解</span>
+          </a>
+          <span class="blog_title_box oneline ">
+            <span class="type-show type-show-edu type-show-after">学院</span>
+            讲师： <span class="blog_title"> 朱祚华</span>
+          </span>
+        </p>
+      </div>
+    </div>
+  </div></div></div>
+	
+<div class="recommend-item-box  recommend-other-item-box"  data-track-click='{"mod":"popu_387","con":",https://bbs.csdn.net/topics/390118929,BlogCommendFromBaidu_8"}'>
+	<a href="https://bbs.csdn.net/topics/390118929" target="_blank">
+		<h4 class="text-truncate oneline">
+				<em>java</em>关于<em>链表</em>的输出		</h4>
+		<div class="info-box d-flex align-content-center">
+				<span class="date">07-03</span>
+		</div>
+		<p class="content oneline">
+			<span class="desc oneline">我这是怎么了？输出无限循环。。。由于我是记事本写的 不好改错啊</span>
+							<span class="type-show type-show-bbs">论坛</span>
+					</p>
+	</a>
+
+</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/wyqwilliam/article/details/82719365,BlogCommendFromBaidu_9"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/wyqwilliam/article/details/82719365" target="_blank" title="Java中双链表的查找、插入、删除等">
+		<h4 class="text-truncate oneline">
+				<em>Java</em>中双<em>链表</em>的查找、插入、删除等		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">09-16</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1257</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/wyqwilliam/article/details/82719365" target="_blank" title="Java中双链表的查找、插入、删除等">
+				<span class="desc oneline">双向链表结构和单向链表的区别：最后一个结点的链接地址上，单向链表是null,而双向链表是表头的链接地址。即双向链表的head和last互相指向示意图 表头为空    head之前的节点是last=50...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/wyqwilliam">来自：	<span class="blog_title"> wyqwilliam的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+			<div class="recommend-item-box blog-expert-recommend-box">
+			<div class="d-flex">
+				<div class="blog-expert-recommend">
+					<div class="blog-expert">
+						<div class="blog-expert-flexbox"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/jianyuerensheng/article/details/51254311,BlogCommendFromThirdServiceAll_10"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/jianyuerensheng/article/details/51254311" target="_blank" title="【排序算法】选择排序原理及Java实现">
+		<h4 class="text-truncate oneline">
+				【排序算法】选择排序<em>原理</em>及<em>Java</em><em>实现</em>		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">04-26</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/jianyuerensheng/article/details/51254311" target="_blank" title="【排序算法】选择排序原理及Java实现">
+				<span class="desc oneline">选择排序是一种简单直观的排序算法，其基本原理如下：对于给定的一组记录，经过第一轮比较后得到最小的记录，然后将该记录的位置与第一个记录的位置交换；接着对不包括第一个记录以外的其他记录进行第二次比较，得到...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/jianyuerensheng">来自：	<span class="blog_title"> 简约人生的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/tayanxunhua/article/details/11100097,BlogCommendFromThirdServiceAll_11"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/tayanxunhua/article/details/11100097" target="_blank" title="用java简单的实现单链表的基本操作">
+		<h4 class="text-truncate oneline">
+				用<em>java</em>简单的<em>实现</em>单<em>链表</em>的基本操作		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">09-04</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					9万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/tayanxunhua/article/details/11100097" target="_blank" title="用java简单的实现单链表的基本操作">
+				<span class="desc oneline">此代码仅供参考，如有疑问欢迎评论：packagecom.tyxh.link;//节点类publicclassNode{protectedNodenext;//指针域protectedintdata;/...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/tayanxunhua">来自：	<span class="blog_title"> 踏雁寻花</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/lilong117194/article/details/83759106,BlogCommendFromThirdServiceAll_12"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/lilong117194/article/details/83759106" target="_blank" title="Java链表的基本使用">
+		<h4 class="text-truncate oneline">
+				<em>Java</em><em>链表</em>的基本使用		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">11-06</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					986</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/lilong117194/article/details/83759106" target="_blank" title="Java链表的基本使用">
+				<span class="desc oneline">得到的</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/lilong117194">来自：	<span class="blog_title"> lilong117194的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	<div class="recommend-item-box recommend-ad-box"><script type="text/javascript" src="//rabc1.iteye.com/production/res/rxjg.js?pkcgstj=jm"></script></div>
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/CrazyHSF/article/details/81049609,BlogCommendFromThirdServiceAll_13"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/CrazyHSF/article/details/81049609" target="_blank" title="Java实现简单的链表-面向初学者">
+		<h4 class="text-truncate oneline">
+				<em>Java</em><em>实现</em>简单的<em>链表</em>-面向初学者		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">07-15</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					5562</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/CrazyHSF/article/details/81049609" target="_blank" title="Java实现简单的链表-面向初学者">
+				<span class="desc oneline">很久之前用C语言实现过链表，现在已经太久没用C语言。就先用JAVA实现一个简单链表好了，还是使用最原始的C语言实现的思路，想来语言变了实现方式大同小异吧。后续可能会不断实现不一样的数据结构。节点先确定...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/CrazyHSF">来自：	<span class="blog_title"> CrazyHSF的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/sofuzi/article/details/79921274,BlogCommendFromBaidu_15"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/sofuzi/article/details/79921274" target="_blank" title="Java中链表的头节点">
+		<h4 class="text-truncate oneline">
+				<em>Java</em>中<em>链表</em>的头节点		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">04-12</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2483</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/sofuzi/article/details/79921274" target="_blank" title="Java中链表的头节点">
+				<span class="desc oneline">一个链表头节点为headhead    1    2    3    4    5    6head叫做链表的头节点1所在的节点叫做链表的首节点（不知叫法是否准确）从定义上严格来说头节点head本身并...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/sofuzi">来自：	<span class="blog_title"> sofuzi的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/bitcarmanlee/article/details/52155181,BlogCommendFromBaidu_16"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/bitcarmanlee/article/details/52155181" target="_blank" title="链表常见操作java实现一：链表初始化，求链表长度">
+		<h4 class="text-truncate oneline">
+				<em>链表</em>常见操作<em>java</em><em>实现</em>一：<em>链表</em>初始化，求<em>链表</em>长度		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">08-08</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					9967</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/bitcarmanlee/article/details/52155181" target="_blank" title="链表常见操作java实现一：链表初始化，求链表长度">
+				<span class="desc oneline">1.前言链表是一种非常基础也非常重要的数据结构，在实际中使用非常广泛，也是各种面试里特别容易出现的类型。尤其在各大IT公司的校招中，不管笔试还是面试，链表几乎都是必出现的题型。因此不管从实际工作场景中...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/bitcarmanlee">来自：	<span class="blog_title"> bitcarmanlee的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box  recommend-other-item-box"  data-track-click='{"mod":"popu_387","con":",http://ask.csdn.net/questions/753760,BlogCommendFromBaidu_17"}'>
+	<a href="http://ask.csdn.net/questions/753760" target="_blank">
+		<h4 class="text-truncate oneline">
+				<em>java</em><em>链表</em>添加头节点方法没有用		</h4>
+		<div class="info-box d-flex align-content-center">
+				<span class="date">03-27</span>
+		</div>
+		<p class="content oneline">
+			<span class="desc oneline">-</span>
+							<span class="type-show type-show-ask">问答</span>
+					</p>
+	</a>
+
+</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/weixin_40921797/article/details/83933490,BlogCommendFromBaidu_18"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/weixin_40921797/article/details/83933490" target="_blank" title="java-链表详解">
+		<h4 class="text-truncate oneline">
+				<em>java</em>-<em>链表</em>详解		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">11-10</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					204</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/weixin_40921797/article/details/83933490" target="_blank" title="java-链表详解">
+				<span class="desc oneline">##java实现链表的主要操作interfaceILink{booleanadd(Objectdata);voidprintLink();Objectremove(Objectdata);Object...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/weixin_40921797">来自：	<span class="blog_title"> 坚持不懈做贡献</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	<div class="recommend-item-box recommend-ad-box"><div id="kp_box_62" data-pid="62" data-track-view='{"mod":"kp_popu_62-1062","con":",,"}' data-track-click='{"mod":"kp_popu_62-1062","con":",,"}'><iframe  src="https://kunpeng-sc.csdnimg.cn/#/preview/237?positionId=62&queryWord=" frameborder="0" width= "100%"  height= "75px" scrolling="no" ></iframe></div></div>
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/aa346359669/article/details/84550713,BlogCommendFromBaidu_19"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/aa346359669/article/details/84550713" target="_blank" title="java单链表冒泡排序">
+		<h4 class="text-truncate oneline">
+				<em>java</em>单<em>链表</em>冒泡排序		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">04-18</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					107</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/aa346359669/article/details/84550713" target="_blank" title="java单链表冒泡排序">
+				<span class="desc oneline">去面试的一家公司出的面试题，让我回来做完发过去，记录一下:arrow:节点类:[code=&amp;quot;java&amp;quot;]//节点类classNode{	publicNode(intvalue){	...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/aa346359669">来自：	<span class="blog_title"> aa346359669的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/pbrlovejava/article/details/82975746,BlogCommendFromThirdServiceAll_20"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/pbrlovejava/article/details/82975746" target="_blank" title="算法学习笔记(4)-快速排序">
+		<h4 class="text-truncate oneline">
+				算法学习笔记(4)-快速排序		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">10-09</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1086</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/pbrlovejava/article/details/82975746" target="_blank" title="算法学习笔记(4)-快速排序">
+				<span class="desc oneline">快速排序是图灵奖得主C.R.A.Hoare于1960年提出的一种划分交换排序。它采用了一种分治的策略，通常称其为分治法(Divide-and-ConquerMethod)。分治法的基本思想是：将原问题...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/pbrlovejava">来自：	<span class="blog_title"> ARong's Blog</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/jianyuerensheng/article/details/51192811,BlogCommendFromThirdServiceAll_21"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/jianyuerensheng/article/details/51192811" target="_blank" title="【数据结构】ArrayList原理及实现学习总结">
+		<h4 class="text-truncate oneline">
+				【<em>数据结构</em>】ArrayList<em>原理</em>及<em>实现</em>学习总结		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">04-19</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/jianyuerensheng/article/details/51192811" target="_blank" title="【数据结构】ArrayList原理及实现学习总结">
+				<span class="desc oneline">一、ArrayList介绍ArrayList是一种线性数据结构，它的底层是用数组实现的，相当于动态数组。与Java中的数组相比，它的容量能动态增长。类似于C语言中的动态申请内存，动态增长内存。当创建一...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/jianyuerensheng">来自：	<span class="blog_title"> 简约人生的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/qq_35580883/article/details/79061578,BlogCommendFromThirdServiceAll_22"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/qq_35580883/article/details/79061578" target="_blank" title="Java实现单向链表及其常见操作">
+		<h4 class="text-truncate oneline">
+				<em>Java</em><em>实现</em>单向<em>链表</em>及其常见操作		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">01-15</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					9589</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/qq_35580883/article/details/79061578" target="_blank" title="Java实现单向链表及其常见操作">
+				<span class="desc oneline">本文将使用Java实现链表以及链表的常用操作。一、什么是链表   链表是一种物理存储单元上非连续、非顺序的存储结构，数据元素的逻辑顺序是通过链表中的指针链接次序实现的。链表由一系列结点（链表中每一个元...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/qq_35580883">来自：	<span class="blog_title"> TimeTDIT的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/ikv1989/article/details/79270110,BlogCommendFromThirdServiceAll_23"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/ikv1989/article/details/79270110" target="_blank" title="Java 链表完整版(单向)">
+		<h4 class="text-truncate oneline">
+				<em>Java</em> <em>链表</em>完整版(单向)		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">02-06</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1181</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/ikv1989/article/details/79270110" target="_blank" title="Java 链表完整版(单向)">
+				<span class="desc oneline">范例：classLink{	classNode{		privateNodenext;//下一个节点		privateObjectdata;//数据		//构造方法		publicNode(Object...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/ikv1989">来自：	<span class="blog_title"> Java软贱攻城狮</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	<div class="recommend-item-box recommend-ad-box"><div id="kp_box_63" data-pid="63" data-track-view='{"mod":"kp_popu_63-1059","con":",,"}' data-track-click='{"mod":"kp_popu_63-1059","con":",,"}'><iframe  src="https://kunpeng-sc.csdnimg.cn/#/preview/234?positionId=63&queryWord=" frameborder="0" width= "100%"  height= "75px" scrolling="no" ></iframe></div></div>
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/jianyuerensheng/article/details/51240068,BlogCommendFromThirdServiceAll_24"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/jianyuerensheng/article/details/51240068" target="_blank" title="【数据结构】二叉树的原理及实现学习总结">
+		<h4 class="text-truncate oneline">
+				【<em>数据结构</em>】二叉树的<em>原理</em>及<em>实现</em>学习总结		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">04-25</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					9259</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/jianyuerensheng/article/details/51240068" target="_blank" title="【数据结构】二叉树的原理及实现学习总结">
+				<span class="desc oneline">二叉树概述数组、向量、链表都是一种顺序容器，它们提供了按位置访问数据的手段。而很多情况下，我们需要按数据的值来访问元素，而不是它们的位置来访问元素，二叉树在很大程度上解决了这个问题，二叉树是按值来保存...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/jianyuerensheng">来自：	<span class="blog_title"> 简约人生的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/moakun/article/details/79996966,BlogCommendFromBaidu_25"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/moakun/article/details/79996966" target="_blank" title="Java单链表反转">
+		<h4 class="text-truncate oneline">
+				<em>Java</em>单<em>链表</em>反转		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">04-18</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					3100</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/moakun/article/details/79996966" target="_blank" title="Java单链表反转">
+				<span class="desc oneline">转载自   Java单链表反转详细过程（一）单链表的结点结构:　     data域：存储数据元素信息的域称为数据域；　   next域：存储直接后继位置的域称为指针域，它是存放结点的直接后继的地址（...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/moakun">来自：	<span class="blog_title"> 茅坤宝骏氹的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/Google_huchun/article/details/52824024,BlogCommendFromBaidu_26"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/Google_huchun/article/details/52824024" target="_blank" title="Java  链表的定义与使用">
+		<h4 class="text-truncate oneline">
+				<em>Java</em>  <em>链表</em>的定义与使用		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">10-15</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					4574</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/Google_huchun/article/details/52824024" target="_blank" title="Java  链表的定义与使用">
+				<span class="desc oneline">Java实现链表主要依靠引用传递，引用可以理解为地址，链表的遍历多使用递归，这里我存在一个疑问同一个类的不同对象的的相同方法的方法内调用算不算递归.这里我写的是单向链表;packagecom.exam...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/Google_huchun">来自：	<span class="blog_title"> 移动开发者</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/qq_20597479/article/details/59492181,BlogCommendFromBaidu_27"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/qq_20597479/article/details/59492181" target="_blank" title="Java中的链表——LinkedList解析">
+		<h4 class="text-truncate oneline">
+				<em>Java</em>中的<em>链表</em>——LinkedList解析		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">03-02</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					4978</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/qq_20597479/article/details/59492181" target="_blank" title="Java中的链表——LinkedList解析">
+				<span class="desc oneline">LinkedList类结构LinkedListextendsAbstractSequentialListimplementsList,Deque,Cloneable,java.io.Serializa...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/qq_20597479">来自：	<span class="blog_title"> 亦轩丶Javer的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/engerla/article/details/78568300,BlogCommendFromBaidu_28"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/engerla/article/details/78568300" target="_blank" title="Java链表的实现">
+		<h4 class="text-truncate oneline">
+				<em>Java</em><em>链表</em>的<em>实现</em>		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">11-18</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					4102</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/engerla/article/details/78568300" target="_blank" title="Java链表的实现">
+				<span class="desc oneline">在Java中没有struct来定义结构体，我们可以封装一个类来当结构体（快捷键alt+shift+S）publicclassLinkNode{publicintdata;//数据域publicLink...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/engerla">来自：	<span class="blog_title"> 伏都哥哥的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	<div class="recommend-item-box recommend-ad-box"><div id="kp_box_64" data-pid="64" data-track-view='{"mod":"kp_popu_64-1060","con":",,"}' data-track-click='{"mod":"kp_popu_64-1060","con":",,"}'><iframe  src="https://kunpeng-sc.csdnimg.cn/#/preview/235?positionId=64&queryWord=" frameborder="0" width= "100%"  height= "75px" scrolling="no" ></iframe></div></div>
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/jianyuerensheng/article/details/51212259,BlogCommendFromThirdServiceAll_29"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/jianyuerensheng/article/details/51212259" target="_blank" title="【数据结构】堆栈、队列的原理及java实现">
+		<h4 class="text-truncate oneline">
+				【<em>数据结构</em>】堆栈、队列的<em>原理</em>及<em>java</em><em>实现</em>		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">04-21</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					6331</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/jianyuerensheng/article/details/51212259" target="_blank" title="【数据结构】堆栈、队列的原理及java实现">
+				<span class="desc oneline">栈(stack)又名堆栈，它是一种先进后出(FILO)的线性表。其限制是仅允许在表的一端进行插入和删除运算。队列是一种先进先出的线性表。其限制仅在表的一端（尾端）进行插入，另一端（首端）进行删除的线性...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/jianyuerensheng">来自：	<span class="blog_title"> 简约人生的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/qq_37937537/article/details/80101744,BlogCommendFromThirdServiceAll_30"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/qq_37937537/article/details/80101744" target="_blank" title="Java实现链表">
+		<h4 class="text-truncate oneline">
+				<em>Java</em><em>实现</em><em>链表</em>		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">04-27</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					4951</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/qq_37937537/article/details/80101744" target="_blank" title="Java实现链表">
+				<span class="desc oneline">     单链表是一种链式存取的数据结构，用一组地址任意的存储单元存放线性表中的数据元素。链表中的数据是以结点来表示的，每个结点的构成:元素(数据元素的映象)+指针(指示后继元素存储位置)，元素就是存...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/qq_37937537">来自：	<span class="blog_title"> 小仙女的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/lj6020382/article/details/81784864,BlogCommendFromThirdServiceAll_31"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/lj6020382/article/details/81784864" target="_blank" title="链表相关（Java实现）">
+		<h4 class="text-truncate oneline">
+				<em>链表</em>相关（<em>Java</em><em>实现</em>）		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">08-18</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					357</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/lj6020382/article/details/81784864" target="_blank" title="链表相关（Java实现）">
+				<span class="desc oneline">一、问题描述1.单链表的构造1.1头插法1.2尾插法2.单链表逆置（输入一个链表，从尾到头打印链表每个节点的值）2.1数组存放，倒序输出2.2利用栈倒叙输出，不改变链表本身（利用递归输出）......</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/lj6020382">来自：	<span class="blog_title"> 菜鸟哆哆的专栏</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/kerryfish/article/details/24043099,BlogCommendFromThirdServiceAll_32"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/kerryfish/article/details/24043099" target="_blank" title="JAVA中关于链表的操作和基本算法">
+		<h4 class="text-truncate oneline">
+				<em>JAVA</em>中关于<em>链表</em>的操作和基本算法		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">04-18</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					6万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/kerryfish/article/details/24043099" target="_blank" title="JAVA中关于链表的操作和基本算法">
+				<span class="desc oneline">importjava.util.HashMap;importjava.util.Scanner;importjava.util.Stack;/****@authorThink*关于java中链表的操作...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/kerryfish">来自：	<span class="blog_title"> kerryfish的专栏</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/weixin_36352179/article/details/81150663,BlogCommendFromThirdServiceAll_33"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/weixin_36352179/article/details/81150663" target="_blank" title="链表的基本实现（Java）">
+		<h4 class="text-truncate oneline">
+				<em>链表</em>的基本<em>实现</em>（<em>Java</em>）		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">07-21</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					96</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/weixin_36352179/article/details/81150663" target="_blank" title="链表的基本实现（Java）">
+				<span class="desc oneline">packagesummer;//每一个链表实际上是由多个节点组成的classNode{   privateStringdata; //要保存的数据   privateNodenext;      //...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/weixin_36352179">来自：	<span class="blog_title"> weixin_36352179的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	<div class="recommend-item-box recommend-ad-box"><div id="kp_box_65" data-pid="65" data-track-view='{"mod":"kp_popu_65-1061","con":",,"}' data-track-click='{"mod":"kp_popu_65-1061","con":",,"}'><iframe  src="https://kunpeng-sc.csdnimg.cn/#/preview/236?positionId=65&queryWord=" frameborder="0" width= "100%"  height= "75px" scrolling="no" ></iframe></div></div>
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/qq_37199582/article/details/79244657,BlogCommendFromBaidu_34"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/qq_37199582/article/details/79244657" target="_blank" title="java链表基本概念">
+		<h4 class="text-truncate oneline">
+				<em>java</em><em>链表</em>基本概念		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">02-03</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1561</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/qq_37199582/article/details/79244657" target="_blank" title="java链表基本概念">
+				<span class="desc oneline">链表是一种根据元素节点逻辑关系排列起来的一种数据结构。利用链表可以保存多个数据，这一点类似于数组的概念，但是数组本身有一个缺点——数组的长度固定，不可改变，在长度固定的情况下首选的肯定是数组，但是在现...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/qq_37199582">来自：	<span class="blog_title"> 口耳戈是个生僻字</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/sinat_41144773/article/details/88091467,BlogCommendFromBaidu_35"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/sinat_41144773/article/details/88091467" target="_blank" title="JAVA ListNode链表">
+		<h4 class="text-truncate oneline">
+				<em>JAVA</em> ListNode<em>链表</em>		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">03-06</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					674</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/sinat_41144773/article/details/88091467" target="_blank" title="JAVA ListNode链表">
+				<span class="desc oneline">链表结构，在Java中用需要自己定义一个ListNode类来生成链表对象。自定义的ListNode链表类如下：publicclassListNode{intval;ListNodenext;//下一个...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/sinat_41144773">来自：	<span class="blog_title"> 摸金校尉的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/jpp_aaa/article/details/79455485,BlogCommendFromBaidu_36"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/jpp_aaa/article/details/79455485" target="_blank" title="java链表ListNode">
+		<h4 class="text-truncate oneline">
+				<em>java</em><em>链表</em>ListNode		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">03-06</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					6735</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/jpp_aaa/article/details/79455485" target="_blank" title="java链表ListNode">
+				<span class="desc oneline">/***描述：删除链表中等于给定值val的所有节点。样例：给出链表1-&amp;amp;gt;2-&amp;amp;gt;3-&amp;amp;gt;3-&amp;amp;gt;4-&amp;amp;gt;5-&amp;amp;gt;3,和val=...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/jpp_aaa">来自：	<span class="blog_title"> 程序媛的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/hit_Gwy/article/details/79473360,BlogCommendFromBaidu_37"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/hit_Gwy/article/details/79473360" target="_blank" title="Java链表">
+		<h4 class="text-truncate oneline">
+				<em>Java</em><em>链表</em>		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">03-11</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					108</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/hit_Gwy/article/details/79473360" target="_blank" title="Java链表">
+				<span class="desc oneline">很好的一篇文章https://www.cnblogs.com/whgk/p/6589920.html</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/hit_Gwy">来自：	<span class="blog_title"> hit_Wan</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/qq646040754/article/details/79719809,BlogCommendFromBaidu_38"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/qq646040754/article/details/79719809" target="_blank" title="Java实现单链表">
+		<h4 class="text-truncate oneline">
+				<em>Java</em><em>实现</em>单<em>链表</em>		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">03-27</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					425</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/qq646040754/article/details/79719809" target="_blank" title="Java实现单链表">
+				<span class="desc oneline">今天把数据结构的书翻了翻，以前没想过用java实现链表玩玩，现在针对单链表进行简单的实现以及测试，小白代码比较粗糙packagecn.dtstructure;/* *单链表 *外部类可以直接访问内部类...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/qq646040754">来自：	<span class="blog_title"> 生活充满希望</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	<div class="recommend-item-box recommend-ad-box"><div id="kp_box_66" data-pid="66" data-track-view='{"mod":"kp_popu_66-881","con":",,"}' data-track-click='{"mod":"kp_popu_66-881","con":",,"}'><script src="https://nbrecsys.4paradigm.com/resource/cus/csdn/sdk-csdn-render.js"></script>
+<div
+  id="_4paradigm_T38_render"
+  class="_paradigm_T_ads_render _4paradigm_box recommend-item-box clearfix"
+></div>
+<script>
+  //  渲染T38  传入 渲染位置的id和渲染位置的标记
+  p4CSDNRender_T("_4paradigm_T38_render", "T38");
+</script></div></div>
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/qq_37935670/article/details/79560958,BlogCommendFromThirdServiceAll_39"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/qq_37935670/article/details/79560958" target="_blank" title="【JAVA数据结构】 简单链表的实现">
+		<h4 class="text-truncate oneline">
+				【<em>JAVA</em><em>数据结构</em>】 简单<em>链表</em>的<em>实现</em>		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">03-14</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					368</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/qq_37935670/article/details/79560958" target="_blank" title="【JAVA数据结构】 简单链表的实现">
+				<span class="desc oneline">写在前面：  我也是一名java语言的爱好者，仅以此文作为学习的记录，对于文中出现的代码规范，代码格式，算法效率等问题，希望各路大神不吝赐教，在下感激不尽。同是学习的同学也同样希望互相交流，取长补短。...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/qq_37935670">来自：	<span class="blog_title"> 偏执的缘由</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/ikv1989/article/details/79186892,BlogCommendFromThirdServiceAll_40"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/ikv1989/article/details/79186892" target="_blank" title="Java链表（基本操作）">
+		<h4 class="text-truncate oneline">
+				<em>Java</em><em>链表</em>（基本操作）		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">01-28</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					997</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/ikv1989/article/details/79186892" target="_blank" title="Java链表（基本操作）">
+				<span class="desc oneline">·链表是一种最为简单的数据结构，它的主要目的是依靠引用关系来实现多个数据的保存，下面代码以String字符串类型示例classNode{	privateStringdata;	privateNoden...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/ikv1989">来自：	<span class="blog_title"> Java软贱攻城狮</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/j_linlian/article/details/80279078,BlogCommendFromThirdServiceAll_41"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/j_linlian/article/details/80279078" target="_blank" title="Java链表插入删除">
+		<h4 class="text-truncate oneline">
+				<em>Java</em><em>链表</em>插入删除		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">05-11</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					867</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/j_linlian/article/details/80279078" target="_blank" title="Java链表插入删除">
+				<span class="desc oneline">publicclassLianbiaoinsertdeletesort{	publicstaticvoidmain(String[]args){		linklistlist=newlinklist()...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/j_linlian">来自：	<span class="blog_title"> j_linlian的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/ikv1989/article/details/79187373,BlogCommendFromThirdServiceAll_42"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/ikv1989/article/details/79187373" target="_blank" title="Java链表基本实现">
+		<h4 class="text-truncate oneline">
+				<em>Java</em><em>链表</em>基本<em>实现</em>		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">01-28</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					234</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/ikv1989/article/details/79187373" target="_blank" title="Java链表基本实现">
+				<span class="desc oneline">classLink{		privateclassNode{		privateNodenext;//下一个节点		privateStringdata;//保存数据		publicNode(Stringd...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/ikv1989">来自：	<span class="blog_title"> Java软贱攻城狮</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/y999666/article/details/51035136,BlogCommendFromBaidu_43"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/y999666/article/details/51035136" target="_blank" title="Java单链表基本操作（一）--顺序查找">
+		<h4 class="text-truncate oneline">
+				<em>Java</em>单<em>链表</em>基本操作（一）--顺序查找		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">04-01</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					3676</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/y999666/article/details/51035136" target="_blank" title="Java单链表基本操作（一）--顺序查找">
+				<span class="desc oneline">本系列博文，将围绕一下几个方面：Java单链表基本操作：（一）顺序查找；（二）指定位置增加节点；（三）删除当前节点；（四）单链表反转；（五）输出倒数第K个节点；（六）删除重复节点；（七）合并两个排序单...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/y999666">来自：	<span class="blog_title"> gaven的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	<div class="recommend-item-box recommend-ad-box"><div id="kp_box_67" data-pid="67" data-track-view='{"mod":"kp_popu_67-882","con":",,"}' data-track-click='{"mod":"kp_popu_67-882","con":",,"}'><script src="https://nbrecsys.4paradigm.com/resource/cus/csdn/sdk-csdn-render.js"></script>
+<div
+  id="_4paradigm_T43_render"
+  class="_paradigm_T_ads_render _4paradigm_box recommend-item-box clearfix"
+></div>
+<script>
+  //  渲染T43  传入 渲染位置的id和渲染位置的标记
+  p4CSDNRender_T("_4paradigm_T43_render", "T43");
+</script></div></div>
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/kuishao1314aa/article/details/79724412,BlogCommendFromBaidu_44"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/kuishao1314aa/article/details/79724412" target="_blank" title="用JAVA语言创建链表的方法">
+		<h4 class="text-truncate oneline">
+				用<em>JAVA</em>语言创建<em>链表</em>的方法		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">03-28</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2394</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/kuishao1314aa/article/details/79724412" target="_blank" title="用JAVA语言创建链表的方法">
+				<span class="desc oneline">链表刚学习时是用c来学习的，那时候对于结构体，指针这些东西实现链表觉得很合适，但想要应用到java上还是有些不同的这里，我学习下用java来使用链表的方法：首先，定义节点类//链表节点classNod...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/kuishao1314aa">来自：	<span class="blog_title"> 苍白的咏叹调的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/hellobinfeng/article/details/16353519,BlogCommendFromBaidu_45"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/hellobinfeng/article/details/16353519" target="_blank" title="面试大总结之一：Java搞定面试中的链表题目">
+		<h4 class="text-truncate oneline">
+				面试大总结之一：<em>Java</em>搞定面试中的<em>链表</em>题目		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">11-16</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/hellobinfeng/article/details/16353519" target="_blank" title="面试大总结之一：Java搞定面试中的链表题目">
+				<span class="desc oneline">链表是面试中常出现的一类题目，本文用Java实现了面试中常见的链表相关题目。本文主要参考整合重写了《轻松搞定面试中的链表题目》和《算法大全（1）单链表》两篇大作。两篇大神的实现分别是C和C#，因为我更...</span>
+			</a>
+			<span class="blog_title_box oneline no-title">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/qq_37199582/article/details/79251054,BlogCommendFromBaidu_46"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/qq_37199582/article/details/79251054" target="_blank" title="java链表增删查改等功能的实现">
+		<h4 class="text-truncate oneline">
+				<em>java</em><em>链表</em>增删查改等功能的<em>实现</em>		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">02-04</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					683</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/qq_37199582/article/details/79251054" target="_blank" title="java链表增删查改等功能的实现">
+				<span class="desc oneline">链表的基本开发结构classLink{				//链表类，外部能够看见的只有这一个类	privateclassNode{			//定义的内部节点类		privateStringdata;		//要保存...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/qq_37199582">来自：	<span class="blog_title"> 口耳戈是个生僻字</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box  recommend-other-item-box"  data-track-click='{"mod":"popu_387","con":",https://bbs.csdn.net/topics/390070622,BlogCommendFromBaidu_47"}'>
+	<a href="https://bbs.csdn.net/topics/390070622" target="_blank">
+		<h4 class="text-truncate oneline">
+				<em>java</em> 建立单<em>链表</em>		</h4>
+		<div class="info-box d-flex align-content-center">
+				<span class="date">05-27</span>
+		</div>
+		<p class="content oneline">
+			<span class="desc oneline">我按照清华大学出版社的java语言与面向对象程序设计（第2版）写了一个程序建立单链表 但是程序运行的结果显示插入节点的顺序是逆序的，我想正序插入，不知道如何解决。我认为是LinkList类里面的ins</span>
+							<span class="type-show type-show-bbs">论坛</span>
+					</p>
+	</a>
+
+</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/ikv1989/article/details/80069047,BlogCommendFromBaidu_48"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/ikv1989/article/details/80069047" target="_blank" title="Java 链表（链表的基本使用）">
+		<h4 class="text-truncate oneline">
+				<em>Java</em> <em>链表</em>（<em>链表</em>的基本使用）		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">04-24</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					615</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/ikv1989/article/details/80069047" target="_blank" title="Java 链表（链表的基本使用）">
+				<span class="desc oneline">范例：链表的基本使用classBook{	privateStringname;	privatedoubleprice;	publicBook(Stringname,doubleprice){		thi...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/ikv1989">来自：	<span class="blog_title"> Java软贱攻城狮</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	<div class="recommend-item-box recommend-ad-box"><div id="kp_box_68" data-pid="68" data-track-view='{"mod":"kp_popu_68-883","con":",,"}' data-track-click='{"mod":"kp_popu_68-883","con":",,"}'><!-- T48 位置 -->
+<script src="https://nbrecsys.4paradigm.com/resource/cus/csdn/sdk-csdn-render.js"></script>
+<div
+  id="_4paradigm_T48_render"
+  class="_paradigm_T_ads_render _4paradigm_box recommend-item-box clearfix"
+></div>
+<script>
+  //  渲染T48  传入 渲染位置的id和渲染位置的标记
+  p4CSDNRender_T("_4paradigm_T48_render", "T48");
+</script></div></div>
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/zxtanshui/article/details/78678495,BlogCommendFromBaidu_49"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/zxtanshui/article/details/78678495" target="_blank" title="java单链表的添加、插入、删除">
+		<h4 class="text-truncate oneline">
+				<em>java</em>单<em>链表</em>的添加、插入、删除		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">11-30</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2363</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/zxtanshui/article/details/78678495" target="_blank" title="java单链表的添加、插入、删除">
+				<span class="desc oneline">packagenodelist;publicclassLinkListTest{publicNodehead=newNode();//定义一个头节点publicLinkListTest(){}/***...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/zxtanshui">来自：	<span class="blog_title"> zxtanshui的专栏</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/yangtiang/article/details/46483999,BlogCommendHotData_0"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/yangtiang/article/details/46483999" target="_blank" title="IOS不用AutoLayout也能实现自动布局的类(1)----MyLinearLayout横空出世">
+		<h4 class="text-truncate oneline">
+				IOS不用AutoLayout也能实现自动布局的类(1)----MyLinearLayout横空出世		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">06-14</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/yangtiang/article/details/46483999" target="_blank" title="IOS不用AutoLayout也能实现自动布局的类(1)----MyLinearLayout横空出世">
+				<span class="desc oneline">MyLinearLayout是一个IOS不用AutoLayout就可以实现的自动流式布局解决方案，他同时支持XIB以及代码编写两种模式，使用简单，简洁，易用，而且功能强大。...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/yangtiang">来自：	<span class="blog_title"> 欧阳大哥的专栏</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/qq_36892341/article/details/73918672,BlogCommendHotData_1"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/qq_36892341/article/details/73918672" target="_blank" title="linux上安装Docker(非常简单的安装方法)">
+		<h4 class="text-truncate oneline">
+				linux上安装Docker(非常简单的安装方法)		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">06-29</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					27万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/qq_36892341/article/details/73918672" target="_blank" title="linux上安装Docker(非常简单的安装方法)">
+				<span class="desc oneline">最近比较有空，大四出来实习几个月了，作为实习狗的我，被叫去研究Docker了，汗汗！
+
+Docker的三大核心概念：镜像、容器、仓库
+镜像：类似虚拟机的镜像、用俗话说就是安装文件。
+容器：类似一个轻量...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/qq_36892341">来自：	<span class="blog_title"> 我走小路的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/yuzhiqiang_1993/article/details/76152454,BlogCommendHotData_2"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/yuzhiqiang_1993/article/details/76152454" target="_blank" title="fragment清除页面数据（重新加载布局）">
+		<h4 class="text-truncate oneline">
+				fragment清除页面数据（重新加载布局）		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">07-27</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/yuzhiqiang_1993/article/details/76152454" target="_blank" title="fragment清除页面数据（重新加载布局）">
+				<span class="desc oneline">上一篇博客介绍了如何解决Fragment重叠的问题，有需要的同学可以看一下，底部有demo下载。 
+直通车：完美解决Fragment重叠本篇博客我们来说一下怎么让fragment重新加载布局资源文件。...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/yuzhiqiang_1993">来自：	<span class="blog_title"> 喻志强的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/kajweb/article/details/76474376,BlogCommendHotData_3"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/kajweb/article/details/76474376" target="_blank" title="[CTF]利用CRC32绕过RAR密码（适合于小文本文件）">
+		<h4 class="text-truncate oneline">
+				[CTF]利用CRC32绕过RAR密码（适合于小文本文件）		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">08-01</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/kajweb/article/details/76474376" target="_blank" title="[CTF]利用CRC32绕过RAR密码（适合于小文本文件）">
+				<span class="desc oneline">利用CRC32绕过RAR密码（适合于小文本文件）原文标题：教你绕过rar密码
+  文章仅作rar密码破解的探讨，如有高见还望提出。 
+　　题目有点夸大其词，事实是我也没能想出一个更好的描述来总结这篇文...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/kajweb">来自：	<span class="blog_title"> 林毅洋</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/diandianxiyu/article/details/53068012,BlogCommendHotData_4"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/diandianxiyu/article/details/53068012" target="_blank" title="【小程序】微信小程序开发实践">
+		<h4 class="text-truncate oneline">
+				【小程序】微信小程序开发实践		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">11-07</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					31万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/diandianxiyu/article/details/53068012" target="_blank" title="【小程序】微信小程序开发实践">
+				<span class="desc oneline">帐号相关流程注册范围
+企业
+政府
+媒体
+其他组织换句话讲就是不让个人开发者注册。 :)填写企业信息不能使用和之前的公众号账户相同的邮箱,也就是说小程序是和微信公众号一个层级的。填写公司机构信息,对公账...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/diandianxiyu">来自：	<span class="blog_title"> 小雨同学的技术博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/yangtiang/article/details/48011431,BlogCommendHotData_5"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/yangtiang/article/details/48011431" target="_blank" title="IOS不用AutoLayout也能实现自动布局的类(4)----MyTableLayout横空出世">
+		<h4 class="text-truncate oneline">
+				IOS不用AutoLayout也能实现自动布局的类(4)----MyTableLayout横空出世		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">08-27</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/yangtiang/article/details/48011431" target="_blank" title="IOS不用AutoLayout也能实现自动布局的类(4)----MyTableLayout横空出世">
+				<span class="desc oneline">表格布局MyTableLayout，是继线性布局MyLinearLayout, 相对布局MyRelativeLayout, 框架布局MyFrameLayout后又推出的一个以表格为展示风格的布局类，我...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/yangtiang">来自：	<span class="blog_title"> 欧阳大哥的专栏</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/wangjun_pfc/article/details/3827631,BlogCommendHotData_6"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/wangjun_pfc/article/details/3827631" target="_blank" title="修改mysql数据库的默认编码方式">
+		<h4 class="text-truncate oneline">
+				修改mysql数据库的默认编码方式		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">01-18</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					7万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/wangjun_pfc/article/details/3827631" target="_blank" title="修改mysql数据库的默认编码方式">
+				<span class="desc oneline">修改my.ini文件加上default-character-set=gb2312设定数据库字符集alter database da_name default character set charset...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/wangjun_pfc">来自：	<span class="blog_title"> 血色残阳的专栏</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/jnulzl/article/details/49894041,BlogCommendHotData_7"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/jnulzl/article/details/49894041" target="_blank" title="史上最好的LDA(线性判别分析)教程">
+		<h4 class="text-truncate oneline">
+				史上最好的LDA(线性判别分析)教程		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">11-17</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					5万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/jnulzl/article/details/49894041" target="_blank" title="史上最好的LDA(线性判别分析)教程">
+				<span class="desc oneline">一、前言最近由于研究需要，要用到线性判别分析(LDA)。于是找了很多资料来看，结果发现大部分讲的都是理论知识，因此最后还是看的一知半解，后来终于找到了个英文的文档，作者由PCA引入LDA，看过后豁然开...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/jnulzl">来自：	<span class="blog_title"> jnulzl的专栏</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/themagickeyjianan/article/details/52386981,BlogCommendHotData_8"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/themagickeyjianan/article/details/52386981" target="_blank" title="python图片处理类之~PIL.Image模块(ios android icon图标自动生成处理)">
+		<h4 class="text-truncate oneline">
+				python图片处理类之~PIL.Image模块(ios android icon图标自动生成处理)		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">08-31</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					11万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/themagickeyjianan/article/details/52386981" target="_blank" title="python图片处理类之~PIL.Image模块(ios android icon图标自动生成处理)">
+				<span class="desc oneline">1.从pyCharm提示下载PIL包
+
+ http://www.pythonware.com/products/pil/
+
+ 
+
+2.解压后，进入到目录下
+
+
+cd /Users/jianan/Dow...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/themagickeyjianan">来自：	<span class="blog_title"> 专注于cocos+unity+服务器全栈</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/wuchengzeng/article/details/50037611,BlogCommendHotData_9"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/wuchengzeng/article/details/50037611" target="_blank" title="jquery/js实现一个网页同时调用多个倒计时(最新的)">
+		<h4 class="text-truncate oneline">
+				jquery/js实现一个网页同时调用多个倒计时(最新的)		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">11-25</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					53万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/wuchengzeng/article/details/50037611" target="_blank" title="jquery/js实现一个网页同时调用多个倒计时(最新的)">
+				<span class="desc oneline">jquery/js实现一个网页同时调用多个倒计时(最新的)
+
+最近需要网页添加多个倒计时. 查阅网络,基本上都是千遍一律的不好用. 自己按需写了个.希望对大家有用. 有用请赞一个哦!
+
+
+
+//js
+...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/wuchengzeng">来自：	<span class="blog_title"> Websites</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/haitao111313/article/details/7875392,BlogCommendHotData_10"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/haitao111313/article/details/7875392" target="_blank" title="基于PCA的人脸检测（Matlab版代码）">
+		<h4 class="text-truncate oneline">
+				基于PCA的人脸检测（Matlab版代码）		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">08-16</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					3万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/haitao111313/article/details/7875392" target="_blank" title="基于PCA的人脸检测（Matlab版代码）">
+				<span class="desc oneline">花了几天，终于把matlab版的人脸检测运行成功了，虽然正确率不是很高，看着各种论文上的人脸检测正确率都出奇的高，我是不怎么相信的，有的论文连基于平均脸的人脸检测正确率都能达到98%，汗啊～～  也许...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/haitao111313">来自：	<span class="blog_title"> 海海人生</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/lsx991947534/article/details/45499205,BlogCommendHotData_11"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/lsx991947534/article/details/45499205" target="_blank" title="servlet+jsp实现过滤器，防止用户未登录访问">
+		<h4 class="text-truncate oneline">
+				servlet+jsp实现过滤器，防止用户未登录访问		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">05-05</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					4万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/lsx991947534/article/details/45499205" target="_blank" title="servlet+jsp实现过滤器，防止用户未登录访问">
+				<span class="desc oneline">我们可能经常会用到这一功能，比如有时，我们不希望用户没有进行登录访问后台的操作页面，而且这样的非法访问会让系统极为的不安全，所以我们常常需要进行登录才授权访问其它页面，否则只会出现登录页面，当然我的思...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/lsx991947534">来自：	<span class="blog_title"> 沉默的鲨鱼的专栏</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/qq574857122/article/details/16361033,BlogCommendHotData_12"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/qq574857122/article/details/16361033" target="_blank" title="强连通分量及缩点tarjan算法解析">
+		<h4 class="text-truncate oneline">
+				强连通分量及缩点tarjan算法解析		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">11-16</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					65万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/qq574857122/article/details/16361033" target="_blank" title="强连通分量及缩点tarjan算法解析">
+				<span class="desc oneline">强连通分量：
+简言之 就是找环（每条边只走一次，两两可达）
+孤立的一个点也是一个连通分量 
+ 
+使用tarjan算法 在嵌套的多个环中优先得到最大环( 最小环就是每个孤立点）
+ 
+定义：
+int Ti...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/qq574857122">来自：	<span class="blog_title"> 九野的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/gefangshuai/article/details/50328451,BlogCommendHotData_13"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/gefangshuai/article/details/50328451" target="_blank" title="关于SpringBoot bean无法注入的问题（与文件包位置有关）">
+		<h4 class="text-truncate oneline">
+				关于SpringBoot bean无法注入的问题（与文件包位置有关）		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">12-16</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					25万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/gefangshuai/article/details/50328451" target="_blank" title="关于SpringBoot bean无法注入的问题（与文件包位置有关）">
+				<span class="desc oneline">问题场景描述整个项目通过Maven构建，大致结构如下：
+核心Spring框架一个module spring-boot-base
+service和dao一个module server-core
+提供系统...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/gefangshuai">来自：	<span class="blog_title"> 开发随笔</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/chunqiuwei/article/details/48765007,BlogCommendHotData_14"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/chunqiuwei/article/details/48765007" target="_blank" title="ListView乱谈之ListView中View重用的简单解析">
+		<h4 class="text-truncate oneline">
+				ListView乱谈之ListView中View重用的简单解析		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">10-10</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					3793</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/chunqiuwei/article/details/48765007" target="_blank" title="ListView乱谈之ListView中View重用的简单解析">
+				<span class="desc oneline">简单分析ListView的回收机制</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/chunqiuwei">来自：	<span class="blog_title"> 菜鸟博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/zml_2015/article/details/46662809,BlogCommendHotData_15"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/zml_2015/article/details/46662809" target="_blank" title="Linux虚拟机与外面系统ping不通，或者连不上网">
+		<h4 class="text-truncate oneline">
+				Linux虚拟机与外面系统ping不通，或者连不上网		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">06-27</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/zml_2015/article/details/46662809" target="_blank" title="Linux虚拟机与外面系统ping不通，或者连不上网">
+				<span class="desc oneline">很多人在做linux课程设计的时候，用的linux虚拟机与外面的系统ping不通，或者虚拟机里面上不了网，这个主要是与系统的默认设置有关，下面让我帮你们解决这个问题吧
+1.首先打开虚拟机的    “编...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/zml_2015">来自：	<span class="blog_title"> 云淡风轻的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/zd0303/article/details/7058457,BlogCommendHotData_16"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/zd0303/article/details/7058457" target="_blank" title="MATLAB中注释一段程序">
+		<h4 class="text-truncate oneline">
+				MATLAB中注释一段程序		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">12-09</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					4万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/zd0303/article/details/7058457" target="_blank" title="MATLAB中注释一段程序">
+				<span class="desc oneline">在MATLAB中，可以注释一段程序。
+使用“%{”和“%}”。
+例如
+%{
+。。。
+%}
+即可。
+经典方法是用 if 0，但缺点是不够直观，注释掉的内容仍然保持代码的颜色。现在可以用
+...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/zd0303">来自：	<span class="blog_title"> 知识小屋</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+                <div class="recommend-item-box type_hot_word">
+                                <div class="content clearfix">
+                    <div class="word float-left">
+                                                            <span>
+                        <a href="https://edu.csdn.net/combos/o363_l0_t " target="_blank">
+                        设计制作学习                    </a></span>
+                                                                                <span>
+                        <a href="https://edu.csdn.net/courses/o5329_s5330_k " target="_blank">
+                        机器学习教程                    </a></span>
+                                                                                <span>
+                        <a href="https://edu.csdn.net/courses/o280_s351_k " target="_blank">
+                        Objective-C培训                    </a></span>
+                                                                                <span>
+                        <a href="https://edu.csdn.net/combos/o7115_s388_l0_t " target="_blank">
+                        交互设计视频教程                    </a></span>
+                                                                                <span>
+                        <a href="https://edu.csdn.net/course/play/5599/104252 " target="_blank">
+                        颜色模型                    </a></span>
+                                                            </div>
+                </div>
+                                                <div class="content clearfix">
+                    <div class="float-left">
+                                        <span>
+                        <a href="https://www.csdn.net/gather_24/MtTaEg3sMDM5MS1ibG9n.html" target="_blank">
+                        mysql关联查询两次本表</a>
+                    </span>
+                                        <span>
+                        <a href="https://www.csdn.net/gather_10/MtjaIg3sMTUzMy1kb3dubG9hZAO0O0OO0O0O.html" target="_blank">
+                        native底部 react</a>
+                    </span>
+                                        <span>
+                        <a href="https://www.csdn.net/gather_1b/Ntzagg1sOTU3LWRvd25sb2Fk.html" target="_blank">
+                        extjs glyph 图标</a>
+                    </span>
+                                        <span>
+                        <a href="https://www.csdn.net/gather_4a/NtzaEg2sOTgtZWR1.html" target="_blank">
+                        java 链表学习</a>
+                    </span>
+                                        <span>
+                        <a href="https://www.csdn.net/gather_4a/NtzacgzsMzEtZWR1.html" target="_blank">
+                        链表学习java</a>
+                    </span>
+                                        </div>
+                </div>
+                                </div>
+                            <div class="recommend-loading-box">
+                <img src='https://csdnimg.cn/release/phoenix/images/feedLoading.gif'>
+            </div>
+            <div class="recommend-end-box">
+                <p class="text-center">没有更多推荐了，<a href="https://blog.csdn.net/" class="c-blue c-blue-hover c-blue-focus">返回首页</a></p>
+            </div>
+        </div>
+    </main>
+
+    <aside>
+	<div id="asideProfile" class="aside-box">
+    <!-- <h3 class="aside-title">个人资料</h3> -->
+    <div class="profile-intro d-flex">
+        <div class="avatar-box d-flex justify-content-center flex-column">
+            <a href="https://blog.csdn.net/jianyuerensheng">
+              <img src="https://avatar.csdn.net/7/B/3/3_jianyuerensheng.jpg" class="avatar_pic">
+                              <img src="https://g.csdnimg.cn/static/user-reg-year/1x/4.png" class="user-years">
+                          </a>
+            
+        </div>
+        <div class="user-info d-flex justify-content-center flex-column">
+            <p class="name csdn-tracking-statistics tracking-click" data-mod="popu_379">
+                <a href="https://blog.csdn.net/jianyuerensheng" target="_blank" class="" id="uid">jianyuerensheng</a>
+            </p>
+                    </div>
+                <div class="opt-box d-flex justify-content-center flex-column">
+            <span  class="csdn-tracking-statistics tracking-click" data-mod="popu_379">
+                <a class="btn btn-sm btn-red-hollow attention" id="btnAttent">关注</a>
+            </span>
+        </div>
+            </div>
+    <div class="data-info d-flex item-tiling">
+                <dl class="text-center" title="54">
+                        <dt><a href="https://blog.csdn.net/jianyuerensheng?t=1">原创</a></dt>
+            <dd><a href="https://blog.csdn.net/jianyuerensheng?t=1"><span class="count">54</span></a></dd>
+                    </dl>
+        <dl class="text-center" id="fanBox" title="636">
+            <dt>粉丝</dt>
+            <dd><span class="count" id="fan">636</span></dd>
+        </dl>
+        <dl class="text-center" title="460">
+            <dt>喜欢</dt>
+            <dd><span class="count">460</span></dd>
+        </dl>
+        <dl class="text-center" title="205">
+            <dt>评论</dt>
+            <dd><span class="count">205</span></dd>
+        </dl>
+    </div>
+    <div class="grade-box clearfix">
+        <dl>
+            <dt>等级：</dt>
+            <dd>
+                <a href="https://blog.csdn.net/home/help.html#level" title="5级,点击查看等级说明" target="_blank">
+                    <svg class="icon icon-level" aria-hidden="true">
+                        <use xlink:href="#csdnc-bloglevel-5"></use>
+                    </svg>
+                </a>
+            </dd>
+        </dl>
+        <dl>
+            <dt>访问：</dt>
+            <dd title="804409">
+                80万+            </dd>
+        </dl>
+        <dl>
+            <dt>积分：</dt>
+            <dd title="4888">
+                4888            </dd>
+        </dl>
+        <dl title="10117">
+            <dt>排名：</dt>
+            <dd>1万+</dd>
+        </dl>
+    </div>
+        <div class="badge-box d-flex">
+        <span>勋章：</span>
+        <div class="badge d-flex">
+                                                        <div class="icon-badge" title="持之以恒">
+                       <div class="mouse-box">
+                          <img src="https://g.csdnimg.cn/static/user-medal/chizhiyiheng.svg" alt="">
+                          <div class="icon-arrow"></div>
+                       </div>
+                       <div class="grade-detail-box">
+                           <div class="pos-box">
+                               <div class="left-box d-flex justify-content-center align-items-center flex-column">
+                                    <img src="https://g.csdnimg.cn/static/user-medal/chizhiyiheng.svg" alt="">
+                                   <p>持之以恒</p>
+                               </div>
+                               <div class="right-box">
+                                   授予每个自然月内发布4篇或4篇以上原创或翻译IT博文的用户。不积跬步无以至千里，不积小流无以成江海，程序人生的精彩需要坚持不懈地积累！                               </div>
+                           </div>
+                       </div>
+                   </div>
+                                             </div>
+        <script>
+            (function ($) {
+                setTimeout(function(){
+                    $('div.icon-badge.show-moment').removeClass('show-moment');
+                }, 5000);
+            })(window.jQuery)
+        </script>
+    </div>
+    </div>
+<div class="csdn-tracking-statistics mb8 box-shadow" data-pid="blog" data-mod="popu_4" style="height:250px;">
+    <div class="aside-content text-center" id="cpro_u2734133">
+      <div id="kp_box_56" data-pid="56" data-track-view='{"mod":"kp_popu_56-876","con":",,"}' data-track-click='{"mod":"kp_popu_56-876","con":",,"}'><!-- 广告位：PC-博客内页左上视窗 -->
+<script>
+(function() {
+    var s = "_" + Math.random().toString(36).slice(2);
+    document.write('<div id="' + s + '"></div>');
+    (window.slotbydup=window.slotbydup || []).push({
+        id: '6096221',
+        container: s,
+        size: '300,250',
+        display: 'inlay-fix'
+    });
+})();
+</script>
+<script src="//dup.baidustatic.com/js/os.js"></script></div>    </div>
+</div>
+<div id="asideArchive" class="aside-box flexible-box">
+    <h3 class="aside-title">归档</h3>
+    <div class="aside-content">
+        <ul class="archive-list">
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/jianyuerensheng/article/month/2018/04">
+                    2018年4月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/jianyuerensheng/article/month/2018/03">
+                    2018年3月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/jianyuerensheng/article/month/2017/12">
+                    2017年12月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/jianyuerensheng/article/month/2017/10">
+                    2017年10月                    <span class="count float-right">3篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/jianyuerensheng/article/month/2016/11">
+                    2016年11月                    <span class="count float-right">7篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/jianyuerensheng/article/month/2016/06">
+                    2016年6月                    <span class="count float-right">9篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/jianyuerensheng/article/month/2016/05">
+                    2016年5月                    <span class="count float-right">5篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/jianyuerensheng/article/month/2016/04">
+                    2016年4月                    <span class="count float-right">15篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/jianyuerensheng/article/month/2016/03">
+                    2016年3月                    <span class="count float-right">7篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/jianyuerensheng/article/month/2016/01">
+                    2016年1月                    <span class="count float-right">7篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/jianyuerensheng/article/month/2015/12">
+                    2015年12月                    <span class="count float-right">7篇</span>
+                </a>
+            </li>
+                    </ul>
+    </div>
+        <p class="text-center">
+        <a class="btn btn-link-blue flexible-btn" data-fbox="aside-archive">展开</a>
+    </p>
+    </div>
+<div id="asideCategory" class="aside-box flexible-box">
+    <h3 class="aside-title">个人分类</h3>
+    <div class="aside-content">
+        <ul>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/jianyuerensheng/article/category/6192034">
+                    <span class="title oneline">数据结构与java集合框架</span>
+                    <span class="count float-right">11篇</span>
+                </a>
+            </li>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/jianyuerensheng/article/category/7340676">
+                    <span class="title oneline">前端学习</span>
+                    <span class="count float-right">2篇</span>
+                </a>
+            </li>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/jianyuerensheng/article/category/6070333">
+                    <span class="title oneline">框架学习</span>
+                    <span class="count float-right">11篇</span>
+                </a>
+            </li>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/jianyuerensheng/article/category/6241262">
+                    <span class="title oneline">Java提高</span>
+                    <span class="count float-right">2篇</span>
+                </a>
+            </li>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/jianyuerensheng/article/category/6203559">
+                    <span class="title oneline">排序算法</span>
+                    <span class="count float-right">8篇</span>
+                </a>
+            </li>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/jianyuerensheng/article/category/6048163">
+                    <span class="title oneline">管理系统常用功能实现方式</span>
+                    <span class="count float-right">9篇</span>
+                </a>
+            </li>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/jianyuerensheng/article/category/6197111">
+                    <span class="title oneline">面试笔试整理</span>
+                    <span class="count float-right">11篇</span>
+                </a>
+            </li>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/jianyuerensheng/article/category/6001371">
+                    <span class="title oneline">Linux</span>
+                    <span class="count float-right">6篇</span>
+                </a>
+            </li>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/jianyuerensheng/article/category/6068265">
+                    <span class="title oneline">Openfire</span>
+                    <span class="count float-right">3篇</span>
+                </a>
+            </li>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/jianyuerensheng/article/category/6032361">
+                    <span class="title oneline">微信公众号</span>
+                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                    </ul>
+    </div>
+        <p class="text-center">
+        <a class="btn btn-link-blue flexible-btn" data-fbox="aside-archive">展开</a>
+    </p>
+    </div>
+<div id="asideNewArticle" class="aside-box">
+    <h3 class="aside-title">最新文章</h3>
+    <div class="aside-content">
+        <ul class="inf_list clearfix csdn-tracking-statistics tracking-click" data-mod="popu_382">
+                        <li class="clearfix">
+                <a href="https://blog.csdn.net/jianyuerensheng/article/details/79930757" target="_blank">JS实现列表数据左右、上下移动功能</a>
+            </li>
+                        <li class="clearfix">
+                <a href="https://blog.csdn.net/jianyuerensheng/article/details/79570781" target="_blank">PDF.js使用总结</a>
+            </li>
+                        <li class="clearfix">
+                <a href="https://blog.csdn.net/jianyuerensheng/article/details/78780696" target="_blank">Select2学习总结</a>
+            </li>
+                        <li class="clearfix">
+                <a href="https://blog.csdn.net/jianyuerensheng/article/details/78190964" target="_blank">C#实现Word转PDF</a>
+            </li>
+                        <li class="clearfix">
+                <a href="https://blog.csdn.net/jianyuerensheng/article/details/78188621" target="_blank">Java实现文件上传下载工具类</a>
+            </li>
+                    </ul>
+    </div>
+</div>
+<div id="asideHotArticle" class="aside-box">
+	<h3 class="aside-title">热门文章</h3>
+	<div class="aside-content">
+		<ul class="hotArticle-list csdn-tracking-statistics tracking-click" data-mod="popu_521">
+							<li>
+					<a href="https://blog.csdn.net/jianyuerensheng/article/details/51258942">【Spring】Spring MVC原理及配置详解</a>
+					<p class="read">阅读数 <span>246746</span></p>
+				</li>
+							<li>
+					<a href="https://blog.csdn.net/jianyuerensheng/article/details/51200274">【数据结构】链表的原理及java实现</a>
+					<p class="read">阅读数 <span>61004</span></p>
+				</li>
+							<li>
+					<a href="https://blog.csdn.net/jianyuerensheng/article/details/51258374">【排序算法】快速排序原理及Java实现</a>
+					<p class="read">阅读数 <span>57648</span></p>
+				</li>
+							<li>
+					<a href="https://blog.csdn.net/jianyuerensheng/article/details/51602015">面向对象编程三大特性------封装、继承、多态</a>
+					<p class="read">阅读数 <span>43002</span></p>
+				</li>
+							<li>
+					<a href="https://blog.csdn.net/jianyuerensheng/article/details/51262984">【排序算法】归并排序原理及Java实现</a>
+					<p class="read">阅读数 <span>27348</span></p>
+				</li>
+					</ul>
+	</div>
+</div>
+<div id="asideNewComments" class="aside-box">
+    <h3 class="aside-title">最新评论</h3>
+    <div class="aside-content">
+        <ul class="newcomment-list">
+                        <li>
+                <a class="title text-truncate" target="_blank" href="https://blog.csdn.net/jianyuerensheng/article/details/51200274#comments">【数据结构】链表的原理及java实现</a>
+                <p class="comment ellipsis">
+                    <a href="https://my.csdn.net/zhengyunheb" class="user-name" target="_blank">zhengyunheb：</a>您好，特别感谢，学到了很多，有个小问题 deleteNode函数里面，64行的  if (i == index) {   ，是不是应该是 if (i == index-1) {                </p>
+            </li>
+                        <li>
+                <a class="title text-truncate" target="_blank" href="https://blog.csdn.net/jianyuerensheng/article/details/51258374#comments">【排序算法】快速排序原理及Java...</a>
+                <p class="comment ellipsis">
+                    <a href="https://my.csdn.net/m0_37307670" class="user-name" target="_blank">m0_37307670：</a>[reply]weixin_44326417[/reply]
+递归肯定要对栈(空间占用) 比较高了                </p>
+            </li>
+                        <li>
+                <a class="title text-truncate" target="_blank" href="https://blog.csdn.net/jianyuerensheng/article/details/51263453#comments">【排序算法】堆排序原理及Java实现</a>
+                <p class="comment ellipsis">
+                    <a href="https://my.csdn.net/qq_27570205" class="user-name" target="_blank">qq_27570205：</a>确实有错，错在了for循环里子树里，尝试改了下
+https://github.com/lightingSummer/summerGit/blob/master/JavaTest/src/HeapSort.java                </p>
+            </li>
+                        <li>
+                <a class="title text-truncate" target="_blank" href="https://blog.csdn.net/jianyuerensheng/article/details/51258374#comments">【排序算法】快速排序原理及Java...</a>
+                <p class="comment ellipsis">
+                    <a href="https://my.csdn.net/u010758352" class="user-name" target="_blank">u010758352：</a>推荐这篇：https://tryenough.com/arithmetic-quitsort                </p>
+            </li>
+                        <li>
+                <a class="title text-truncate" target="_blank" href="https://blog.csdn.net/jianyuerensheng/article/details/53157041#comments">面试总结------常用SQL语句</a>
+                <p class="comment ellipsis">
+                    <a href="https://my.csdn.net/u013034226" class="user-name" target="_blank">u013034226：</a>好多啊                </p>
+            </li>
+                    </ul>
+    </div>
+</div>
+	<div id="asideFooter">
+			
+		<div class="aside-box">
+			<div id="kp_box_57" data-pid="57" data-track-view='{"mod":"kp_popu_57-1158","con":",,"}' data-track-click='{"mod":"kp_popu_57-1158","con":",,"}'><!-- 广告位：PC-博客内页左下视窗 -->
+<script>
+(function() {
+    var s = "_" + Math.random().toString(36).slice(2);
+    document.write('<div id="' + s + '"></div>');
+    (window.slotbydup=window.slotbydup || []).push({
+        id: '6272567',
+        container: s,
+        size: '300,250',
+        display: 'inlay-fix'
+    });
+})();
+</script>
+<script src="http://dup.baidustatic.com/js/os.js"></script></div>		</div>
+				<div class="aside-box">
+			<div class="persion_article">
+			</div>
+		</div>
+	</div>
+</aside>
+<script src="https://csdnimg.cn/pubfooter/js/publib_footer-1.0.3.js" data-isfootertrack="false" type="text/javascript"></script>
+<script>
+	$("a.flexible-btn").click(function(){
+		$(this).parents('div.aside-box').removeClass('flexible-box');
+		$(this).remove();
+	})
+</script>
+</div>
+<div class="mask-dark"></div>
+<div class="tool-box">
+	<ul class="meau-list">
+		<li class="btn-like-box long-width">
+			<button class=" long-height hover-box btn-like " title="点赞">
+				<svg class="icon active hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-thumbsup-ok"></use>
+				</svg>
+				<svg class="icon no-active hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-thumbsup"></use>
+				</svg>
+				<span class="hover-show text-box text">
+					<span class="no-active">点赞</span>
+					<span class="active">取消点赞</span>
+				</span>
+				<p>62</p>
+			</button>
+		</li>
+		<li class="">
+						<a class="btn-comments long-height hover-box" title="写评论" href="#commentBox">
+				<svg class="icon hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-comments"></use>
+				</svg>
+				<span class="hover-show text">评论</span>
+				<p class="">
+						30				</p>
+			</a>
+		</li>
+		<li class="toc-container-box" id="liTocBox">
+			<button class="btn-toc low-height hover-box" title="目录">
+				<svg class="icon hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-contents"></use>
+				</svg>
+				<span class="hover-show text">目录</span>
+			</button>
+			<div class="toc-container">
+				<div class="pos-box">
+					<div class="icon-arrow"></div>
+					<div class="scroll-box">
+						<div class="toc-box"></div>
+					</div>
+				</div>
+				<div class="opt-box">
+					<button class="btn-opt prev nomore" title="向上">
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#csdnc-chevronup"></use>
+						</svg>
+					</button>
+					<button class="btn-opt next">
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#csdnc-chevrondown"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</li>
+		<li>
+			<button class="btn-bookmark low-height hover-box" title="收藏">
+				<svg class="icon active hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-bookmark-ok"></use>
+				</svg>
+				<svg class="icon no-active hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-bookmark"></use>
+				</svg>
+					<span class="hover-show text">收藏</span>
+				<!-- <span class="hover-show text-box text">
+					<span class="no-active">收藏</span>
+					<span class="active">取消收藏</span>
+				</span> -->
+			</button>
+		</li>
+		<li class="bdsharebuttonbox">
+			<div class="weixin-qr btn-comments low-height hover-box" >
+        <a href="#" class="bds_weixin clear-share-style" data-cmd="weixin" title="手机看"></a>
+				<svg class="icon hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-usephone"></use>
+				</svg>
+				<span class="hover-show text text3">
+					手机看
+				</span>
+			</div>
+		</li>
+							<li class="widescreen-hide">
+				<a class="btn-comments low-height hover-box" href="https://blog.csdn.net/jianyuerensheng/article/details/51192811" title="【数据结构】ArrayList原理及实现学习总结">
+					<svg class="icon hover-hide" aria-hidden="true">
+						<use xlink:href="#csdnc-chevronleft"></use>
+					</svg>
+					<span class="hover-show text text3">上一篇</span>
+				</a>
+			</li>
+								<li class="widescreen-hide">
+			<a class="btn-comments hover-box low-height" href="https://blog.csdn.net/jianyuerensheng/article/details/51204598" title="【数据结构】LinkedList原理及实现学习总结">
+				<svg class="icon hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-chevronright"></use>
+				</svg>
+				<span class="hover-show text text3">下一篇</span>
+			</a>
+		</li>
+						<!-- 宽屏更多按钮 -->
+		<li class="widescreen-more">
+			<a class="btn-comments chat-ask-button low-height hover-box" title="快问" href="#chatqa">
+				<svg class="icon hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-more"></use>
+				</svg>
+				<span class="hover-show text">更多</span>
+				
+			</a>
+			<ul class="widescreen-more-box">
+													<li class="widescreen-more">
+						<a class="btn-comments low-height hover-box" href="https://blog.csdn.net/jianyuerensheng/article/details/51192811" title="【数据结构】ArrayList原理及实现学习总结">
+							<svg class="icon hover-hide" aria-hidden="true">
+								<use xlink:href="#csdnc-chevronleft"></use>
+							</svg>
+							<span class="hover-show text text3">上一篇</span>
+						</a>
+					</li>
+																<li class="widescreen-more">
+					<a class="btn-comments hover-box low-height" href="https://blog.csdn.net/jianyuerensheng/article/details/51204598" title="【数据结构】LinkedList原理及实现学习总结">
+						<svg class="icon hover-hide" aria-hidden="true">
+							<use xlink:href="#csdnc-chevronright"></use>
+						</svg>
+						<span class="hover-show text text3">下一篇</span>
+					</a>
+				</li>
+							</ul>
+		</li>
+	</ul>
+</div>
+<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "1", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'https://csdnimg.cn/static/api/js/share.js?v=89860594'];</script>
+<script>
+    var recommendCount = 67;
+    recommendCount = recommendCount > 1 ? (recommendCount + (recommendCount>6 ? 2 : 1)) : recommendCount;
+    var ChannelId = 16;
+    var articleId = "51200274";
+    var commentscount = 30;
+    var islock = false;
+    var curentUrl = "https://blog.csdn.net/jianyuerensheng/article/details/51200274";
+    var myUrl = "https://my.csdn.net/";
+    //1禁止评论，2正常
+    var commentAuth = 2;
+    //百度搜索
+    var baiduKey = "【数据结构】链表的原理及java实现 - 简约人生的博客";
+    var needInsertBaidu = true;
+    // 代码段样式
+    var codeStyle = '';
+	var highlight = ["\u6570\u636e\u7ed3\u6784","\u94fe\u8868","\u539f\u7406","java","\u5b9e\u73b0"];//高亮数组
+
+    var RecommendBlogExpertList = [];
+	var articleType = 1;
+	var CopyrightContent = '本文为博主原创文章，未经博主允许不得转载。';
+</script>
+<script src="https://csdnimg.cn/public/sandalstrap/1.4/js/sandalstrap.min.js"></script>
+<script src="https://csdnimg.cn/release/phoenix/vendor/pagination/paging.js"></script>
+
+<div style="display:none;">
+	<img src="" onerror='setTimeout(function(){if(!/(csdn.net|iteye.com|baiducontent.com|googleusercontent.com|360webcache.com|sogoucdn.com|bingj.com|baidu.com)$/.test(window.location.hostname)){window.location.href="\x68\x74\x74\x70\x73\x3a\x2f\x2f\x77\x77\x77\x2e\x63\x73\x64\x6e\x2e\x6e\x65\x74"}},3000);'>
+</div>
+</body>
+
+	<link rel="stylesheet" href="https://csdnimg.cn/release/blog_editor_html/release1.3.9/ckeditor/plugins/codesnippet/lib/highlight/styles/atom-one-light.css">
+	<script type="text/javascript" src="https://csdnimg.cn/release/phoenix/production/pc_wap_common-45af74a22e.js" /></script>
+
+<script src="https://csdnimg.cn/release/phoenix/template/js/common-0100d9c3da.min.js"></script>
+<script src="https://csdnimg.cn/release/phoenix/template/js/detail-a8a55c8dd3.min.js"></script>
+
+	<script src="https://csdnimg.cn/release/phoenix/themes/skin3-template/skin3-template-fc7383b956.min.js"></script>
+
+<script src="https://csdnimg.cn/public/common/gotop/js/goTop-v1.0.min.js?v201904241615"></script><script>
+    GoTop({
+        right: 8,
+        hasReport: true,
+        reportFun: function() {
+            showReport(false,articleTitles);
+        }
+    })
+</script>
+
+    <script src="//g.csdnimg.cn/??login-box/1.0.5/login-box.js,login-box/1.0.5/login-auto.js,copyright/1.0.3/copyright.js,baidu-search/1.0.0/baidu-search.js?t=20190307095522"  type="text/javascript"></script>
+
+<script type="text/javascript" src="https://csdnimg.cn/release/blog_mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            "HTML-CSS": {
+                    linebreaks: { automatic: true, width: "94%container" },
+                    imageFont: null
+            },
+            tex2jax: {
+                preview: "none"
+            },
+            mml2jax: {
+                preview: 'none'
+            }
+    });
+</script>
+<script type="text/javascript">
+    </script>
+<script src="https://gh.bdstatic.com/static/gh/js/sdk/bword.min.js"></script>
+</html>
