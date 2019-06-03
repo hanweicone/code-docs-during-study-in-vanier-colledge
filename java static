@@ -1,24 +1,4 @@
-<div class="blog-content-box">
-  <div class="article-header-box">
-    <div class="article-header">
-      <div class="article-title-box">
-        <span class="article-type type-2 float-left">转</span>        
-
-# [java]static关键字的四种用法和void的用法
-
-      </div>
-      <div class="article-info-box">
-        <div class="article-bar-top">
-                                                  <span class="time">2018年05月30日 11:16:25</span>
-          [xxm0720](https://me.csdn.net/xxm0720)
-          <span class="read-count">阅读数：2119</span>
-                  </div>
-        <div class="operating">
-                  </div>
-      </div>
-    </div>
-  </div>
-  <article class="baidu_pl">
+<article class="baidu_pl">
     <div id="article_content" class="article_content clearfix csdn-tracking-statistics" data-pid="blog" data-mod="popu_307" data-dsm="post">
             <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/ck_htmledit_views-f57960eb32.css">
                               <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/ck_htmledit_views-f57960eb32.css">
@@ -317,4 +297,3 @@ static是java中非常重要的一个关键字，而且它的用法也很丰富�
           </div>
                   </div>
   </article>
-</div>
