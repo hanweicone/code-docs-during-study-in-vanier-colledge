@@ -185,6 +185,7 @@ static的另一个作用，就是修饰成员方法。相比于修饰成员属�
 &nbsp;上面的例子中，Person类中组合了四个Book成员变量，两个是普通成员，两个是static修饰的类成员。我们可以看到，当我们new一个Person对象时，static修饰的成员变量首先被初始化，随后是普通成员，最后调用Person类的构造方法完成初始化。也就是说，在创建对象时，static修饰的成员会首先被初始化，而且我们还可以看到，如果有多个static修饰的成员，那么会按照他们的先后位置进行初始化。
 
 实际上，static修饰的成员的初始化可以更早的进行，请看下面的例子：
+<pre>
 <div class="cnblogs_code" style="margin:5px 0px;padding:5px;background-color:rgb(245,245,245);border:1px solid rgb(204,204,204);color:rgb(0,0,0);text-align:left;font-family:'Courier New';font-size:12px;"><div class="cnblogs_code_toolbar" style="margin:5px 0px 0px;padding:0px;">
 </div><pre style="margin-bottom:0px;padding-right:0px;padding-left:0px;white-space:pre-wrap;font-family:'Courier New';"><span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">class</span><span style="margin:0px;padding:0px;line-height:1.5;"> Book{
     </span><span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">public</span><span style="margin:0px;padding:0px;line-height:1.5;"> Book(String msg) {
