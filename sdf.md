@@ -3,7 +3,7 @@
 假设有五个男生，五个女生，每个人都在自己心中对五个异性有一定的preference排序，比如：
 
 ![](https://github.com/hanweicone/test1/blob/master/img/0lzb1.jpg)
-![这里写图片描述](https://img-blog.csdn.net/20160420141138723) 
+
 
 以上的排序表解读为：男生1最中意女生C，次中意女生B，次次中意女生E。。。。
 
