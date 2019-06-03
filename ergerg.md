@@ -1,13 +1,3 @@
-<div id="article_content" class="article_content clearfix csdn-tracking-statistics" data-pid="blog" data-mod="popu_307" data-dsm="post">
-              <div class="article-copyright">
-
-          版权声明：本文为博主原创文章，未经博主允许不得转载。          https://blog.csdn.net/jianyuerensheng/article/details/51200274        </div>
-            <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/ck_htmledit_views-f57960eb32.css">
-                              <div id="content_views" class="markdown_views">
-            <!-- flowchart 箭头图标 勿删 -->
-            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-              <path stroke-linecap="round" d="M5,0 0,2.5 5,5z" id="raphael-marker-block" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
-            </svg>
 
 ## <a name="t0"></a>一：单向链表基本介绍
 
@@ -158,134 +148,7 @@
 }
 <div class="hljs-button {2}" data-title="复制"></div>`
 
-*   1
-*   2
-*   3
-*   4
-*   5
-*   6
-*   7
-*   8
-*   9
-*   10
-*   11
-*   12
-*   13
-*   14
-*   15
-*   16
-*   17
-*   18
-*   19
-*   20
-*   21
-*   22
-*   23
-*   24
-*   25
-*   26
-*   27
-*   28
-*   29
-*   30
-*   31
-*   32
-*   33
-*   34
-*   35
-*   36
-*   37
-*   38
-*   39
-*   40
-*   41
-*   42
-*   43
-*   44
-*   45
-*   46
-*   47
-*   48
-*   49
-*   50
-*   51
-*   52
-*   53
-*   54
-*   55
-*   56
-*   57
-*   58
-*   59
-*   60
-*   61
-*   62
-*   63
-*   64
-*   65
-*   66
-*   67
-*   68
-*   69
-*   70
-*   71
-*   72
-*   73
-*   74
-*   75
-*   76
-*   77
-*   78
-*   79
-*   80
-*   81
-*   82
-*   83
-*   84
-*   85
-*   86
-*   87
-*   88
-*   89
-*   90
-*   91
-*   92
-*   93
-*   94
-*   95
-*   96
-*   97
-*   98
-*   99
-*   100
-*   101
-*   102
-*   103
-*   104
-*   105
-*   106
-*   107
-*   108
-*   109
-*   110
-*   111
-*   112
-*   113
-*   114
-*   115
-*   116
-*   117
-*   118
-*   119
-*   120
-*   121
-*   122
-*   123
-*   124
-*   125
-*   126
-*   127
-*   128</pre>
+</pre>
 
 ## <a name="t2"></a>三、链表相关的常用操作实现方法
 
@@ -313,29 +176,7 @@
         <span class="hljs-keyword">this</span>.head = pReversedHead;
         <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.head;
     }<div class="hljs-button {2}" data-title="复制"></div>`
-
-*   1
-*   2
-*   3
-*   4
-*   5
-*   6
-*   7
-*   8
-*   9
-*   10
-*   11
-*   12
-*   13
-*   14
-*   15
-*   16
-*   17
-*   18
-*   19
-*   20
-*   21
-*   22</pre>
+</pre>
 
 **2. 查找单链表的中间节点**
 
@@ -357,21 +198,7 @@
         <span class="hljs-keyword">return</span> q;
     }<div class="hljs-button {2}" data-title="复制"></div>`
 
-*   1
-*   2
-*   3
-*   4
-*   5
-*   6
-*   7
-*   8
-*   9
-*   10
-*   11
-*   12
-*   13
-*   14
-*   15</pre>
+</pre>
 
 **3.  查找倒数第k个元素**
 
@@ -399,27 +226,7 @@
         <span class="hljs-keyword">return</span> p2;
     }<div class="hljs-button {2}" data-title="复制"></div>`
 
-*   1
-*   2
-*   3
-*   4
-*   5
-*   6
-*   7
-*   8
-*   9
-*   10
-*   11
-*   12
-*   13
-*   14
-*   15
-*   16
-*   17
-*   18
-*   19
-*   20
-*   21</pre>
+</pre>
 
 **4. 对链表进行排序**
 
@@ -447,29 +254,7 @@
         <span class="hljs-keyword">return</span> head;
     }<div class="hljs-button {2}" data-title="复制"></div>`
 
-*   1
-*   2
-*   3
-*   4
-*   5
-*   6
-*   7
-*   8
-*   9
-*   10
-*   11
-*   12
-*   13
-*   14
-*   15
-*   16
-*   17
-*   18
-*   19
-*   20
-*   21
-*   22
-*   23</pre>
+</pre>
 
 **5. 删除链表中的重复节点**
 
@@ -491,23 +276,7 @@
 
     }<div class="hljs-button {2}" data-title="复制"></div>`
 
-*   1
-*   2
-*   3
-*   4
-*   5
-*   6
-*   7
-*   8
-*   9
-*   10
-*   11
-*   12
-*   13
-*   14
-*   15
-*   16
-*   17</pre>
+</pre>
 
 **6. 从尾到头输出单链表，采用递归方式实现**
 
@@ -523,17 +292,7 @@
         }
     }<div class="hljs-button {2}" data-title="复制"></div>`
 
-*   1
-*   2
-*   3
-*   4
-*   5
-*   6
-*   7
-*   8
-*   9
-*   10
-*   11</pre>
+</pre>
 
 **7. 判断链表是否有环，有环情况下找出环的入口节点**
 
@@ -583,52 +342,6 @@
         <span class="hljs-keyword">return</span> slow;
     }
 <div class="hljs-button {2}" data-title="复制"></div>`
-
-*   1
-*   2
-*   3
-*   4
-*   5
-*   6
-*   7
-*   8
-*   9
-*   10
-*   11
-*   12
-*   13
-*   14
-*   15
-*   16
-*   17
-*   18
-*   19
-*   20
-*   21
-*   22
-*   23
-*   24
-*   25
-*   26
-*   27
-*   28
-*   29
-*   30
-*   31
-*   32
-*   33
-*   34
-*   35
-*   36
-*   37
-*   38
-*   39
-*   40
-*   41
-*   42
-*   43
-*   44
-*   45
-*   46</pre>          </div>
+</pre>          </div>
           <link href="https://csdnimg.cn/release/phoenix/mdeditor/markdown_views-258a4616f7.css" rel="stylesheet">
                   </div>
