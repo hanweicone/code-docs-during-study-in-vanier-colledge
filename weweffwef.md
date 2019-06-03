@@ -149,6 +149,7 @@ static的另一个作用，就是修饰成员方法。相比于修饰成员属�
 ### <a name="t3"></a>3.静态块
 
 在说明static关键字的第三个用法时，我们有必要重新梳理一下一个对象的初始化过程。以下面的代码为例：
+<pre>
 <div class="cnblogs_code" style="margin:5px 0px;padding:5px;background-color:rgb(245,245,245);border:1px solid rgb(204,204,204);color:rgb(0,0,0);text-align:left;font-family:'Courier New';font-size:12px;"><pre style="margin-bottom:0px;padding-right:0px;padding-left:0px;white-space:pre-wrap;font-family:'Courier New';"><span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">package</span><span style="margin:0px;padding:0px;line-height:1.5;"> com.dotgua.study;
 
 </span><span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">class</span><span style="margin:0px;padding:0px;line-height:1.5;"> Book{
