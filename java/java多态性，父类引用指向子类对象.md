@@ -17,6 +17,8 @@ Son s = new Son();//系统将分配1.5M内存!
 
 Son s1 = s; //s1指向那1.5M的内存.
 Father f1 = (Father)s;//这时f1会指向那1.5M内存中的1M内存
+
+![](https://github.com/hanweicone/test1/blob/master/img/%E5%86%85%E5%AD%98%E7%A4%BA%E6%84%8F%E5%9B%BE.png)
 f1只是指向了s中实例的父类实例对象,所以f1只能调用父类的方法(存储在1M内存中),而不能调用子类的方法(存储在0.5M内存中).
 
 Son s2 = (Son)f;//这句代码运行时会报ClassCastException.
@@ -45,7 +47,7 @@ Cat c1 = （Cat）c；    //不允许“向下转型”，需用强制类型转�
 
 JAVA里没有多继承，一个类只能有一个父类。而继承的表现就是多态。一个父类可以有多个子类，而在子类里可以重写父类的方法，这样每个子类里重写的代码不一样，自然表现形式就不一样。这样用父类的变量去引用不同的子类，在调用这个相同的方法的时候得到的结果和表现形式就不一样了，这就是多态，相同的消息（也就是调用相同的方法）会有不同的结果。举例说明： 
 下面看一个多态性的例子
-
+```java
 //父类 
 public class Father{ 
     //父类有一个打孩子方法 
@@ -85,9 +87,10 @@ public class Test{
       father.hitChild(); 
     } 
 } 
+```
 上面程序调用同一个方法，去出现不同的结果。这就是多态。 
 对于多态性的实现有必要重视方法重载（overloading）和方法重写（override）区别
-
+```java
 class Father{ 
     public void func1(){ 
        System.out.println("AAA"); 
@@ -108,7 +111,8 @@ public class PolymorphismTest {
         Father child = new Child(); 
         child.func1(68);//错误
     } 
-} 
+}
+```
 上面的程序是个很典型的多态的例子。子类Child继承了父类Father，并重载了父类的func1()方法。重载后的func1(int i)和func1()不再是同一个方法，由于父类中没有func1(int i)，那么，父类类型的引用child就不能调用func1(int i)方法。
 
 最后，对于多态做出几点总结
