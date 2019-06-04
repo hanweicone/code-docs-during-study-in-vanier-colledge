@@ -1,8 +1,4 @@
-<div class="blog-content-box">
-  <div class="article-header-box">
-    <div class="article-header">
-      <div class="article-title-box">
-        <span class="article-type type-2 float-left">转</span>        
+     
 
 # [java]static关键字的四种用法和void的用法
 
@@ -74,19 +70,17 @@ public class Person {
 
 我们知道，static关键字可以修饰成员变量和方法，来让它们变成类的所属，而不是对象的所属，比如我们将Person的age属性用static进行修饰，结果会是什么样呢？请看下面的例子：
 
-<pre>`
-
-1.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>{</div></div>
-2.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    String name;</div></div>
-3.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> age;</div></div>
-4.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    </div></div>
-5.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-comment">/* 其余代码不变... */</span></div></div>
-6.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"> </div></div>
-7.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-comment"><span class="hljs-comment">/**Output</span></span></div></div>
-8.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-comment">     * Name:zhangsan, Age:12</span></div></div>
-9.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-comment">     * Name:lisi, Age:12</span></div></div>
-10.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-comment">     */</span><span class="hljs-comment">//~</span></div></div>
-11.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="11"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">}</div></div>`<div class="hljs-button {2}" data-title="复制" onclick="hljs.copyCode(event)"></div></pre>
+public class Person {
+    String name;
+    static int age;
+    
+    /* 其余代码不变... */
+ 
+    /**Output
+     * Name:zhangsan, Age:12
+     * Name:lisi, Age:12
+     *///~
+}
 
 <span style="color:rgb(0,0,0);font-family:Verdana, Arial, Helvetica, sans-serif;font-size:13px;text-align:left;background-color:rgb(254,254,242);">我们发现，结果发生了一点变化，在给p2的age属性赋值时，干扰了p1的age属性，这是为什么呢？我们还是来看他们在内存中的示意：</span>![](https://images2015.cnblogs.com/blog/1055692/201701/1055692-20170129182741362-1771285007.jpg)
 
