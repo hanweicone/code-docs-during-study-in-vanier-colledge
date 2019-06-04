@@ -36,31 +36,29 @@
 ### <a name="t1"></a>1.修饰成员变量
 
 在我们平时的使用当中，static最常用的功能就是修饰类的属性和方法，让他们成为类的成员属性和方法，我们通常将用static修饰的成员称为类成员或者静态成员，这句话挺起来都点奇怪，其实这是相对于对象的属性和方法来说的。请看下面的例子：（未避免程序太过臃肿，暂时不管访问控制）
-<pre><div class="hljs-button {2}" data-title="复制" onclick="hljs.copyCode(event)"></div></pre><pre class="java" name="code">`
-
-1.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">public class Person {</div></div>
-2.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    String name;</div></div>
-3.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    int age;</div></div>
-4.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    </div></div>
-5.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    public String toString() {</div></div>
-6.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">        return "Name:" + name + ", Age:" + age;</div></div>
-7.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    }</div></div>
-8.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    </div></div>
-9.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    public static void main(String[] args) {</div></div>
-10.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">        Person p1 = new Person();</div></div>
-11.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="11"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">        p1.name = "zhangsan";</div></div>
-12.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="12"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">        p1.age = 10;</div></div>
-13.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="13"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">        Person p2 = new Person();</div></div>
-14.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="14"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">        p2.name = "lisi";</div></div>
-15.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="15"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">        p2.age = 12;</div></div>
-16.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="16"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">        System.out.println(p1);</div></div>
-17.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="17"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">        System.out.println(p2);</div></div>
-18.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="18"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    }</div></div>
-19.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="19"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    /**Output</div></div>
-20.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="20"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">     * Name:zhangsan, Age:10</div></div>
-21.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="21"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">     * Name:lisi, Age:12</div></div>
-22.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="22"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">     *///~</div></div>
-23.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="23"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">}</div></div>`<div class="hljs-button {2}" data-title="复制" onclick="hljs.copyCode(event)"></div></pre>
+public class Person {
+    String name;
+    int age;
+    
+    public String toString() {
+        return "Name:" + name + ", Age:" + age;
+    }
+    
+    public static void main(String[] args) {
+        Person p1 = new Person();
+        p1.name = "zhangsan";
+        p1.age = 10;
+        Person p2 = new Person();
+        p2.name = "lisi";
+        p2.age = 12;
+        System.out.println(p1);
+        System.out.println(p2);
+    }
+    /**Output
+     * Name:zhangsan, Age:10
+     * Name:lisi, Age:12
+     *///~
+}
 
 <span style="color:rgb(0,0,0);font-family:Verdana, Arial, Helvetica, sans-serif;font-size:13px;text-align:left;background-color:rgb(254,254,242);">上面的代码我们很熟悉，根据Person构造出的每一个对象都是独立存在的，保存有自己独立的成员变量，相互不会影响，他们在内存中的示意如下:</span>
 
