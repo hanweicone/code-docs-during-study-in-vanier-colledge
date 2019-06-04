@@ -11,10 +11,8 @@ LinkedList：LinkedList是List接口的（双向）链表实现。
 
 ## 二、两个List的数据结构
 ### 1、ArrayList的数据结构
-ArrayList的类继承图如下：
+ArrayList的类继承图如下： 
 ![](https://github.com/hanweicone/test1/blob/master/img/arraylist%E7%BB%A7%E6%89%BF%E5%9B%BE.png)
-
-ArrayList的类继承图
 
 （1-1：ArrayList的类继承图）
 存储
@@ -70,10 +68,8 @@ ArrayList使用数组存储数据，因此在添加数据的时候需要做容�
 （1-2：ArrayList数组扩容源码）
 
 ### 2、LinkedList的数据结构
-LinkedList的类继承图如下：
+LinkedList的类继承图如下： 
 ![](https://github.com/hanweicone/test1/blob/master/img/LinkedList%E7%9A%84%E7%B1%BB%E7%BB%A7%E6%89%BF%E5%9B%BE.png)
-
-LinkedList的类继承图
 
 （2-1：LinkedList的类继承图）
 存储
@@ -222,9 +218,9 @@ LinkedList添加删除元素，实际上就是对链表进行结点添加/删除
 
 其它加锁实现线程安全，如：ConcurrentLinkedDeque（自旋+CAS）、CopyOnWriteArrayList（读写锁）
 
-参考资料
-JAVA学习-ArrayList详解
-[JAVA学习-LinkedList详解](https://www.jianshu.com/p/732b5294a985)
-Java的快速失败和安全失败
-ArrayList线程不安全的表现
-聊聊并发-Java中的Copy-On-Write容器
+参考资料 
+JAVA学习-ArrayList详解 
+[JAVA学习-LinkedList详解](https://www.jianshu.com/p/732b5294a985) 
+Java的快速失败和安全失败 
+ArrayList线程不安全的表现 
+聊聊并发-Java中的Copy-On-Write容器 
