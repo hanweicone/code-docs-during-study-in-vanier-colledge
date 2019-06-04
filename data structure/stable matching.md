@@ -1,4 +1,5 @@
-                                                      # stable matching
+
+                                                             # Stable Matching
 
 离散数学课（CSCI 2110）上，讲到一个有趣的问题。
 
