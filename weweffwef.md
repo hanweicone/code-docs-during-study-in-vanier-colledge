@@ -251,8 +251,8 @@ public class Person {
 
 ### <a name="t4"></a>4.静态导包
 
-&nbsp;相比于上面的三种用途，第四种用途可能了解的人就比较少了，但是实际上它很简单，而且在调用类方法时会更方便。以上面的“PrintHelper”的例子为例，做一下稍微的变化，即可使用静态导包带给我们的方便：<a title="复制代码" style="background-color:rgb(245,245,245);font-family:'Courier New';font-size:12px;margin:0px;padding:0px;color:rgb(7,93,179);border:none;" target="_blank"></a>
-/* PrintHelper.java文件 */
+&nbsp;相比于上面的三种用途，第四种用途可能了解的人就比较少了，但是实际上它很简单，而且在调用类方法时会更方便。以上面的“PrintHelper”的例子为例，做一下稍微的变化，即可使用静态导包带给我们的方便：
+
 package com.dotgua.study;
  
 public class PrintHelper {
@@ -271,10 +271,11 @@ public class App
     {
         print("Hello World!");
     }
-    /**Output
+    /*Output
      * Hello World!
      *///~
 }
+
 上面的代码来自于两个java文件，其中的PrintHelper很简单，包含了一个用于打印的static方法。而在App.java文件中，我们首先将PrintHelper类导入，这里在导入时，我们使用了static关键字，而且在引入类的最后还加上了<span style="margin:0px;padding:0px;">“.*”</span>，它的作用就是将PrintHelper类中的所有类方法直接导入。不同于非static导入，采用static导入包后，在不与当前类的方法名冲突的情况下，无需使用“<span style="margin:0px;padding:0px;">类名.方法名</span>”的方法去调用类方法了，直接可以采用"<span style="margin:0px;padding:0px;">方法名</span>"去调用类方法，就好像是该类自己的方法一样使用即可。
 
 ## <a name="t5"></a>总结
