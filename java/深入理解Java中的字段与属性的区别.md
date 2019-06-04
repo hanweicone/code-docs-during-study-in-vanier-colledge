@@ -1,19 +1,19 @@
-深入理解Java中的字段与属性的区别
+# 深入理解Java中的字段与属性的区别
 
-1、Java中的属性和字段有什么区别？ 
+## 1、Java中的属性和字段有什么区别？ 
 答：Java中的属性(property)，通常可以理解为get和set方法。
 而字段(field)，通常叫做“类成员”，或 "类成员变量”，有时也叫“域”，理解为“数据成员”，用来承载数据的。
 
 这两个概念是完全不同的。
 
-2、属性和字段详解
+## 2、属性和字段详解
 
  ◆◆字段（filed）
 ------------------------------------------------------------------------------------
 类成员(字段)，通常是在类中定义的类成员变量，例如：
-public class A{
-    private String s = "123";
-}
+    public class A{
+        private String s = "123";
+    }
 我们可以说A类中有一个成员变量叫做s，A类有一个字段s 。
 
 字段一般用来承载数据，所以为了安全性，一般定义为私有的。
@@ -25,8 +25,8 @@ public class A{
  ◆◆属性（property）
 -------------------------------------------------------------------------
 属性只局限于类中方法的声明，并不与类中其他成员相关，属于JavaBean的范畴。例如：
-void setA(String s){}
-String getA(){}
+    void setA(String s){}
+    String getA(){}
 当一个类中拥有这样一对方法时，我们可以说，这个类中拥有一个可读写的a属性(注意是小写a)。如果去掉了set的方法，则是可读属性，反之亦然。
 
 其规则是：去掉get或set后其剩余的字符串，
@@ -42,27 +42,27 @@ getCPU---->CPU 
 
 
 
-public class User {
-    private String id; //私有字段
-    private String name; //私有字段
-    private String identifier = "440282199008098076"; //私有字段
-    public String getId() { //id的可读属性
-        return id;
-    }
-    public void setId(String id) { //id的可写属性
-        this.id = id;
-    }
-    public String getName() { //name的可读属性
-        return name;
-    }
-    public void setName(String name) { //name的可写属性
-        this.name = name;
-    }
-    public String getIdentifier() { //identifier只有一个get方法，所以它是只读属性         return identifier;
-    }
-    public final static Integer SHOW_STATUS_YES = 1; //公共字段
-    public final static Integer SHOW_STATUS_No = 0; //公共字段
-}
+    public class User {
+        private String id; //私有字段
+        private String name; //私有字段
+        private String identifier = "440282199008098076"; //私有字段
+        public String getId() { //id的可读属性
+            return id;
+        }
+        public void setId(String id) { //id的可写属性
+            this.id = id;
+        }
+        public String getName() { //name的可读属性
+            return name;
+        }
+        public void setName(String name) { //name的可写属性
+            this.name = name;
+        }
+        public String getIdentifier() { //identifier只有一个get方法，所以它是只读属性         return identifier;
+        }
+        public final static Integer SHOW_STATUS_YES = 1; //公共字段
+        public final static Integer SHOW_STATUS_No = 0; //公共字段
+    }
 
 当我操作这个类时，比如调用getName()方法时，我们要说是获得name属性，调用setName(String name)方法时要说设置name属性，因为对我们来说name字段是私有的，我们操作该Person类时根本看不到有这个name字段 。
 一个类主要包括字段、属性和方法。属性在此时指的就是get/set访问器。
@@ -78,33 +78,33 @@ id和name为私有字段，且有两个操作他们的public属性。可以通�
 为了便于测试加上toString方法：
 
 
-public class User {
-   //其他代码同上...
-   
-    @Override
-    public String toString() { //只有拥有属性的字段，才会被toString方法调用
-        return "User [id=" + id + ", name=" + name + ", identifier=" + identifier + "]";
-    }
-}
+    public class User {
+       //其他代码同上...
 
-测试类：
+        @Override
+        public String toString() { //只有拥有属性的字段，才会被toString方法调用
+            return "User [id=" + id + ", name=" + name + ", identifier=" + identifier + "]";
+        }
+    }
+
+    测试类：
 
 
-public class UserTest {
-    public static void main(String[] args) {
-        User user = new User();
-        user.setId("100");
-        user.setName("chunlynn");
-        String identifier = user.getIdentifier();
-        System.out.println("identifier==" + identifier);
-        // 4402322BDFV323230001
-        System.out.println(user);
-        // User [id=100, name=chunlynn, identifier=4402322BDFV323230001]
-        Integer status = User.SHOW_STATUS_YES; // public字段的访问
-        System.out.println(status);
-        // 1
-    }
-}
+    public class UserTest {
+        public static void main(String[] args) {
+            User user = new User();
+            user.setId("100");
+            user.setName("chunlynn");
+            String identifier = user.getIdentifier();
+            System.out.println("identifier==" + identifier);
+            // 4402322BDFV323230001
+            System.out.println(user);
+            // User [id=100, name=chunlynn, identifier=4402322BDFV323230001]
+            Integer status = User.SHOW_STATUS_YES; // public字段的访问
+            System.out.println(status);
+            // 1
+        }
+    }
 
 虽然在实际项目的开发过程中，公共字段和属性在合适的条件下都可以使用，但是我们应该尽可能的使用属性（property），而不是数据成员（field）；
 
@@ -125,12 +125,6 @@ JavaBean是一种特殊的类，主要用于传递数据信息，这种类中的
 JavaBean在Java EE开发中，通常用于封装数据，对于遵循以上写法的JavaBean组件，其它程序可以通过反射技术实例化JavaBean对象（内省机制），并且通过反射那些遵循命名规范的方法，从而获知JavaBean的属性，进而调用其属性保存数据。
 
 
-
-
 友情链接：
- 什么是JavaBean、bean? 什么是POJO、PO、DTO、VO、BO ? 
---------------------- 
-作者：chunlynn 
-来源：CSDN 
-原文：https://blog.csdn.net/chenchunlin526/article/details/71424844 
-版权声明：本文为博主原创文章，转载请附上博文链接！
+ [什么是JavaBean、bean? 什么是POJO、PO、DTO、VO、BO ? ](http://blog.csdn.net/chenchunlin526/article/details/69939337)
+
