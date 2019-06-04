@@ -87,35 +87,35 @@ public class Person {
 我们发现，给age属性加了<span style="margin:0px;padding:0px;">static</span>关键字之后，Person对象就不再拥有age属性了，age属性会统一交给Person类去管理，即多个Person对象只会对应一个age属性，一个对象如果对age属性做了改变，其他的对象都会受到影响。我们看到此时的age和toString()方法一样，都是交由类去管理。
 
 虽然我们看到static可以让对象共享属性，但是实际中我们很少这么用，也不推荐这么使用。因为这样会让该属性变得难以控制，因为它在任何地方都有可能被改变。如果我们想共享属性，一般我们会采用其他的办法：
-<pre style="margin-bottom:0px;padding-right:0px;padding-left:0px;white-space:pre-wrap;text-align:left;font-family:'Courier New';"><span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">public</span> <span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">class</span><span style="margin:0px;padding:0px;line-height:1.5;"> Person {
-    </span><span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">private</span> <span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">static</span> <span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">int</span> count = 0<span style="margin:0px;padding:0px;line-height:1.5;">;
-    </span><span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">int</span><span style="margin:0px;padding:0px;line-height:1.5;"> id;
+public class Person {
+    private static int count = 0;
+    int id;
     String name;
-    </span><span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">int</span><span style="margin:0px;padding:0px;line-height:1.5;"> age;
-
-    </span><span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">public</span><span style="margin:0px;padding:0px;line-height:1.5;"> Person() {
-        id </span>= ++count<span style="margin:0px;padding:0px;line-height:1.5;">;
+    int age;
+    
+    public Person() {
+        id = ++count;
     }
-
-    </span><span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">public</span><span style="margin:0px;padding:0px;line-height:1.5;"> String toString() {
-        </span><span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">return</span> "Id:" + id + ", Name:" + name + ", Age:" +<span style="margin:0px;padding:0px;line-height:1.5;"> age;
+    
+    public String toString() {
+        return "Id:" + id + ", Name:" + name + ", Age:" + age;
     }
-
-    </span><span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">public</span> <span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">static</span> <span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">void</span><span style="margin:0px;padding:0px;line-height:1.5;"> main(String[] args) {
-        Person p1 </span>= <span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">new</span><span style="margin:0px;padding:0px;line-height:1.5;"> Person();
-        p1.name </span>= "zhangsan"<span style="margin:0px;padding:0px;line-height:1.5;">;
-        p1.age </span>= 10<span style="margin:0px;padding:0px;line-height:1.5;">;
-        Person p2 </span>= <span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,0,255);">new</span><span style="margin:0px;padding:0px;line-height:1.5;"> Person();
-        p2.name </span>= "lisi"<span style="margin:0px;padding:0px;line-height:1.5;">;
-        p2.age </span>= 12<span style="margin:0px;padding:0px;line-height:1.5;">;
+    
+    public static void main(String[] args) {
+        Person p1 = new Person();
+        p1.name = "zhangsan";
+        p1.age = 10;
+        Person p2 = new Person();
+        p2.name = "lisi";
+        p2.age = 12;
         System.out.println(p1);
         System.out.println(p2);
     }
-    </span><span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,128,0);">/**</span><span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,128,0);">Output
+    /**Output
      * Id:1, Name:zhangsan, Age:10
      * Id:2, Name:lisi, Age:12
-     </span><span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,128,0);">*///</span><span style="margin:0px;padding:0px;line-height:1.5;color:rgb(0,128,0);">~</span>
-}</pre>
+     *///~
+}
 
 上面的代码起到了给Person的对象创建一个唯一id以及记录总数的作用，其中count由static修饰，是Person类的成员属性，每次创建一个Person对象，就会使该属性自加1然后赋给对象的id属性，这样，count属性记录了创建Person对象的总数，由于count使用了private修饰，所以从类外面无法随意改变。
 
@@ -123,18 +123,16 @@ public class Person {
 
 static的另一个作用，就是修饰成员方法。相比于修饰成员属性，修饰成员方法对于数据的存储上面并没有多大的变化，因为我们从上面可以看出，方法本来就是存放在类的定义当中的。static修饰成员方法最大的作用，就是可以使用"<span style="margin:0px;padding:0px;">类名.方法名</span>"的方式操作方法，避免了先要new出对象的繁琐和资源消耗，我们可能会经常在帮助类中看到它的使用：
 
-<pre>`
-
-1.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PrintHelper</span> </span>{</div></div>
-2.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"> </div></div>
-3.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">(Object o)</span></span>{</div></div>
-4.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">        System.out.println(o);</div></div>
-5.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    }</div></div>
-6.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    </div></div>
-7.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</div></div>
-8.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">        PrintHelper.print(<span class="hljs-string">"Hello world"</span>);</div></div>
-9.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    }</div></div>
-10.  <div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">}</div></div>`<div class="hljs-button {2}" data-title="复制" onclick="hljs.copyCode(event)"></div></pre>
+public class PrintHelper {
+ 
+    public static void print(Object o){
+        System.out.println(o);
+    }
+    
+    public static void main(String[] args) {
+        PrintHelper.print("Hello world");
+    }
+}
 
 上面便是一个例子（现在还不太实用），但是我们可以看到它的作用，使得static修饰的方法成为类的方法，使用时通过“<span style="margin:0px;padding:0px;">类名.方法名</span>”的方式就可以方便的使用了，相当于定义了一个全局的函数（只要导入该类所在的包即可）。不过它也有使用的局限，一个static修饰的类中，不能使用非static修饰的成员变量和方法，这很好理解，因为static修饰的方法是属于类的，如果去直接使用对象的成员变量，它会不知所措（不知该使用哪一个对象的属性）。
 
