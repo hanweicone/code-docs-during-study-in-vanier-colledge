@@ -1,8 +1,7 @@
 # JAVA随机数之多种方法从给定范围内随机N个不重复数
-##一、JAVA中生成随机数的方式
+# #一、JAVA中生成随机数的方式
 
-1、在j2se中使用Math.random()令系统随机选取一个0~1之间的double类型小数，将其乘以一个数，比如25，就能得到一个0~25范围内的随机数，这个在j2me中没有；    
-
+1、在j2se中使用Math.random()令系统随机选取一个0-1之间的double类型小数，将其乘以一个数，比如25，就能得到一个0-25范围内的随机数，这个在j2me中没有；    
 Java代码 
 
         int randomNumber = (int) Math.round(Math.random()*(max-min)+min);  
