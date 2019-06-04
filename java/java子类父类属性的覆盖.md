@@ -93,22 +93,34 @@ public class SubClass extends ParentClass {
 
 这段代码的运行结果如下： 
 
-ParentClass parentClass = new ParentClass(); 
+ParentClass parentClass = new ParentClass();
+
 父类变量--private 
-父类变量--friendly 
+
+父类变量--friendly
+
 父类变量--protected 
+
 父类变量--public 
 
 ParentClass subClass = new SubClass(); 
+
 子类变量--private 
+
 父类变量--friendly 
-父类变量--protected 
+
+父类变量--protected
+
 父类变量--public 
 
 SubClass subClazz = new SubClass(); 
+
 子类变量--private 
+
 子类变量--friendly 
+
 子类变量--protected 
+
 子类变量--public 
 
 从上面的结果中可以看出，private的变量与其它三种访问权限变量的不同，这是由于方法的重写（override）而引起的。关于重写知识的回顾留给以后的章节，这里我们来看一下其它三种访问权限下变量的覆盖情况。 
@@ -190,7 +202,9 @@ public class SubClass extends ParentClass {
 运行结果如下： 
 
 子类静态变量 
+
 子类常量 
+
 子类静态常量 
 
 
