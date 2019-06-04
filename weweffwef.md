@@ -20,8 +20,8 @@
 ### <a name="t1"></a>1.修饰成员变量
 
 在我们平时的使用当中，static最常用的功能就是修饰类的属性和方法，让他们成为类的成员属性和方法，我们通常将用static修饰的成员称为类成员或者静态成员，这句话挺起来都点奇怪，其实这是相对于对象的属性和方法来说的。请看下面的例子：（未避免程序太过臃肿，暂时不管访问控制）
-(```)
-public class Person {
+
+     public class Person {
     String name;
     int age;
     public String toString() {
@@ -42,7 +42,7 @@ public class Person {
      * Name:lisi, Age:12
      *///~
 }
-(```)
+
 
 <span style="color:rgb(0,0,0);font-family:Verdana, Arial, Helvetica, sans-serif;font-size:13px;text-align:left;background-color:rgb(254,254,242);">上面的代码我们很熟悉，根据Person构造出的每一个对象都是独立存在的，保存有自己独立的成员变量，相互不会影响，他们在内存中的示意如下:</span>
 
