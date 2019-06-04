@@ -1,41 +1,5 @@
-<div class="blog-content-box">
-  <div class="article-header-box">
-    <div class="article-header">
-      <div class="article-title-box">
-        <span class="article-type type-1 float-left">原</span>        <h1 class="title-article">Java高级系列——枚举（Enums）</h1>
-      </div>
-      <div class="article-info-box">
-        <div class="article-bar-top" style="height: 24px;">
-                                                  <span class="time">2018年01月12日 15:56:51</span>
-          <a class="follow-nickName" href="https://me.csdn.net/zyhlwzy" target="_blank">RonTech</a>
-          <span class="read-count">阅读数：7292</span><span class="article_info_click" style="position: static;">更多</span>
-          
-                                                  <div class="tags-box space">
-                <span class="label">所属专栏：</span>
-                                  <a class="tag-link" href="https://blog.csdn.net/column/details/18828.html" target="_blank">Java高级系列文章</a>
-                                
-              </div>
-                              </div>
-        <div class="operating">
-                  </div>
-      </div>
-    </div>
-  </div>
-  <article class="baidu_pl">
-    <div id="article_content" class="article_content clearfix csdn-tracking-statistics" data-pid="blog" data-mod="popu_307" data-dsm="post">
-              <div class="article-copyright">
-                      <svg class="icon" title="CSDN认证原创" aria-hidden="true" style="width:53px; height: 18px; vertical-align: -4px;">
-              <use xlink:href="#CSDN_Cert"></use>
-            </svg>
-          
-          版权声明：转载请注明出处，谢谢配合。          https://blog.csdn.net/zyhlwzy/article/details/79045066        </div>
-            <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/ck_htmledit_views-f57960eb32.css">
-                              <div id="content_views" class="markdown_views">
-            <!-- flowchart 箭头图标 勿删 -->
-            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-              <path stroke-linecap="round" d="M5,0 0,2.5 5,5z" id="raphael-marker-block" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
-            </svg>
-            <p><strong>一、介绍</strong></p>
+# Java高级系列——枚举（Enums）
+## 一、介绍
 
 <p>本系列文章的这一部分我们将会介绍Java 5版本之后引入的除泛型之外的另外一个强大特性：枚举。可以将枚举看成一种特殊的类，并且可以将注解看成一种特殊的接口。</p>
 
