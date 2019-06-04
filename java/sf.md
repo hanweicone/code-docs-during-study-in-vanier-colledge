@@ -12,7 +12,7 @@ LinkedList：LinkedList是List接口的（双向）链表实现。
 ## 二、两个List的数据结构
 1、ArrayList的数据结构
 ArrayList的类继承图如下：
-
+![](https://github.com/hanweicone/test1/blob/master/img/arraylist%E7%BB%A7%E6%89%BF%E5%9B%BE.png)
 ArrayList的类继承图
 
 （1-1：ArrayList的类继承图）
