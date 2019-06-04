@@ -1,5 +1,5 @@
 
-<div align:"center"><h1>stable matching</h1></div>
+<div align="center"><h1>stable matching</h1></div>
 离散数学课（CSCI 2110）上，讲到一个有趣的问题。
 
 假设有五个男生，五个女生，每个人都在自己心中对五个异性有一定的preference排序，比如：
