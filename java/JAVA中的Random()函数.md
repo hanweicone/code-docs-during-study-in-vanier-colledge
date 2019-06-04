@@ -27,13 +27,13 @@ Java中存在着两种Random函数：
       }
     }
     复制代码
-二、java.util.Random
+## 二、java.util.Random
 
 下面Random()的两种构造方法：
 
-   Random()：创建一个新的随机数生成器。
+Random()：创建一个新的随机数生成器。
 
-   Random(long seed)：使用单个 long 种子创建一个新的随机数生成器。
+Random(long seed)：使用单个 long 种子创建一个新的随机数生成器。
 
 我们可以在构造Random对象的时候指定种子（这里指定种子有何作用，请接着往下看），如：Random r1 = new Random(20);
 
@@ -44,9 +44,9 @@ Java中存在着两种Random函数：
     Random rand =new Random(25);
     int i;
     i=rand.nextInt(100);
-　　初始化时25并没有起直接作用（注意：不是没有起作用）,rand.nextInt(100);中的100是随机数的上限,产生的随机数为0-100的整数,不包括100。
+初始化时25并没有起直接作用（注意：不是没有起作用）,rand.nextInt(100);中的100是随机数的上限,产生的随机数为0-100的整数,不包括100。
 
-　　具体用法如下例：
+具体用法如下例：
 
     复制代码
     package IO;
