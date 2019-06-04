@@ -1,38 +1,7 @@
-<div class="blog-content-box">
-
-<div class="article-header-box">
-
-<div class="article-header">
-
-<div class="article-title-box"><span class="article-type type-1 float-left">原</span>
 
 # Java向下转型的意义
 
-</div>
 
-<div class="article-info-box">
-
-<div class="article-bar-top" style="height: 26px;"><span class="time">2016年08月17日 16:13:01</span> [yinhuanxu](https://me.csdn.net/xyh269) <span class="read-count">阅读数：21045</span> <span class="tags-box artic-tag-box"><span class="label">标签：</span> [java](https://so.csdn.net/so/search/s.do?q=java&t=blog) [转型](https://so.csdn.net/so/search/s.do?q=转型&t=blog) [向下转型](https://so.csdn.net/so/search/s.do?q=向下转型&t=blog) [向上转型](https://so.csdn.net/so/search/s.do?q=向上转型&t=blog) [泛型](https://so.csdn.net/so/search/s.do?q=泛型&t=blog) <span class="article_info_click">更多</span></span>
-
-<div class="tags-box space"><span class="label">个人分类：</span> [Java学习篇](https://blog.csdn.net/xyh269/article/category/6353644)</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<article class="baidu_pl">
-
-<div id="article_content" class="article_content clearfix csdn-tracking-statistics" data-pid="blog" data-mod="popu_307" data-dsm="post">
-
-<div class="article-copyright">版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/xyh269/article/details/52231944</div>
-
-<link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/ck_htmledit_views-f57960eb32.css">
-
-<div id="content_views" class="markdown_views">
 
 一开始学习 Java 时不重视向下转型。一直搞不清楚向下转型的意义和用途，不清楚其实就是不会，那开发的过程肯定也想不到用向下转型。
 
@@ -182,9 +151,9 @@ List 集合是用来存放电子产品的，add 方法用来添加电子产品�
 
 运行截图：  
 
-<div align="center">  
-![这里写图片描述](https://img-blog.csdn.net/20161022214436745)  
-</div>
+  
+![](https://img-blog.csdn.net/20161022214436745)  
+
 
 举个例子分析就好
 
