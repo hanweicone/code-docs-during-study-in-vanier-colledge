@@ -218,9 +218,14 @@ LinkedList添加删除元素，实际上就是对链表进行结点添加/删除
 
 其它加锁实现线程安全，如：ConcurrentLinkedDeque（自旋+CAS）、CopyOnWriteArrayList（读写锁）
 
-参考资料 
+参考资料
+
 JAVA学习-ArrayList详解 
+
 [JAVA学习-LinkedList详解](https://www.jianshu.com/p/732b5294a985) 
+
 Java的快速失败和安全失败 
+
 ArrayList线程不安全的表现 
+
 聊聊并发-Java中的Copy-On-Write容器 
