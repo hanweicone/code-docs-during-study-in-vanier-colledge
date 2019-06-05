@@ -1,20 +1,8 @@
-<div id="mainContent">
 
-<div class="forFlow">
-
-<div id="post_detail">
-
-<div id="topics">
-
-<div class="post">
 
 # [浅析java中的语法糖](https://www.cnblogs.com/qingshanli/p/9375040.html)
 
-<div class="postBody">
 
-<div id="cnblogs_post_body" class="blogpost-body"><a name="_labelTop"></a>
-
-<div id="navCategory">
 
 **目录**
 
@@ -36,9 +24,9 @@
 *   [源代码](#_label15)
 *   [参数资料](#_label16)
 
-</div>
 
-<div style="text-align: right"><a name="_label0"></a></div>
+
+
 
 ## **<span style="font-size: 18px;">概述</span>**
 
@@ -98,7 +86,7 @@ public void ifCompilerTest() {
 
 <div style="text-align: right"><a name="_label3"></a></div>
 
-## <span style="font-size: 18px;">**断言**</span>
+## 断言
 
 ```java
 /**
@@ -116,41 +104,29 @@ public void assertTest(String s) {
 
 如上, 当断言结果为true时, 程序继续正常执行, 当断言结果为false时, 则抛出AssertionError异常来打断程序的执行。
 
-<div style="text-align: right"><a name="_label4"></a></div>
 
-## <span style="font-size: 18px;">**枚举与Switch语句**</span>
 
-<div class="cnblogs_code">
+## **<span style="font-size: 18px;">枚举与Switch语句</span>**
 
-<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy">[![复制代码](//common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")</span></div>
 
-<pre class="prettyprint prettyprinted" style=""><span style="color: #008000;"><span class="com">/**</span></span><span style="color: #008000;"> <span class="com">* 枚举与Switch语句
-
-```java
- /**
- * 枚举与Switch语句
- * option: --decodeenumswitch false
- */
-public int switchEnumTest(EnumTest e) {
-    switch (e) {
-        case FOO:
-            return 1;
-        case BAP:
-            return 2;
+    public int switchEnumTest(EnumTest e) {
+        switch (e) {
+            case FOO:
+                return 1;
+            case BAP:
+                return 2;
+        }
+        return 0;
     }
-    return 0;
-}
 
-/**
- * 枚举, JDK1.5开始支持
- * option: --sugarenums false
- */
-public enum EnumTest {
-    FOO,
-    BAR,
-    BAP
-}
-```
+
+    public enum EnumTest {
+        FOO,
+        BAR,
+        BAP
+    }
+
+
 命令行: <span style="color: #ff6600;">java -jar cfr_0_132.jar CFRDecompilerDemo.class --decodeenumswitch false</span>
 
 ![](https://images2018.cnblogs.com/blog/1278884/201808/1278884-20180803143426977-947258293.png)
@@ -602,9 +578,6 @@ public class CFRDecompilerDemo {
     }
 }
 ```
-<span class="cnblogs_code_collapse" style="display: none;">View Code</span></div>
-
-<div style="text-align: right"><a name="_label16"></a></div>
 
 ## <span style="font-size: 18px;">**参数资料**</span>
 
@@ -618,5 +591,5 @@ public class CFRDecompilerDemo {
 
 [一些防止java代码被反编译的方法](https://blog.csdn.net/qq_35038153/article/details/78054085)
 
-</div>
+
 
