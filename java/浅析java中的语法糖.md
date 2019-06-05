@@ -54,26 +54,6 @@ java中的语法糖只存在于编译期, 在编译器将 .java 源文件编译�
 
 ## **<span style="font-size: 18px;">字符串拼接</span>**
 
-
-命令行: <span style="color: #ff6600;">java -jar cfr_0_132.jar CFRDecompilerDemo.class --stringbuilder false</span>
-
-![](https://images2018.cnblogs.com/blog/1278884/201808/1278884-20180803120016044-486497178.png)从反编译后的代码中能看出, 当我们使用+号进行字符串拼接操作时, 编译时会自动创建一个<span style="color: #ff6600;">StringBuilder</span>对象。所以当在循环中拼接字符串时, 应避免使用+号操作, 否则每次循环都会创建一个<span style="color: #ff6600;">StringBuilder</span>对象再回收, 造成较大的开销。
-
-<div style="text-align: right"><a name="_label2"></a></div>
-
-## **<span style="font-size: 18px;">条件编译</span>**
-
-<div class="cnblogs_code">
-
-<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy">[![复制代码](//common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")</span></div>
-
-<pre class="prettyprint prettyprinted" style=""><span style="color: #008000;"><span class="com">/**</span></span><span style="color: #008000;"> <span class="com">* 条件编译
- * option: 不需要参数</span> </span><span style="color: #008000;"><span class="com">*/</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">void</span></span><span style="color: #000000;"> <span class="pln">ifCompilerTest</span><span class="pun">()</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">if</span></span><span class="pun">(</span><span style="color: #0000ff;"><span class="kwd">false</span></span><span style="color: #000000;"><span class="pun">)</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> <span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span></span><span class="str">"false if"</span><span style="color: #000000;"><span class="pun">);</span> <span class="pln"></span> <span class="pun">}</span></span><span style="color: #0000ff;"><span class="kwd">else</span></span><span style="color: #000000;"> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> <span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span></span><span class="str">"true else"</span><span style="color: #000000;"><span class="pun">);</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> <span class="pun">}</span></span></pre>
-
-<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy">[![复制代码](//common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")</span></div>
-
-</div>
-
 ```java
 /**
  * 字符串拼接
@@ -88,6 +68,28 @@ public void stringBuilderTest(int end) {
     }
 }
 ```
+命令行: <span style="color: #ff6600;">java -jar cfr_0_132.jar CFRDecompilerDemo.class --stringbuilder false</span>
+
+![](https://images2018.cnblogs.com/blog/1278884/201808/1278884-20180803120016044-486497178.png)从反编译后的代码中能看出, 当我们使用+号进行字符串拼接操作时, 编译时会自动创建一个<span style="color: #ff6600;">StringBuilder</span>对象。所以当在循环中拼接字符串时, 应避免使用+号操作, 否则每次循环都会创建一个<span style="color: #ff6600;">StringBuilder</span>对象再回收, 造成较大的开销。
+
+<div style="text-align: right"><a name="_label2"></a></div>
+
+## **<span style="font-size: 18px;">条件编译</span>**
+
+```java
+/**
+ * 条件编译
+ * option: 不需要参数
+ */
+public void ifCompilerTest() {
+    if(false) {
+        System.out.println("false if");
+    }else {
+        System.out.println("true else");
+    }
+}
+
+```
 命令行: <span style="color: #ff6600;">java -jar cfr_0_132.jar CFRDecompilerDemo.class</span>
 
 ![](https://images2018.cnblogs.com/blog/1278884/201808/1278884-20180803142423489-682039451.png)
@@ -98,17 +100,16 @@ public void stringBuilderTest(int end) {
 
 ## <span style="font-size: 18px;">**断言**</span>
 
-<div class="cnblogs_code">
-
-<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy">[![复制代码](//common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")</span></div>
-
-<pre class="prettyprint prettyprinted" style=""><span style="color: #008000;"><span class="com">/**</span></span><span style="color: #008000;"> <span class="com">* 断言, JDK1.4开始支持
- * option: --sugarasserts false</span> </span><span style="color: #008000;"><span class="com">*/</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">void</span></span><span style="color: #000000;"> <span class="pln">assertTest</span><span class="pun">(</span><span class="typ">String</span> <span class="pln">s</span><span class="pun">)</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">assert</span></span> <span class="pln"></span> <span class="pun">(!</span><span class="pln">s</span><span class="pun">.</span><span class="pln">equals</span><span class="pun">(</span><span class="str">"Fred"</span><span style="color: #000000;"><span class="pun">));</span> <span class="pln"></span> <span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="pln">s</span><span class="pun">);</span> <span class="pln"></span> <span class="pun">}</span></span></pre>
-
-<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy">[![复制代码](//common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")</span></div>
-
-</div>
-
+```java
+/**
+ * 断言, JDK1.4开始支持
+ * option: --sugarasserts false
+ */
+public void assertTest(String s) {
+    assert (!s.equals("Fred"));
+    System.out.println(s);
+}
+```
 命令行: <span style="color: #ff6600;">java -jar cfr_0_132.jar CFRDecompilerDemo.class --sugarasserts false</span>
 
 ![](https://images2018.cnblogs.com/blog/1278884/201808/1278884-20180803145913175-818304986.png)
@@ -124,13 +125,32 @@ public void stringBuilderTest(int end) {
 <div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy">[![复制代码](//common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")</span></div>
 
 <pre class="prettyprint prettyprinted" style=""><span style="color: #008000;"><span class="com">/**</span></span><span style="color: #008000;"> <span class="com">* 枚举与Switch语句
- * option: --decodeenumswitch false</span> </span><span style="color: #008000;"><span class="com">*/</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">int</span></span><span style="color: #000000;"> <span class="pln">switchEnumTest</span><span class="pun">(</span><span class="typ">EnumTest</span> <span class="pln">e</span><span class="pun">)</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">switch</span></span><span style="color: #000000;"> <span class="pln"></span> <span class="pun">(</span><span class="pln">e</span><span class="pun">)</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">case</span></span><span style="color: #000000;"> <span class="pln">FOO</span><span class="pun">:</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">return</span></span> <span class="pln"></span> <span class="lit">1</span><span style="color: #000000;"><span class="pun">;</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">case</span></span><span style="color: #000000;"> <span class="pln">BAP</span><span class="pun">:</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">return</span></span> <span class="pln"></span> <span class="lit">2</span><span style="color: #000000;"><span class="pun">;</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">return</span></span> <span class="pln"></span> <span class="lit">0</span><span style="color: #000000;"><span class="pun">;</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> </span><span style="color: #008000;"><span class="com">/**</span></span><span style="color: #008000;"> <span class="com">* 枚举, JDK1.5开始支持
- * option: --sugarenums false</span> </span><span style="color: #008000;"><span class="com">*/</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">enum</span></span><span style="color: #000000;"> <span class="pln"></span> <span class="typ">EnumTest</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln">FOO</span><span class="pun">,</span> <span class="pln">BAR</span><span class="pun">,</span> <span class="pln">BAP</span> <span class="pun">}</span></span></pre>
 
-<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy">[![复制代码](//common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")</span></div>
+```java
+ /**
+ * 枚举与Switch语句
+ * option: --decodeenumswitch false
+ */
+public int switchEnumTest(EnumTest e) {
+    switch (e) {
+        case FOO:
+            return 1;
+        case BAP:
+            return 2;
+    }
+    return 0;
+}
 
-</div>
-
+/**
+ * 枚举, JDK1.5开始支持
+ * option: --sugarenums false
+ */
+public enum EnumTest {
+    FOO,
+    BAR,
+    BAP
+}
+```
 命令行: <span style="color: #ff6600;">java -jar cfr_0_132.jar CFRDecompilerDemo.class --decodeenumswitch false</span>
 
 ![](https://images2018.cnblogs.com/blog/1278884/201808/1278884-20180803143426977-947258293.png)
@@ -141,17 +161,26 @@ switch支持枚举是通过调用枚举类默认继承的父类Enum中的<span s
 
 ## <span style="font-size: 18px;">**字符串与Switch语句**</span>
 
-<div class="cnblogs_code">
-
-<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy">[![复制代码](//common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")</span></div>
-
-<pre class="prettyprint prettyprinted" style=""><span style="color: #008000;"><span class="com">/**</span></span><span style="color: #008000;"> <span class="com">* 字符串与Switch语句
- * option: --decodestringswitch false</span> </span><span style="color: #008000;"><span class="com">*/</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">int</span></span><span style="color: #000000;"> <span class="pln">switchStringTest</span><span class="pun">(</span><span class="typ">String</span> <span class="pln">s</span><span class="pun">)</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">switch</span></span><span style="color: #000000;"> <span class="pln"></span> <span class="pun">(</span><span class="pln">s</span><span class="pun">)</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">default</span></span><span style="color: #000000;"><span class="pun">:</span> <span class="pln"></span> <span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span></span><span class="str">"Test"</span><span style="color: #000000;"><span class="pun">);</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">break</span></span><span style="color: #000000;"><span class="pun">;</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">case</span></span> <span class="pln"></span> <span class="str">"BB"</span><span class="pun">:</span> <span class="pln"></span> <span style="color: #008000;"><span class="com">//</span></span><span style="color: #008000;"> <span class="com">BB and Aa have the same hashcode.</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">return</span></span> <span class="pln"></span> <span class="lit">12</span><span style="color: #000000;"><span class="pun">;</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">case</span></span> <span class="pln"></span> <span class="str">"Aa"</span><span style="color: #000000;"><span class="pun">:</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">case</span></span> <span class="pln"></span> <span class="str">"FRED"</span><span style="color: #000000;"><span class="pun">:</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">return</span></span> <span class="pln"></span> <span class="lit">13</span><span style="color: #000000;"><span class="pun">;</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> <span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span></span><span class="str">"Here"</span><span style="color: #000000;"><span class="pun">);</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">return</span></span> <span class="pln"></span> <span class="lit">0</span><span style="color: #000000;"><span class="pun">;</span> <span class="pln"></span> <span class="pun">}</span></span></pre>
-
-<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy">[![复制代码](//common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")</span></div>
-
-</div>
-
+```java
+/** 
+ * 字符串与Switch语句
+ * option: --decodestringswitch false
+ */
+public int switchStringTest(String s) {
+    switch (s) {
+        default:
+            System.out.println("Test");
+            break;
+        case "BB":  // BB and Aa have the same hashcode.
+            return 12;
+        case "Aa":
+        case "FRED":
+            return 13;
+    }
+    System.out.println("Here");
+    return 0;
+}
+```
 命令行: <span style="color: #ff6600;">java -jar cfr_0_132.jar CFRDecompilerDemo.class --decodestringswitch false</span>
 
 ![](https://images2018.cnblogs.com/blog/1278884/201808/1278884-20180803143605821-951143227.png)
@@ -164,17 +193,17 @@ switch支持字符串是通过<span style="color: #ff6600;">hashCode()</span>和
 
 ## <span style="font-size: 18px;">**可变参数**</span>
 
-<div class="cnblogs_code">
-
-<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy">[![复制代码](//common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")</span></div>
-
-<pre class="prettyprint prettyprinted" style=""><span style="color: #008000;"><span class="com">/**</span></span><span style="color: #008000;"> <span class="com">* 可变参数
- * option: --arrayiter false</span> </span><span style="color: #008000;"><span class="com">*/</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">void</span></span><span style="color: #000000;"> <span class="pln">varargsTest</span><span class="pun">(</span><span class="typ">String</span> <span class="pln"></span> <span class="pun">...</span> <span class="pln">arr</span><span class="pun">)</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">for</span></span><span style="color: #000000;"> <span class="pln"></span> <span class="pun">(</span><span class="typ">String</span> <span class="pln">s</span> <span class="pun">:</span> <span class="pln">arr</span><span class="pun">)</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> <span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="pln">s</span><span class="pun">);</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> <span class="pun">}</span></span></pre>
-
-<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy">[![复制代码](//common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")</span></div>
-
-</div>
-
+```java
+/**
+ * 可变参数
+ * option: --arrayiter false
+ */
+public void varargsTest(String ... arr) {
+    for (String s : arr) {
+        System.out.println(s);
+    }
+}
+```
 命令行: <span style="color: #ff6600;">java -jar cfr_0_132.jar CFRDecompilerDemo.class --arrayiter false</span>
 
 ![](https://images2018.cnblogs.com/blog/1278884/201808/1278884-20180803143827363-1860208236.png)
@@ -185,17 +214,15 @@ switch支持字符串是通过<span style="color: #ff6600;">hashCode()</span>和
 
 ## <span style="font-size: 18px;">**自动装箱/拆箱**</span>
 
-<div class="cnblogs_code">
-
-<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy">[![复制代码](//common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")</span></div>
-
-<pre class="prettyprint prettyprinted" style=""><span style="color: #008000;"><span class="com">/**</span></span><span style="color: #008000;"> <span class="com">* 自动装箱/拆箱
- * option: --sugarboxing false</span> </span><span style="color: #008000;"><span class="com">*/</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">public</span></span><span style="color: #000000;"> <span class="pln"></span> <span class="typ">Double</span> <span class="pln">autoBoxingTest</span><span class="pun">(</span><span class="typ">Integer</span> <span class="pln">i</span><span class="pun">,</span> <span class="pln"></span> <span class="typ">Double</span> <span class="pln">d</span><span class="pun">)</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">return</span></span> <span class="pln">d</span> <span class="pun">+</span><span style="color: #000000;"> <span class="pln">i</span><span class="pun">;</span> <span class="pln"></span> <span class="pun">}</span></span></pre>
-
-<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy">[![复制代码](//common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")</span></div>
-
-</div>
-
+```java
+/**
+ * 自动装箱/拆箱
+ * option: --sugarboxing false
+ */
+public Double autoBoxingTest(Integer i, Double d) {
+    return d + i;
+}
+```
 命令行: <span style="color: #ff6600;">java -jar cfr_0_132.jar CFRDecompilerDemo.class --sugarboxing false</span>
 
 ![](https://images2018.cnblogs.com/blog/1278884/201808/1278884-20180803144041276-2054980101.png)
@@ -206,17 +233,17 @@ switch支持字符串是通过<span style="color: #ff6600;">hashCode()</span>和
 
 ## <span style="font-size: 18px;">**枚举**</span>
 
-<div class="cnblogs_code">
-
-<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy">[![复制代码](//common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")</span></div>
-
-<pre class="prettyprint prettyprinted" style=""><span style="color: #008000;"><span class="com">/**</span></span><span style="color: #008000;"> <span class="com">* 枚举, JDK1.5开始支持
- * option: --sugarenums false</span> </span><span style="color: #008000;"><span class="com">*/</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">enum</span></span><span style="color: #000000;"> <span class="pln"></span> <span class="typ">EnumTest</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln">FOO</span><span class="pun">,</span> <span class="pln">BAR</span><span class="pun">,</span> <span class="pln">BAP</span> <span class="pun">}</span></span></pre>
-
-<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy">[![复制代码](//common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")</span></div>
-
-</div>
-
+```java
+/**
+ * 枚举, JDK1.5开始支持
+ * option: --sugarenums false
+ */
+public enum EnumTest {
+    FOO,
+    BAR,
+    BAP
+}
+```
 命令行: <span style="color: #ff6600;">java -jar cfr_0_132.jar CFRDecompilerDemo.class --sugarenums false</span>
 
 ![](https://images2018.cnblogs.com/blog/1278884/201808/1278884-20180803144547865-634089140.png)
@@ -227,17 +254,30 @@ switch支持字符串是通过<span style="color: #ff6600;">hashCode()</span>和
 
 ## <span style="font-size: 18px;">**内部类**</span>
 
-<div class="cnblogs_code">
+```java
+import java.util.*;
+import java.io.*;
 
-<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy">[![复制代码](//common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")</span></div>
+public class CFRDecompilerDemo {
 
-<pre class="prettyprint prettyprinted" style=""><span style="color: #0000ff;"><span class="kwd">import</span></span> <span class="pln">java</span><span class="pun">.</span><span class="pln">util</span><span class="pun">.*</span><span style="color: #000000;"><span class="pun">;</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">import</span></span> <span class="pln">java</span><span class="pun">.</span><span class="pln">io</span><span class="pun">.*</span><span style="color: #000000;"><span class="pun">;</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">class</span></span><span style="color: #000000;"> <span class="pln"></span> <span class="typ">CFRDecompilerDemo</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">int</span></span> <span class="pln">x</span> <span class="pun">=</span> <span class="pln"></span> <span class="lit">3</span><span style="color: #000000;"><span class="pun">;</span> <span class="pln"></span> </span><span style="color: #008000;"><span class="com">/**</span></span><span style="color: #008000;"> <span class="com">* 内部类
-     * option: --removeinnerclasssynthetics false</span> </span><span style="color: #008000;"><span class="com">*/</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">void</span></span><span style="color: #000000;"> <span class="pln">innerClassTest</span><span class="pun">()</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">new</span></span> <span class="pln"></span> <span class="typ">InnerClass</span><span class="pun">().</span><span class="pln">getSum</span><span class="pun">(</span><span class="lit">6</span><span style="color: #000000;"><span class="pun">);</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">class</span></span><span style="color: #000000;"> <span class="pln"></span> <span class="typ">InnerClass</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">int</span></span> <span class="pln">getSum</span><span class="pun">(</span><span style="color: #0000ff;"><span class="kwd">int</span></span><span style="color: #000000;"> <span class="pln">y</span><span class="pun">)</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln">x</span> </span><span class="pun">+=</span><span style="color: #000000;"> <span class="pln">y</span><span class="pun">;</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">return</span></span><span style="color: #000000;"> <span class="pln">x</span><span class="pun">;</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> <span class="pun">}</span></span></pre>
+    int x = 3;
 
-<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy">[![复制代码](//common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")</span></div>
+    /**
+     * 内部类
+     * option: --removeinnerclasssynthetics false
+     */
+    public void innerClassTest() {
+        new InnerClass().getSum(6);
+    }
 
-</div>
-
+    public class InnerClass {
+        public int getSum(int y) {
+            x += y;
+            return x;
+        }
+    }    
+}
+```
 命令行:<span style="color: #ff6600;"> java -jar cfr_0_132.jar CFRDecompilerDemo.class --removeinnerclasssynthetics false</span>
 
 ![](https://images2018.cnblogs.com/blog/1278884/201808/1278884-20180803150827020-401588426.png)
@@ -248,17 +288,15 @@ switch支持字符串是通过<span style="color: #ff6600;">hashCode()</span>和
 
 ## <span style="font-size: 18px;">**泛型擦除**</span>
 
-<div class="cnblogs_code">
-
-<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy">[![复制代码](//common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")</span></div>
-
-<pre class="prettyprint prettyprinted" style=""><span style="color: #008000;"><span class="com">/**</span></span><span style="color: #008000;"> <span class="com">* 泛型擦除
- * option:</span> </span><span style="color: #008000;"><span class="com">*/</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">void</span></span><span style="color: #000000;"> <span class="pln">genericEraseTest</span><span class="pun">()</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> <span class="typ">List</span></span><span class="pun"><</span><span class="typ">String</span><span class="pun">></span> <span class="pln">list</span> <span class="pun">=</span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">new</span></span> <span class="pln"></span> <span class="typ">ArrayList</span><span class="pun"><</span><span class="typ">String</span><span class="pun">></span><span style="color: #000000;"><span class="pun">();</span> <span class="pln"></span> <span class="pun">}</span></span></pre>
-
-<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy">[![复制代码](//common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")</span></div>
-
-</div>
-
+```java
+/**
+ * 泛型擦除
+ * option: 
+ */
+public void genericEraseTest() {
+    List<String> list =  new ArrayList<String>();
+}
+```
 命令行: <span style="color: #ff6600;">java -jar cfr_0_132.jar CFRDecompilerDemo.class</span>
 
 ![](https://images2018.cnblogs.com/blog/1278884/201808/1278884-20180803145253168-1402875032.png)
@@ -269,17 +307,19 @@ switch支持字符串是通过<span style="color: #ff6600;">hashCode()</span>和
 
 ## **<span style="font-size: 18px;">增强for循环</span>**
 
-<div class="cnblogs_code">
-
-<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy">[![复制代码](//common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")</span></div>
-
-<pre class="prettyprint prettyprinted" style=""><span style="color: #008000;"><span class="com">/**</span></span><span style="color: #008000;"> <span class="com">* 增强for循环
- * option: --collectioniter false</span> </span><span style="color: #008000;"><span class="com">*/</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">void</span></span><span style="color: #000000;"> <span class="pln">forLoopTest</span><span class="pun">()</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> <span class="typ">String</span><span class="pun">[]</span> <span class="pln">qingshanli</span> </span><span class="pun">=</span> <span class="pln"></span> <span class="pun">{</span><span class="str">"haha"</span><span class="pun">,</span> <span class="pln"></span> <span class="str">"qingshan"</span><span class="pun">,</span> <span class="pln"></span> <span class="str">"helloworld"</span><span class="pun">,</span> <span class="pln"></span> <span class="str">"ceshi"</span><span style="color: #000000;"><span class="pun">};</span> <span class="pln"></span> <span class="typ">List</span></span><span class="pun"><</span><span class="typ">String</span><span class="pun">></span> <span class="pln">list</span> <span class="pun">=</span><span style="color: #000000;"> <span class="pln"></span> <span class="typ">Arrays</span><span class="pun">.</span><span class="pln">asList</span><span class="pun">(</span><span class="pln">qingshanli</span><span class="pun">);</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">for</span></span><span style="color: #000000;"> <span class="pln"></span> <span class="pun">(</span><span class="typ">Object</span> <span class="pln">s</span> <span class="pun">:</span> <span class="pln">list</span><span class="pun">)</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> <span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="pln">s</span><span class="pun">);</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> <span class="pun">}</span></span></pre>
-
-<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy">[![复制代码](//common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")</span></div>
-
-</div>
-
+```java
+/**
+ * 增强for循环
+ * option: --collectioniter false
+ */
+public void forLoopTest() {
+    String[] qingshanli = {"haha", "qingshan", "helloworld", "ceshi"};  
+    List<String> list =  Arrays.asList(qingshanli);
+    for (Object s : list) {
+        System.out.println(s);
+    }
+}
+```
 命令行: <span style="color: #ff6600;">java -jar cfr_0_132.jar CFRDecompilerDemo.class --collectioniter false</span>
 
 ![](https://images2018.cnblogs.com/blog/1278884/201808/1278884-20180803151155842-1294559378.png)
@@ -290,17 +330,20 @@ switch支持字符串是通过<span style="color: #ff6600;">hashCode()</span>和
 
 ## <span style="font-size: 18px;">**lambda表达式**</span>
 
-<div class="cnblogs_code">
-
-<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy">[![复制代码](//common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")</span></div>
-
-<pre class="prettyprint prettyprinted" style=""><span style="color: #008000;"><span class="com">/**</span></span><span style="color: #008000;"> <span class="com">* lambda表达式
- * option: --decodelambdas false</span> </span><span style="color: #008000;"><span class="com">*/</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">void</span></span><span style="color: #000000;"> <span class="pln">lambdaTest</span><span class="pun">()</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> <span class="typ">String</span><span class="pun">[]</span> <span class="pln">qingshanli</span> </span><span class="pun">=</span> <span class="pln"></span> <span class="pun">{</span><span class="str">"haha"</span><span class="pun">,</span> <span class="pln"></span> <span class="str">"qingshan"</span><span class="pun">,</span> <span class="pln"></span> <span class="str">"helloworld"</span><span class="pun">,</span> <span class="pln"></span> <span class="str">"ceshi"</span><span style="color: #000000;"><span class="pun">};</span> <span class="pln"></span> <span class="typ">List</span></span><span class="pun"><</span><span class="typ">String</span><span class="pun">></span> <span class="pln">list</span> <span class="pun">=</span><span style="color: #000000;"> <span class="pln"></span> <span class="typ">Arrays</span><span class="pun">.</span><span class="pln">asList</span><span class="pun">(</span><span class="pln">qingshanli</span><span class="pun">);</span> <span class="pln"></span> </span><span style="color: #008000;"><span class="com">//</span></span><span style="color: #008000;"> <span class="com">使用lambda表达式以及函数操作</span></span> <span class="pln">list</span><span class="pun">.</span><span class="pln">forEach</span><span class="pun">((</span><span class="pln">str</span><span class="pun">)</span> <span class="pln"></span> <span class="pun">-></span> <span class="pln"></span> <span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="kwd">print</span><span class="pun">(</span><span class="pln">str</span> <span class="pun">+</span> <span class="pln"></span> <span class="str">"; "</span><span style="color: #000000;"><span class="pun">));</span> <span class="pln"></span> </span><span style="color: #008000;"><span class="com">//</span></span><span style="color: #008000;"> <span class="com">在JDK8中使用双冒号操作符</span></span> <span class="pln"></span><span style="color: #000000;"> <span class="pln">list</span><span class="pun">.</span><span class="pln">forEach</span><span class="pun">(</span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">::</span><span class="pln">println</span><span class="pun">);</span> <span class="pln"></span> <span class="pun">}</span></span></pre>
-
-<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy">[![复制代码](//common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")</span></div>
-
-</div>
-
+```java
+/**
+ * lambda表达式
+ * option: --decodelambdas false
+ */
+public void lambdaTest() {
+    String[] qingshanli = {"haha", "qingshan", "helloworld", "ceshi"};  
+    List<String> list =  Arrays.asList(qingshanli);
+    // 使用lambda表达式以及函数操作
+    list.forEach((str) -> System.out.print(str + "; "));
+    // 在JDK8中使用双冒号操作符
+    list.forEach(System.out::println);  
+}
+```
 命令行:<span style="color: #ff6600;"> java -jar cfr_0_132.jar CFRDecompilerDemo.class --decodelambdas false</span>
 
 ![](https://images2018.cnblogs.com/blog/1278884/201808/1278884-20180803160951039-1629659950.png)
@@ -311,17 +354,19 @@ switch支持字符串是通过<span style="color: #ff6600;">hashCode()</span>和
 
 ## <span style="font-size: 18px;">**try-with-resources语句**</span>
 
-<div class="cnblogs_code">
-
-<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy">[![复制代码](//common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")</span></div>
-
-<pre class="prettyprint prettyprinted" style=""><span style="color: #008000;"><span class="com">/**</span></span><span style="color: #008000;"> <span class="com">* try-with-resources语句
- * option: --tryresources false</span> </span><span style="color: #008000;"><span class="com">*/</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">void</span></span> <span class="pln">tryWithResourcesTest</span><span class="pun">()</span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">throws</span></span><span style="color: #000000;"> <span class="pln"></span> <span class="typ">IOException</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">try</span></span> <span class="pln"></span> <span class="pun">(</span><span style="color: #0000ff;"><span class="kwd">final</span></span> <span class="pln"></span> <span class="typ">StringWriter</span> <span class="pln">writer</span> <span class="pun">=</span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">new</span></span><span style="color: #000000;"> <span class="pln"></span> <span class="typ">StringWriter</span><span class="pun">();</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">final</span></span> <span class="pln"></span> <span class="typ">StringWriter</span> <span class="pln">writer2</span> <span class="pun">=</span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">new</span></span><span style="color: #000000;"> <span class="pln"></span> <span class="typ">StringWriter</span><span class="pun">())</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln">writer</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span></span><span class="str">"This is qingshanli1"</span><span style="color: #000000;"><span class="pun">);</span> <span class="pln">writer2</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span></span><span class="str">"this is qingshanli2"</span><span style="color: #000000;"><span class="pun">);</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> <span class="pun">}</span></span></pre>
-
-<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy">[![复制代码](//common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")</span></div>
-
-</div>
-
+```java
+/**
+ * try-with-resources语句
+ * option: --tryresources false
+ */
+public void tryWithResourcesTest() throws IOException {
+    try (final StringWriter writer = new StringWriter();
+         final StringWriter writer2 = new StringWriter()) {
+        writer.write("This is qingshanli1");
+        writer2.write("this is qingshanli2");
+    }
+}
+```
 命令行:<span style="color: #ff6600;"> java -jar cfr_0_132.jar CFRDecompilerDemo.class --tryresources false</span>
 
 ![](https://images2018.cnblogs.com/blog/1278884/201808/1278884-20180803152324539-1851079267.png)
@@ -332,17 +377,29 @@ switch支持字符串是通过<span style="color: #ff6600;">hashCode()</span>和
 
 ## <span style="font-size: 18px;">**JDK10的局部变量类型推断**</span>
 
-<div class="cnblogs_code">
-
-<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy">[![复制代码](//common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")</span></div>
-
-<pre class="prettyprint prettyprinted" style=""><span style="color: #008000;"><span class="com">/**</span></span><span style="color: #008000;"> <span class="com">* 局部变量类型推断, JDK10开始支持
- * option: 不需要参数</span> </span><span style="color: #008000;"><span class="com">*/</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">void</span></span><span style="color: #000000;"> <span class="pln">varTest</span><span class="pun">()</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> </span><span style="color: #008000;"><span class="com">//</span></span><span style="color: #008000;"><span class="com">初始化局部变量</span> </span><span class="pln"></span> <span class="kwd">var</span> <span class="pln"></span> <span class="kwd">string</span> <span class="pln"></span> <span class="pun">=</span> <span class="pln"></span> <span class="str">"qingshanli"</span><span style="color: #000000;"><span class="pun">;</span> <span class="pln"></span> </span><span style="color: #008000;"><span class="com">//</span></span><span style="color: #008000;"><span class="com">初始化局部变量</span> </span><span class="pln"></span> <span class="kwd">var</span> <span class="pln">stringList</span> <span class="pun">=</span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">new</span></span> <span class="pln"></span> <span class="typ">ArrayList</span><span class="pun"><</span><span class="typ">String</span><span class="pun">></span><span style="color: #000000;"><span class="pun">();</span> <span class="pln">stringList</span><span class="pun">.</span><span class="pln">add</span><span class="pun">(</span></span><span class="str">"九幽阴灵，诸天神魔，以我血躯，奉为牺牲。"</span><span style="color: #000000;"><span class="pun">);</span> <span class="pln">stringList</span><span class="pun">.</span><span class="pln">add</span><span class="pun">(</span></span><span class="str">"三生七世，永堕阎罗，只为情故，虽死不悔！"</span><span style="color: #000000;"><span class="pun">);</span> <span class="pln">stringList</span><span class="pun">.</span><span class="pln">add</span><span class="pun">(</span></span><span class="str">"blog:http://www.cnblogs.com/qingshanli/"</span><span style="color: #000000;"><span class="pun">);</span> <span class="pln"></span> </span><span style="color: #008000;"><span class="com">//</span></span><span style="color: #008000;"><span class="com">增强for循环的索引</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">for</span></span><span style="color: #000000;"> <span class="pln"></span> <span class="pun">(</span><span class="kwd">var</span> <span class="pln">s</span> <span class="pun">:</span> <span class="pln">stringList</span><span class="pun">){</span> <span class="pln"></span> <span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="pln">s</span><span class="pun">);</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> </span><span style="color: #008000;"><span class="com">//</span></span><span style="color: #008000;"><span class="com">传统for循环的局部变量定义</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">for</span></span> <span class="pln"></span> <span class="pun">(</span><span class="kwd">var</span> <span class="pln">i</span> <span class="pun">=</span> <span class="pln"></span> <span class="lit">0</span><span class="pun">;</span> <span class="pln">i</span> <span class="pun"><</span> <span class="pln">stringList</span><span class="pun">.</span><span class="pln">size</span><span class="pun">();</span> <span class="pln">i</span><span class="pun">++</span><span style="color: #000000;"><span class="pun">){</span> <span class="pln"></span> <span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="pln">stringList</span><span class="pun">.</span><span class="kwd">get</span><span class="pun">(</span><span class="pln">i</span><span class="pun">));</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> <span class="pun">}</span></span></pre>
-
-<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy">[![复制代码](//common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")</span></div>
-
-</div>
-
+```java
+/**
+ * 局部变量类型推断, JDK10开始支持
+ * option: 不需要参数
+ */
+public void varTest() {
+    //初始化局部变量  
+    var string = "qingshanli";
+    //初始化局部变量  
+    var stringList = new ArrayList<String>();
+    stringList.add("九幽阴灵，诸天神魔，以我血躯，奉为牺牲。");
+    stringList.add("三生七世，永堕阎罗，只为情故，虽死不悔！");
+    stringList.add("blog:http://www.cnblogs.com/qingshanli/");
+    //增强for循环的索引
+    for (var s : stringList){
+        System.out.println(s);
+    }
+    //传统for循环的局部变量定义
+    for (var i = 0; i < stringList.size(); i++){
+        System.out.println(stringList.get(i));
+    }
+}
+```
 JDK10环境下编译:<span style="color: #ff6600;"> /home/qingshanli/Downloads/jdk-10.0.2/bin/javac CFRDecompilerDemo.java</span>
 
 命令行: <span style="color: #ff6600;">java -jar cfr_0_132.jar CFRDecompilerDemo.class --collectioniter false</span>
@@ -359,32 +416,192 @@ JDK10环境下编译:<span style="color: #ff6600;"> /home/qingshanli/Downloads/
 
 ## <span style="font-size: 18px;">**源代码**</span>
 
-<div class="cnblogs_code" onclick="cnblogs_code_show('723b83fa-810c-482c-a015-dbb56bd5bf80')">![](https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif)![](https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif)
+```java
+import java.util.*;
+import java.io.*;
 
-<div id="cnblogs_code_open_723b83fa-810c-482c-a015-dbb56bd5bf80" class="cnblogs_code_hide" style="display: block;">
+public class CFRDecompilerDemo {
 
-<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy">[![复制代码](//common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")</span></div>
+    int x = 3;
 
-<pre class="prettyprint prettyprinted" style=""><span style="color: #0000ff;"><span class="kwd">import</span></span> <span class="pln">java</span><span class="pun">.</span><span class="pln">util</span><span class="pun">.*</span><span style="color: #000000;"><span class="pun">;</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">import</span></span> <span class="pln">java</span><span class="pun">.</span><span class="pln">io</span><span class="pun">.*</span><span style="color: #000000;"><span class="pun">;</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">class</span></span><span style="color: #000000;"> <span class="pln"></span> <span class="typ">CFRDecompilerDemo</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">int</span></span> <span class="pln">x</span> <span class="pun">=</span> <span class="pln"></span> <span class="lit">3</span><span style="color: #000000;"><span class="pun">;</span> <span class="pln"></span> </span><span style="color: #008000;"><span class="com">/**</span></span><span style="color: #008000;"> <span class="com">* 字符串拼接
-     * option: --stringbuilder false</span> </span><span style="color: #008000;"><span class="com">*/</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">void</span></span> <span class="pln">stringBuilderTest</span><span class="pun">(</span><span style="color: #0000ff;"><span class="kwd">int</span></span><span style="color: #000000;"> <span class="pln"></span> <span class="kwd">end</span><span class="pun">)</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">char</span></span><span class="pun">[]</span> <span class="pln">foo</span> <span class="pun">=</span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">new</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">char</span></span><span class="pun">[]{</span><span class="str">'@'</span><span class="pun">,</span> <span class="pln"></span> <span class="str">'a'</span><span class="pun">,</span> <span class="pln"></span> <span class="str">'*'</span><span style="color: #000000;"><span class="pun">};</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">char</span></span><span style="color: #000000;"> <span class="pln">ch</span><span class="pun">;</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">int</span></span> <span class="pln">x</span> <span class="pun">=</span> <span class="pln"></span> <span class="lit">0</span><span style="color: #000000;"><span class="pun">;</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">while</span></span> <span class="pln"></span> <span class="pun">((</span><span class="pln">ch</span> <span class="pun">=</span> <span class="pln">foo</span><span class="pun">[++</span><span class="pln">x</span><span class="pun">])</span> <span class="pln"></span> <span class="pun">!=</span> <span class="pln"></span> <span class="str">'*'</span><span style="color: #000000;"><span class="pun">)</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> <span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span></span><span class="str">""</span> <span class="pln"></span> <span class="pun">+</span> <span class="pln">x</span> <span class="pun">+</span> <span class="pln"></span> <span class="str">": "</span> <span class="pln"></span> <span class="pun">+</span><span style="color: #000000;"> <span class="pln">ch</span><span class="pun">);</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> </span><span style="color: #008000;"><span class="com">/**</span></span><span style="color: #008000;"> <span class="com">* 条件编译
-     * option: 不需要参数</span> </span><span style="color: #008000;"><span class="com">*/</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">void</span></span><span style="color: #000000;"> <span class="pln">ifCompilerTest</span><span class="pun">()</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">if</span></span><span class="pun">(</span><span style="color: #0000ff;"><span class="kwd">false</span></span><span style="color: #000000;"><span class="pun">)</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> <span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span></span><span class="str">"false if"</span><span style="color: #000000;"><span class="pun">);</span> <span class="pln"></span> <span class="pun">}</span></span><span style="color: #0000ff;"><span class="kwd">else</span></span><span style="color: #000000;"> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> <span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span></span><span class="str">"true else"</span><span style="color: #000000;"><span class="pun">);</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> </span><span style="color: #008000;"><span class="com">/**</span></span><span style="color: #008000;"> <span class="com">* 断言, JDK1.4开始支持
-     * option: --sugarasserts false</span> </span><span style="color: #008000;"><span class="com">*/</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">void</span></span><span style="color: #000000;"> <span class="pln">assertTest</span><span class="pun">(</span><span class="typ">String</span> <span class="pln">s</span><span class="pun">)</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">assert</span></span> <span class="pln"></span> <span class="pun">(!</span><span class="pln">s</span><span class="pun">.</span><span class="pln">equals</span><span class="pun">(</span><span class="str">"Fred"</span><span style="color: #000000;"><span class="pun">));</span> <span class="pln"></span> <span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="pln">s</span><span class="pun">);</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> </span><span style="color: #008000;"><span class="com">/**</span></span><span style="color: #008000;"> <span class="com">* 枚举与Switch语句
-     * option: --decodeenumswitch false</span> </span><span style="color: #008000;"><span class="com">*/</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">int</span></span><span style="color: #000000;"> <span class="pln">switchEnumTest</span><span class="pun">(</span><span class="typ">EnumTest</span> <span class="pln">e</span><span class="pun">)</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">switch</span></span><span style="color: #000000;"> <span class="pln"></span> <span class="pun">(</span><span class="pln">e</span><span class="pun">)</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">case</span></span><span style="color: #000000;"> <span class="pln">FOO</span><span class="pun">:</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">return</span></span> <span class="pln"></span> <span class="lit">1</span><span style="color: #000000;"><span class="pun">;</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">case</span></span><span style="color: #000000;"> <span class="pln">BAP</span><span class="pun">:</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">return</span></span> <span class="pln"></span> <span class="lit">2</span><span style="color: #000000;"><span class="pun">;</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">return</span></span> <span class="pln"></span> <span class="lit">0</span><span style="color: #000000;"><span class="pun">;</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> </span><span style="color: #008000;"><span class="com">/**</span></span><span style="color: #008000;"> <span class="com">* 字符串与Switch语句
-     * option: --decodestringswitch false</span> </span><span style="color: #008000;"><span class="com">*/</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">int</span></span><span style="color: #000000;"> <span class="pln">switchStringTest</span><span class="pun">(</span><span class="typ">String</span> <span class="pln">s</span><span class="pun">)</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">switch</span></span><span style="color: #000000;"> <span class="pln"></span> <span class="pun">(</span><span class="pln">s</span><span class="pun">)</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">default</span></span><span style="color: #000000;"><span class="pun">:</span> <span class="pln"></span> <span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span></span><span class="str">"Test"</span><span style="color: #000000;"><span class="pun">);</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">break</span></span><span style="color: #000000;"><span class="pun">;</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">case</span></span> <span class="pln"></span> <span class="str">"BB"</span><span class="pun">:</span> <span class="pln"></span> <span style="color: #008000;"><span class="com">//</span></span><span style="color: #008000;"> <span class="com">BB and Aa have the same hashcode.</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">return</span></span> <span class="pln"></span> <span class="lit">12</span><span style="color: #000000;"><span class="pun">;</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">case</span></span> <span class="pln"></span> <span class="str">"Aa"</span><span style="color: #000000;"><span class="pun">:</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">case</span></span> <span class="pln"></span> <span class="str">"FRED"</span><span style="color: #000000;"><span class="pun">:</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">return</span></span> <span class="pln"></span> <span class="lit">13</span><span style="color: #000000;"><span class="pun">;</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> <span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span></span><span class="str">"Here"</span><span style="color: #000000;"><span class="pun">);</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">return</span></span> <span class="pln"></span> <span class="lit">0</span><span style="color: #000000;"><span class="pun">;</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> </span><span style="color: #008000;"><span class="com">/**</span></span><span style="color: #008000;"> <span class="com">* 可变参数
-     * option: --arrayiter false</span> </span><span style="color: #008000;"><span class="com">*/</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">void</span></span><span style="color: #000000;"> <span class="pln">varargsTest</span><span class="pun">(</span><span class="typ">String</span> <span class="pln"></span> <span class="pun">...</span> <span class="pln">arr</span><span class="pun">)</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">for</span></span><span style="color: #000000;"> <span class="pln"></span> <span class="pun">(</span><span class="typ">String</span> <span class="pln">s</span> <span class="pun">:</span> <span class="pln">arr</span><span class="pun">)</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> <span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="pln">s</span><span class="pun">);</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> </span><span style="color: #008000;"><span class="com">/**</span></span><span style="color: #008000;"> <span class="com">* 自动装箱/拆箱
-     * option: --sugarboxing false</span> </span><span style="color: #008000;"><span class="com">*/</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">public</span></span><span style="color: #000000;"> <span class="pln"></span> <span class="typ">Double</span> <span class="pln">autoBoxingTest</span><span class="pun">(</span><span class="typ">Integer</span> <span class="pln">i</span><span class="pun">,</span> <span class="pln"></span> <span class="typ">Double</span> <span class="pln">d</span><span class="pun">)</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">return</span></span> <span class="pln">d</span> <span class="pun">+</span><span style="color: #000000;"> <span class="pln">i</span><span class="pun">;</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> </span><span style="color: #008000;"><span class="com">/**</span></span><span style="color: #008000;"> <span class="com">* 枚举, JDK1.5开始支持
-     * option: --sugarenums false</span> </span><span style="color: #008000;"><span class="com">*/</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">enum</span></span><span style="color: #000000;"> <span class="pln"></span> <span class="typ">EnumTest</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln">FOO</span><span class="pun">,</span> <span class="pln">BAR</span><span class="pun">,</span> <span class="pln">BAP</span> <span class="pun">}</span> <span class="pln"></span> </span><span style="color: #008000;"><span class="com">/**</span></span><span style="color: #008000;"> <span class="com">* 内部类
-     * option: --removeinnerclasssynthetics false</span> </span><span style="color: #008000;"><span class="com">*/</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">void</span></span><span style="color: #000000;"> <span class="pln">innerClassTest</span><span class="pun">()</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">new</span></span> <span class="pln"></span> <span class="typ">InnerClass</span><span class="pun">().</span><span class="pln">getSum</span><span class="pun">(</span><span class="lit">6</span><span style="color: #000000;"><span class="pun">);</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">class</span></span><span style="color: #000000;"> <span class="pln"></span> <span class="typ">InnerClass</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">int</span></span> <span class="pln">getSum</span><span class="pun">(</span><span style="color: #0000ff;"><span class="kwd">int</span></span><span style="color: #000000;"> <span class="pln">y</span><span class="pun">)</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln">x</span> </span><span class="pun">+=</span><span style="color: #000000;"> <span class="pln">y</span><span class="pun">;</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">return</span></span><span style="color: #000000;"> <span class="pln">x</span><span class="pun">;</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> </span><span style="color: #008000;"><span class="com">/**</span></span><span style="color: #008000;"> <span class="com">* 泛型擦除
-     * option:</span> </span><span style="color: #008000;"><span class="com">*/</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">void</span></span><span style="color: #000000;"> <span class="pln">genericEraseTest</span><span class="pun">()</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> <span class="typ">List</span></span><span class="pun"><</span><span class="typ">String</span><span class="pun">></span> <span class="pln">list</span> <span class="pun">=</span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">new</span></span> <span class="pln"></span> <span class="typ">ArrayList</span><span class="pun"><</span><span class="typ">String</span><span class="pun">></span><span style="color: #000000;"><span class="pun">();</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> </span><span style="color: #008000;"><span class="com">/**</span></span><span style="color: #008000;"> <span class="com">* 增强for循环
-     * option: --collectioniter false</span> </span><span style="color: #008000;"><span class="com">*/</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">void</span></span><span style="color: #000000;"> <span class="pln">forLoopTest</span><span class="pun">()</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> <span class="typ">String</span><span class="pun">[]</span> <span class="pln">qingshanli</span> </span><span class="pun">=</span> <span class="pln"></span> <span class="pun">{</span><span class="str">"haha"</span><span class="pun">,</span> <span class="pln"></span> <span class="str">"qingshan"</span><span class="pun">,</span> <span class="pln"></span> <span class="str">"helloworld"</span><span class="pun">,</span> <span class="pln"></span> <span class="str">"ceshi"</span><span style="color: #000000;"><span class="pun">};</span> <span class="pln"></span> <span class="typ">List</span></span><span class="pun"><</span><span class="typ">String</span><span class="pun">></span> <span class="pln">list</span> <span class="pun">=</span><span style="color: #000000;"> <span class="pln"></span> <span class="typ">Arrays</span><span class="pun">.</span><span class="pln">asList</span><span class="pun">(</span><span class="pln">qingshanli</span><span class="pun">);</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">for</span></span><span style="color: #000000;"> <span class="pln"></span> <span class="pun">(</span><span class="typ">Object</span> <span class="pln">s</span> <span class="pun">:</span> <span class="pln">list</span><span class="pun">)</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> <span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="pln">s</span><span class="pun">);</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> </span><span style="color: #008000;"><span class="com">/**</span></span><span style="color: #008000;"> <span class="com">* lambda表达式
-     * option: --decodelambdas false</span> </span><span style="color: #008000;"><span class="com">*/</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">void</span></span><span style="color: #000000;"> <span class="pln">lambdaTest</span><span class="pun">()</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> <span class="typ">String</span><span class="pun">[]</span> <span class="pln">qingshanli</span> </span><span class="pun">=</span> <span class="pln"></span> <span class="pun">{</span><span class="str">"haha"</span><span class="pun">,</span> <span class="pln"></span> <span class="str">"qingshan"</span><span class="pun">,</span> <span class="pln"></span> <span class="str">"helloworld"</span><span class="pun">,</span> <span class="pln"></span> <span class="str">"ceshi"</span><span style="color: #000000;"><span class="pun">};</span> <span class="pln"></span> <span class="typ">List</span></span><span class="pun"><</span><span class="typ">String</span><span class="pun">></span> <span class="pln">list</span> <span class="pun">=</span><span style="color: #000000;"> <span class="pln"></span> <span class="typ">Arrays</span><span class="pun">.</span><span class="pln">asList</span><span class="pun">(</span><span class="pln">qingshanli</span><span class="pun">);</span> <span class="pln"></span> </span><span style="color: #008000;"><span class="com">//</span></span><span style="color: #008000;"> <span class="com">使用lambda表达式以及函数操作</span></span> <span class="pln">list</span><span class="pun">.</span><span class="pln">forEach</span><span class="pun">((</span><span class="pln">str</span><span class="pun">)</span> <span class="pln"></span> <span class="pun">-></span> <span class="pln"></span> <span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="kwd">print</span><span class="pun">(</span><span class="pln">str</span> <span class="pun">+</span> <span class="pln"></span> <span class="str">"; "</span><span style="color: #000000;"><span class="pun">));</span> <span class="pln"></span> </span><span style="color: #008000;"><span class="com">//</span></span><span style="color: #008000;"> <span class="com">在JDK8中使用双冒号操作符</span></span> <span class="pln"></span><span style="color: #000000;"> <span class="pln">list</span><span class="pun">.</span><span class="pln">forEach</span><span class="pun">(</span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">::</span><span class="pln">println</span><span class="pun">);</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> </span><span style="color: #008000;"><span class="com">/**</span></span><span style="color: #008000;"> <span class="com">* try-with-resources语句
-     * option: --tryresources false</span> </span><span style="color: #008000;"><span class="com">*/</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">void</span></span> <span class="pln">tryWithResourcesTest</span><span class="pun">()</span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">throws</span></span><span style="color: #000000;"> <span class="pln"></span> <span class="typ">IOException</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">try</span></span> <span class="pln"></span> <span class="pun">(</span><span style="color: #0000ff;"><span class="kwd">final</span></span> <span class="pln"></span> <span class="typ">StringWriter</span> <span class="pln">writer</span> <span class="pun">=</span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">new</span></span><span style="color: #000000;"> <span class="pln"></span> <span class="typ">StringWriter</span><span class="pun">();</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">final</span></span> <span class="pln"></span> <span class="typ">StringWriter</span> <span class="pln">writer2</span> <span class="pun">=</span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">new</span></span><span style="color: #000000;"> <span class="pln"></span> <span class="typ">StringWriter</span><span class="pun">())</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln">writer</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span></span><span class="str">"This is qingshanli1"</span><span style="color: #000000;"><span class="pun">);</span> <span class="pln">writer2</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span></span><span class="str">"this is qingshanli2"</span><span style="color: #000000;"><span class="pun">);</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> </span><span style="color: #008000;"><span class="com">/**</span></span><span style="color: #008000;"> <span class="com">* 局部变量类型推断, JDK10开始支持
-     * option: 不需要参数</span> </span><span style="color: #008000;"><span class="com">*/</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">void</span></span><span style="color: #000000;"> <span class="pln">varTest</span><span class="pun">()</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> </span><span style="color: #008000;"><span class="com">//</span></span><span style="color: #008000;"><span class="com">初始化局部变量</span> </span><span class="pln"></span> <span class="kwd">var</span> <span class="pln"></span> <span class="kwd">string</span> <span class="pln"></span> <span class="pun">=</span> <span class="pln"></span> <span class="str">"qingshanli"</span><span style="color: #000000;"><span class="pun">;</span> <span class="pln"></span> </span><span style="color: #008000;"><span class="com">//</span></span><span style="color: #008000;"><span class="com">初始化局部变量</span> </span><span class="pln"></span> <span class="kwd">var</span> <span class="pln">stringList</span> <span class="pun">=</span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">new</span></span> <span class="pln"></span> <span class="typ">ArrayList</span><span class="pun"><</span><span class="typ">String</span><span class="pun">></span><span style="color: #000000;"><span class="pun">();</span> <span class="pln">stringList</span><span class="pun">.</span><span class="pln">add</span><span class="pun">(</span></span><span class="str">"九幽阴灵，诸天神魔，以我血躯，奉为牺牲。"</span><span style="color: #000000;"><span class="pun">);</span> <span class="pln">stringList</span><span class="pun">.</span><span class="pln">add</span><span class="pun">(</span></span><span class="str">"三生七世，永堕阎罗，只为情故，虽死不悔！"</span><span style="color: #000000;"><span class="pun">);</span> <span class="pln">stringList</span><span class="pun">.</span><span class="pln">add</span><span class="pun">(</span></span><span class="str">"blog:http://www.cnblogs.com/qingshanli/"</span><span style="color: #000000;"><span class="pun">);</span> <span class="pln"></span> </span><span style="color: #008000;"><span class="com">//</span></span><span style="color: #008000;"><span class="com">增强for循环的索引</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">for</span></span><span style="color: #000000;"> <span class="pln"></span> <span class="pun">(</span><span class="kwd">var</span> <span class="pln">s</span> <span class="pun">:</span> <span class="pln">stringList</span><span class="pun">){</span> <span class="pln"></span> <span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="pln">s</span><span class="pun">);</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> </span><span style="color: #008000;"><span class="com">//</span></span><span style="color: #008000;"><span class="com">传统for循环的局部变量定义</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">for</span></span> <span class="pln"></span> <span class="pun">(</span><span class="kwd">var</span> <span class="pln">i</span> <span class="pun">=</span> <span class="pln"></span> <span class="lit">0</span><span class="pun">;</span> <span class="pln">i</span> <span class="pun"><</span> <span class="pln">stringList</span><span class="pun">.</span><span class="pln">size</span><span class="pun">();</span> <span class="pln">i</span><span class="pun">++</span><span style="color: #000000;"><span class="pun">){</span> <span class="pln"></span> <span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="pln">stringList</span><span class="pun">.</span><span class="kwd">get</span><span class="pun">(</span><span class="pln">i</span><span class="pun">));</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> <span class="pun">}</span></span></pre>
-
-<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy">[![复制代码](//common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")</span></div>
-
-</div>
-
+    /**
+     * 字符串拼接
+     * option: --stringbuilder false
+     */
+    public void stringBuilderTest(int end) {
+        char[] foo = new char[]{'@', 'a', '*'};
+        char ch;
+        int x = 0;
+        while ((ch = foo[++x]) != '*') {
+            System.out.println("" + x + ": " + ch);
+        }
+    }
+    
+    /**
+     * 条件编译
+     * option: 不需要参数
+     */
+    public void ifCompilerTest() {
+        if(false) {
+            System.out.println("false if");
+        }else {
+            System.out.println("true else");
+        }
+    }
+    
+    /**
+     * 断言, JDK1.4开始支持
+     * option: --sugarasserts false
+     */
+    public void assertTest(String s) {
+        assert (!s.equals("Fred"));
+        System.out.println(s);
+    }
+    
+    /**
+     * 枚举与Switch语句
+     * option: --decodeenumswitch false
+     */
+    public int switchEnumTest(EnumTest e) {
+        switch (e) {
+            case FOO:
+                return 1;
+            case BAP:
+                return 2;
+        }
+        return 0;
+    }
+    
+    /** 
+     * 字符串与Switch语句
+     * option: --decodestringswitch false
+     */
+   public int switchStringTest(String s) {
+        switch (s) {
+            default:
+                System.out.println("Test");
+                break;
+            case "BB":  // BB and Aa have the same hashcode.
+                return 12;
+            case "Aa":
+            case "FRED":
+                return 13;
+        }
+        System.out.println("Here");
+        return 0;
+    }
+    
+    /**
+     * 可变参数
+     * option: --arrayiter false
+     */
+    public void varargsTest(String ... arr) {
+        for (String s : arr) {
+            System.out.println(s);
+        }
+    }
+    
+    /**
+     * 自动装箱/拆箱
+     * option: --sugarboxing false
+     */
+    public Double autoBoxingTest(Integer i, Double d) {
+        return d + i;
+    }
+    
+    /**
+     * 枚举, JDK1.5开始支持
+     * option: --sugarenums false
+     */
+    public enum EnumTest {
+        FOO,
+        BAR,
+        BAP
+    }
+    
+    /**
+     * 内部类
+     * option: --removeinnerclasssynthetics false
+     */
+    public void innerClassTest() {
+        new InnerClass().getSum(6);
+    }
+    
+    public class InnerClass {
+        public int getSum(int y) {
+            x += y;
+            return x;
+        }
+    }
+    
+    /**
+     * 泛型擦除
+     * option: 
+     */
+    public void genericEraseTest() {
+        List<String> list =  new ArrayList<String>();
+    }
+    
+    /**
+     * 增强for循环
+     * option: --collectioniter false
+     */
+    public void forLoopTest() {
+        String[] qingshanli = {"haha", "qingshan", "helloworld", "ceshi"};  
+        List<String> list =  Arrays.asList(qingshanli);
+        for (Object s : list) {
+            System.out.println(s);
+        }
+    }
+    
+    /**
+     * lambda表达式
+     * option: --decodelambdas false
+     */
+    public void lambdaTest() {
+        String[] qingshanli = {"haha", "qingshan", "helloworld", "ceshi"};  
+        List<String> list =  Arrays.asList(qingshanli);
+        // 使用lambda表达式以及函数操作
+        list.forEach((str) -> System.out.print(str + "; "));
+        // 在JDK8中使用双冒号操作符
+        list.forEach(System.out::println);  
+    }
+    
+    /**
+     * try-with-resources语句
+     * option: --tryresources false
+     */
+    public void tryWithResourcesTest() throws IOException {
+        try (final StringWriter writer = new StringWriter();
+             final StringWriter writer2 = new StringWriter()) {
+            writer.write("This is qingshanli1");
+            writer2.write("this is qingshanli2");
+        }
+    }
+    
+    /**
+     * 局部变量类型推断, JDK10开始支持
+     * option: 不需要参数
+     */
+    public void varTest() {
+        //初始化局部变量  
+        var string = "qingshanli";
+        //初始化局部变量  
+        var stringList = new ArrayList<String>();
+        stringList.add("九幽阴灵，诸天神魔，以我血躯，奉为牺牲。");
+        stringList.add("三生七世，永堕阎罗，只为情故，虽死不悔！");
+        stringList.add("blog:http://www.cnblogs.com/qingshanli/");
+        //增强for循环的索引
+        for (var s : stringList){
+            System.out.println(s);
+        }
+        //传统for循环的局部变量定义
+        for (var i = 0; i < stringList.size(); i++){
+            System.out.println(stringList.get(i));
+        }
+    }
+}
+```
 <span class="cnblogs_code_collapse" style="display: none;">View Code</span></div>
 
 <div style="text-align: right"><a name="_label16"></a></div>
@@ -403,123 +620,3 @@ JDK10环境下编译:<span style="color: #ff6600;"> /home/qingshanli/Downloads/
 
 </div>
 
-<div id="blog_post_info_block">
-
-<div id="BlogPostCategory">分类: [JVM虚拟机](https://www.cnblogs.com/qingshanli/category/1223757.html)</div>
-
-<div id="EntryTag">标签: [JVM学习总结](https://www.cnblogs.com/qingshanli/tag/JVM%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/)</div>
-
-<div id="blog_post_info">
-
-<div id="green_channel">[好文要顶](javascript:void(0);) [关注我](javascript:void(0);) [收藏该文](javascript:void(0);) [![](//common.cnblogs.com/images/icon_weibo_24.png)](javascript:void(0); "分享至新浪微博") [![](//common.cnblogs.com/images/wechat.png)](javascript:void(0); "分享至微信")</div>
-
-<div id="author_profile">
-
-<div id="author_profile_info" class="author_profile_info">[![](//pic.cnblogs.com/face/1278884/20180718101838.png)](https://home.cnblogs.com/u/qingshanli/)
-
-<div id="author_profile_detail" class="author_profile_info">[qingshanli](https://home.cnblogs.com/u/qingshanli/)  
-[关注 - 19](https://home.cnblogs.com/u/qingshanli/followees)  
-[粉丝 - 13](https://home.cnblogs.com/u/qingshanli/followers)</div>
-
-</div>
-
-<div id="author_profile_follow">[+加关注](javascript:void(0);)</div>
-
-</div>
-
-<div id="div_digg">
-
-<div class="diggit" onclick="votePost(9375040,'Digg')" title="支持"><span class="diggnum" id="digg_count">2</span></div>
-
-<div class="buryit" onclick="votePost(9375040,'Bury')" title="反对"><span class="burynum" id="bury_count">0</span></div>
-
-</div>
-
-<script type="text/javascript">currentDiggType = 0;</script></div>
-
-<div id="post_next_prev">[«](https://www.cnblogs.com/qingshanli/p/9321175.html) 上一篇：[关于赞赏](https://www.cnblogs.com/qingshanli/p/9321175.html "发布于2018-07-30 23:46")  
-[»](https://www.cnblogs.com/qingshanli/p/9439987.html) 下一篇：[左耳听风专栏学习总结](https://www.cnblogs.com/qingshanli/p/9439987.html "发布于2018-08-07 22:42")  
-</div>
-
-</div>
-
-</div>
-
-<div class="postDesc">posted @ <span id="post-date">2018-08-04 01:37</span> [qingshanli](https://www.cnblogs.com/qingshanli/) 阅读(<span id="post_view_count">1491</span>) 评论(<span id="post_comment_count">1</span>) [编辑](https://i.cnblogs.com/EditPosts.aspx?postid=9375040) [收藏](#)</div>
-
-</div>
-
-<script type="text/javascript">var allowComments=true,cb_blogId=434237,cb_entryId=9375040,cb_blogApp=currentBlogApp,cb_blogUserGuid='a6083e56-ad3e-4b2f-c17b-08d523685c8c',cb_entryCreatedDate='2018/8/4 1:37:00';loadViewCount(cb_entryId);var cb_postType=1;var isMarkdown=false;</script></div>
-
-</div>
-
-<a name="!comments"></a>
-
-<div id="blog-comments-placeholder">  
-
-<div class="feedback_area_title">评论列表</div>
-
-<div class="feedbackItem">
-
-<div class="feedbackListSubtitle">
-
-<div class="feedbackManage">  <span class="comment_actions"></span></div>
-
-[#1楼](#4035280)<a name="4035280" id="comment_anchor_4035280"></a><span id="comment-maxId" style="display:none;">4035280</span><span id="comment-maxDate" style="display:none;">2018/8/4 8:25:43</span> <span class="comment_date">2018-08-04 08:25</span> [Dream_saddle](https://www.cnblogs.com/dream-saddle/) [ ](http://msg.cnblogs.com/send/Dream_saddle "发送站内短消息")</div>
-
-<div class="feedbackCon">![](http://pic.cnblogs.com/face/1226851/20180828223755.png)
-
-<div id="comment_body_4035280" class="blog_comment_body">凡瑶大旗用不倒</div>
-
-<div class="comment_vote">[支持(1)](javascript:void(0);)[反对(0)](javascript:void(0);)</div>
-
-<span id="comment_4035280_avatar" style="display:none;">http://pic.cnblogs.com/face/1226851/20180828223755.png</span></div>
-
-</div>
-
-</div>
-
-<script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
-
-<div id="comment_form" class="commentform"><a name="commentform"></a>
-
-<div id="comment_nav"><span id="span_refresh_tips"></span>[刷新评论](javascript:void(0);)[刷新页面](#)[返回顶部](#top)</div>
-
-<div id="comment_form_container">
-
-<div class="login_tips">注册用户登录后才能发表评论，请 [登录](javascript:void(0);) 或 [注册](javascript:void(0);)，[访问](http://www.cnblogs.com)网站首页。</div>
-
-</div>
-
-<div id="ad_t2">[【推荐】超50万C++/C#源码: 大型实时仿真组态图形源码](http://www.ucancode.com/index.htm)  
-[【前端】SpreadJS表格控件，可嵌入系统开发的在线Excel](https://www.grapecity.com.cn/developer/spreadjs?utm_source=cnblogs&utm_medium=blogpage&utm_term=bottom&utm_content=SpreadJS&utm_campaign=community)  
-[【推荐】程序员问答平台，解决您开发中遇到的技术难题](https://q.cnblogs.com/)  
-</div>
-
-<script>var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];</script> <script>googletag.cmd.push(function() { googletag.defineSlot('/1090369/C1', [300, 250], 'div-gpt-ad-1546353474406-0').addService(googletag.pubads()); googletag.defineSlot('/1090369/C2', [468, 60], 'div-gpt-ad-1539008685004-0').addService(googletag.pubads()); googletag.pubads().enableSingleRequest(); googletag.enableServices(); });</script>
-
-<div id="cnblogs_c1" class="c_ad_block" style="">
-
-<div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;" data-google-query-id="CJrd9emn0eICFUtgwQodqOAACg">
-
-<div id="google_ads_iframe_/1090369/C1_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/1090369/C1_0" title="3rd party ad content" name="google_ads_iframe_/1090369/C1_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" srcdoc="" data-google-container-id="1" style="border: 0px; vertical-align: bottom;" data-load-complete="true"></iframe></div>
-
-</div>
-
-</div>
-
-<div id="cnblogs_c2" class="c_ad_block" style="">
-
-<div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;" data-google-query-id="CPK8-Omn0eICFUtgwQodqOAACg">
-
-<div id="google_ads_iframe_/1090369/C2_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/1090369/C2_0" title="3rd party ad content" name="google_ads_iframe_/1090369/C2_0" width="468" height="60" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" srcdoc="" data-google-container-id="2" style="border: 0px; vertical-align: bottom;" data-load-complete="true"></iframe></div>
-
-</div>
-
-</div>
-
-<script type="text/javascript">if(enablePostBottom()) { codeHighlight(); fixPostBody(); setTimeout(function () { incrementViewCount(cb_entryId); }, 50); deliverT2(); deliverC1(); deliverC2(); loadNewsAndKb(); loadBlogSignature(); LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid); GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType); loadOptUnderPost(); GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate); }</script></div>
-
-</div>
-
-</div>
