@@ -1,48 +1,5 @@
-<div class="blog-content-box">
-  <div class="article-header-box">
-    <div class="article-header">
-      <div class="article-title-box">
-        <span class="article-type type-2 float-left">转</span>        <h1 class="title-article">JAVA 正则表达式 （超详细）</h1>
-      </div>
-      <div class="article-info-box">
-        <div class="article-bar-top">
-                                                  <span class="time">2008年10月24日 14:55:00</span>
-          <a class="follow-nickName" href="https://me.csdn.net/allwefantasy" target="_blank">祝威廉</a>
-          <span class="read-count">阅读数：567962</span>
-          
-                          <span class="tags-box artic-tag-box">
-                <span class="label">标签：</span>
-                                  <a data-track-click="{&quot;mod&quot;:&quot;popu_626&quot;,&quot;con&quot;:&quot;正则表达式&quot;}" class="tag-link" href="https://so.csdn.net/so/search/s.do?q=正则表达式&amp;t=blog" target="_blank">正则表达式                                    </a><a data-track-click="{&quot;mod&quot;:&quot;popu_626&quot;,&quot;con&quot;:&quot;java&quot;}" class="tag-link" href="https://so.csdn.net/so/search/s.do?q=java&amp;t=blog" target="_blank">java                                    </a><a data-track-click="{&quot;mod&quot;:&quot;popu_626&quot;,&quot;con&quot;:&quot;string&quot;}" class="tag-link" href="https://so.csdn.net/so/search/s.do?q=string&amp;t=blog" target="_blank">string                                    </a><a data-track-click="{&quot;mod&quot;:&quot;popu_626&quot;,&quot;con&quot;:&quot;perl&quot;}" class="tag-link" href="https://so.csdn.net/so/search/s.do?q=perl&amp;t=blog" target="_blank">perl                                    </a><a data-track-click="{&quot;mod&quot;:&quot;popu_626&quot;,&quot;con&quot;:&quot;border&quot;}" class="tag-link" href="https://so.csdn.net/so/search/s.do?q=border&amp;t=blog" target="_blank">border                                    </a><a data-track-click="{&quot;mod&quot;:&quot;popu_626&quot;,&quot;con&quot;:&quot;input&quot;}" class="tag-link" href="https://so.csdn.net/so/search/s.do?q=input&amp;t=blog" target="_blank">input                                  </a>
-              </span>
-                                                      </div>
-        <div class="operating">
-                  </div>
-      </div>
-    </div>
-  </div>
-  <article class="baidu_pl">
-    <div id="article_content" class="article_content clearfix csdn-tracking-statistics" data-pid="blog" data-mod="popu_307" data-dsm="post">
-            <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/ck_htmledit_views-f57960eb32.css">
-                              <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/ck_htmledit_views-f57960eb32.css">
-          <div class="htmledit_views" id="content_views">
-            <div id="csdnblog_allwrap">
-<form id="Form1" name="Form1" action="1566365.aspx" method="post">
-<div id="csdnblog_midwrap">
-<h1><a id="Header1_HeaderTitle" href="http://blog.csdn.net/djsl6071/" rel="nofollow" target="_blank"></a></h1>
-<h2></h2>
-<h3 class="post-title entry-title"><a name="t2"></a><a href="http://coolcat-allwefantasy.blogspot.com/2008/10/blog-post.html" rel="nofollow" target="_blank"><u>新网站上线 欢迎大家</u></a> </h3>
-<div class="post-header-line-1"></div>
-<div class="post-body entry-content"><a href="http://www.websiteempire.cn/" rel="nofollow" target="_blank"><u><font color="#de7008">网站交易中心</font></u></a> 在这里你可以购买或者出售你的网站。<br><a href="http://news.websiteempire.cn/" rel="nofollow" target="_blank"><u><font color="#de7008">网站信息发布中心</font></u></a> 在这里有各种交易信息的发布。同时提供<br>一些软件的免费使用（附有源码）。<br><a href="http://blog.websiteempire.cn/" rel="nofollow" target="_blank"><u><font color="#de7008">网站博客系统</font></u></a> 这里你可以注册自己的博客。一个账户无限量博客<br>联系方式：<a href="mailto:support@websiteempire.cn" rel="nofollow" target="_blank"><u><font color="#de7008">support@websiteempire.cn</font></u></a><br>QQ:563828566<br>MSN:zhuhailin123@hotmail.com <br></div>
-<div id="csdnblog_content">
-<div class="gutter">
-<div class="default_contents">
-<div class="user_article">
-<script src="http://blog.csdn.net/js/LoadFeedbackCount.js" type="text/javascript"></script><h1><a name="t3"></a><cite class="fav_csdnstylebykimi"><font face="Tahoma" color="#336699">____---------------------------________________</font></cite></h1>
-<div class="blogstory"><span id="Post.ascx_ViewPost_PreviousAndNextEntriesUp">
-</span><h3><a name="t4"></a>(PS:这篇文章为转载，我不喜欢转载的但我觉得这篇文章实在是超赞了，就转了过来，这篇可以说是学习JAVA正则表达的必读篇。作者是个正真有功力的人，阅读愉快)<a href="http://blog.csdn.net/djsl6071/archive/2007/04/14/1564483.aspx" rel="nofollow" target="_blank"></a></h3>
-<script type="text/javascript"><!--//--><![CDATA[//><!--
-function StorePage(){d=document;t=d.selection?(d.selection.type!='None'?d.selection.createRange().text:''):(d.getSelection?d.getSelection():'');void(keyit=window.open('http://www.365key.com/storeit.aspx?t='+escape(d.title)+'&u='+escape(d.location.href)+'&c='+escape(t),'keyit','scrollbars=no,width=475,height=575,left=75,top=20,status=no,resizable=yes'));keyit.focus();}
-//--><!]]></script><p>　　在Sun的Java JDK 1.40版本中，Java自带了支持正则表达式的包，本文就抛砖引玉地介绍了如何使用java.util.regex包。</p>
+  <h1 class="title-article">JAVA 正则表达式 （超详细）</h1>
+<p>　　在Sun的Java JDK 1.40版本中，Java自带了支持正则表达式的包，本文就抛砖引玉地介绍了如何使用java.util.regex包。</p>
 <p>　　可粗略估计一下，除了偶尔用Linux的外，其他Linu x用户都会遇到正则表达式。正则表达式是个极端强大工具，而且在字符串模式-匹配和字符串模式-替换方面富有弹性。在Unix世界里，正则表达式几乎没有什么限制，可肯定的是，它应用非常之广泛。</p>
 <p>　　正则表达式的引擎已被许多普通的Unix工具所实现，包括grep，awk，vi和Emacs等。此外，许多使用比较广泛的脚本语言也支持正则表达式，比如Python，Tcl，JavaScript，以及最著名的Perl。</p>
 <p>　　我很早以前就是个Perl方面的黑客，如果你和我一样话，你也会非常依赖你手边的这些强大的text-munging工具。近几年来，像其他程序开发者一样，我也越来越关注Java的开发。</p>
