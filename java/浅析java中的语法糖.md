@@ -54,16 +54,6 @@ java中的语法糖只存在于编译期, 在编译器将 .java 源文件编译�
 
 ## **<span style="font-size: 18px;">字符串拼接</span>**
 
-<div class="cnblogs_code">
-
-<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy">[![复制代码](//common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")</span></div>
-
-<pre class="prettyprint prettyprinted" style=""><span style="color: #008000;"><span class="com">/**</span></span><span style="color: #008000;"> <span class="com">* 字符串拼接
- * option: --stringbuilder false</span> </span><span style="color: #008000;"><span class="com">*/</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">public</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">void</span></span> <span class="pln">stringBuilderTest</span><span class="pun">(</span><span style="color: #0000ff;"><span class="kwd">int</span></span><span style="color: #000000;"> <span class="pln"></span> <span class="kwd">end</span><span class="pun">)</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">char</span></span><span class="pun">[]</span> <span class="pln">foo</span> <span class="pun">=</span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">new</span></span> <span class="pln"></span> <span style="color: #0000ff;"><span class="kwd">char</span></span><span class="pun">[]{</span><span class="str">'@'</span><span class="pun">,</span> <span class="pln"></span> <span class="str">'a'</span><span class="pun">,</span> <span class="pln"></span> <span class="str">'*'</span><span style="color: #000000;"><span class="pun">};</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">char</span></span><span style="color: #000000;"> <span class="pln">ch</span><span class="pun">;</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">int</span></span> <span class="pln">x</span> <span class="pun">=</span> <span class="pln"></span> <span class="lit">0</span><span style="color: #000000;"><span class="pun">;</span> <span class="pln"></span> </span><span style="color: #0000ff;"><span class="kwd">while</span></span> <span class="pln"></span> <span class="pun">((</span><span class="pln">ch</span> <span class="pun">=</span> <span class="pln">foo</span><span class="pun">[++</span><span class="pln">x</span><span class="pun">])</span> <span class="pln"></span> <span class="pun">!=</span> <span class="pln"></span> <span class="str">'*'</span><span style="color: #000000;"><span class="pun">)</span> <span class="pln"></span> <span class="pun">{</span> <span class="pln"></span> <span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span></span><span class="str">""</span> <span class="pln"></span> <span class="pun">+</span> <span class="pln">x</span> <span class="pun">+</span> <span class="pln"></span> <span class="str">": "</span> <span class="pln"></span> <span class="pun">+</span><span style="color: #000000;"> <span class="pln">ch</span><span class="pun">);</span> <span class="pln"></span> <span class="pun">}</span> <span class="pln"></span> <span class="pun">}</span></span></pre>
-
-<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy">[![复制代码](//common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")</span></div>
-
-</div>
 
 命令行: <span style="color: #ff6600;">java -jar cfr_0_132.jar CFRDecompilerDemo.class --stringbuilder false</span>
 
@@ -84,6 +74,20 @@ java中的语法糖只存在于编译期, 在编译器将 .java 源文件编译�
 
 </div>
 
+```java
+/**
+ * 字符串拼接
+ * option: --stringbuilder false
+ */
+public void stringBuilderTest(int end) {
+    char[] foo = new char[]{'@', 'a', '*'};
+    char ch;
+    int x = 0;
+    while ((ch = foo[++x]) != '*') {
+        System.out.println("" + x + ": " + ch);
+    }
+}
+```
 命令行: <span style="color: #ff6600;">java -jar cfr_0_132.jar CFRDecompilerDemo.class</span>
 
 ![](https://images2018.cnblogs.com/blog/1278884/201808/1278884-20180803142423489-682039451.png)
