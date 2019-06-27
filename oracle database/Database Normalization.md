@@ -1,40 +1,49 @@
-Skip to content
- 
-Search or jump to…
+<div id="bodyContent" class="mw-body-content">
 
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@hanweicone 
-0
-0 0 hanweicone/test1
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Security  Insights  Settings
-Update Database Normalization.md
+<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
 
- master
-@hanweicone
-hanweicone committed 18 seconds ago 
-1 parent 4e319d8 commit 084799bf7bdb3854349101c990f7ea034c2d6323
-Showing  with 0 additions and 544 deletions.
-  544  oracle database/Database Normalization.md 
-@@ -22,547 +22,3 @@ First normal form enforces these criteria:<sup class="noprint Inline-Template Te
+[Jump to navigation](#mw-head) [Jump to search](#p-search)
+
+<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+
+<div class="mw-parser-output">
+
+**First normal form** (**1NF**) is a property of a [relation](/wiki/Relation_(database) "Relation (database)") in a [relational database](/wiki/Relational_database "Relational database"). A relation is in first normal form if and only if the [domain](/wiki/Data_domain "Data domain") of each [attribute](/wiki/Column_(database) "Column (database)") contains only [atomic](#Atomicity) (indivisible) values, and the value of each attribute contains only a single value from that domain.<sup id="cite_ref-1" class="reference">[[1]](#cite_note-1)</sup> The first definition of the term, in a 1971 conference paper by [Edgar Codd](/wiki/Edgar_F._Codd "Edgar F. Codd"), defined a relation to be in first normal form when none of its domains have any sets as elements.<sup id="cite_ref-2" class="reference">[[2]](#cite_note-2)</sup>
+
+First normal form is an essential property of a relation in a relational database. [Database normalization](/wiki/Database_normalization "Database normalization") is the process of representing a database in terms of relations in standard normal forms, where first normal is a minimal requirement.
+
+First normal form enforces these criteria:<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">[_[<span title="This claim needs references to reliable sources. (October 2018)">citation needed</span>](/wiki/Wikipedia:Citation_needed "Wikipedia:Citation needed")_]</sup>
+
+*   Eliminate repeating groups<sup class="noprint Inline-Template" style="margin-left:0.1em; white-space:nowrap;">[_[<span title="The text near this tag may need clarification or removal of jargon. (October 2018)">clarification needed</span>](/wiki/Wikipedia:Please_clarify "Wikipedia:Please clarify")_]</sup> in individual tables
+*   Create a separate table for each set of related data<sup class="noprint Inline-Template" style="white-space:nowrap;">[_[<span title="You can help -- (October 2018)">definition needed</span>](/wiki/Wikipedia:Please_clarify "Wikipedia:Please clarify")_]</sup>
+*   Identify each set of related data with a [primary key](/wiki/Primary_key "Primary key")
+
+<div id="toc" class="toc"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none">
+
 <div class="toctitle" lang="en" dir="ltr">
+
 ## Contents
+
 <span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+
 *   [<span class="tocnumber">1</span> <span class="toctext">Examples</span>](#Examples)
     *   [<span class="tocnumber">1.1</span> <span class="toctext">Designs that violate 1NF</span>](#Designs_that_violate_1NF)
     *   [<span class="tocnumber">1.2</span> <span class="toctext">Designs that comply with 1NF</span>](#Designs_that_comply_with_1NF)
 *   [<span class="tocnumber">2</span> <span class="toctext">Atomicity</span>](#Atomicity)
 *   [<span class="tocnumber">3</span> <span class="toctext">1NF tables as representations of relations</span>](#1NF_tables_as_representations_of_relations)
-*   [<span class="tocnumber">4</span> <span class="toctext">See also</span>](#See_also)
+*   [<span class="tocnumber">4</span> <span class="toctext">
+</span>](#See_also)
 *   [<span class="tocnumber">5</span> <span class="toctext">References</span>](#References)
 *   [<span class="tocnumber">6</span> <span class="toctext">Further reading</span>](#Further_reading)
+
 </div>
+
 ## <span class="mw-headline" id="Examples">Examples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span>[edit](/w/index.php?title=First_normal_form&action=edit&section=1 "Edit section: Examples")<span class="mw-editsection-bracket">]</span></span>
+
 the following scenarios first illustrate how a database design might violate first normal form, followed by examples that comply.<sup id="cite_ref-3" class="reference">[[3]](#cite_note-3)</sup><sup id="cite_ref-4" class="reference">[[4]](#cite_note-4)</sup>
+
 ### <span class="mw-headline" id="Designs_that_violate_1NF">Designs that violate 1NF</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span>[edit](/w/index.php?title=First_normal_form&action=edit&section=2 "Edit section: Designs that violate 1NF")<span class="mw-editsection-bracket">]</span></span>
+
 Below is a table that stores the names and telephone numbers of customers. One requirement though is to retain _multiple_ telephone numbers for some customers. The simplest way of satisfying this requirement is to allow the "Telephone Number" column in any given row to contain more than one value:
 
 <table class="wikitable customer"><caption>Customer</caption>
@@ -412,6 +421,7 @@ According to Date's definition, a table is in first normal form if and only if i
 > 3.  There are no duplicate rows.
 > 4.  Every row-and-column intersection contains exactly one value from the applicable domain (and nothing else).
 > 5.  All columns are regular [i.e. rows have no hidden components such as row IDs, object IDs, or hidden timestamps].
+
 Violation of any of these conditions would mean that the table is not strictly relational, and therefore that it is not in first normal form.
 
 Examples of tables (or [views](/wiki/View_(database) "View (database)")) that would not meet this definition of first normal form are:
@@ -422,47 +432,10 @@ Examples of tables (or [views](/wiki/View_(database) "View (database)")) that wo
 
 First normal form, as defined by Chris Date, permits relation-valued attributes (tables within tables). Date argues that relation-valued attributes, by means of which a column within a table can contain a table, are useful in rare cases.<sup id="cite_ref-DateRVA_16-0" class="reference">[[16]](#cite_note-DateRVA-16)</sup>
 
-## <span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span>[edit](/w/index.php?title=First_normal_form&action=edit&section=6 "Edit section: See also")<span class="mw-editsection-bracket">]</span></span>
 
-<div role="note" class="hatnote navigation-not-searchable">For other normal forms, see the navigation bar at the bottom of the page.</div>
 
-## <span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span>[edit](/w/index.php?title=First_normal_form&action=edit&section=7 "Edit section: References")<span class="mw-editsection-bracket">]</span></span>
 
-<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
 
-1.  <span class="mw-cite-backlink">**[^](#cite_ref-1 "Jump up")**</span> <span class="reference-text"><cite class="citation book">Elmasri, Ramez; Navathe, Shamkant B. (July 2003). _Fundamentals of Database Systems, Fourth Edition_. Pearson. p. 315\. [ISBN](/wiki/International_Standard_Book_Number "International Standard Book Number") [<bdi>0321204484</bdi>](/wiki/Special:BookSources/0321204484 "Special:BookSources/0321204484"). <q>It states that the domain of an attribute must include only _atomic_ (simple, indivisible) _values_ and that the value of any attribute in a tuple must be a _single value_ from the domain of that attribute.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Fundamentals+of+Database+Systems%2C+Fourth+Edition&amp;rft.pages=315&amp;rft.pub=Pearson&amp;rft.date=2003-07&amp;rft.isbn=0321204484&amp;rft.au=Elmasri%2C+Ramez&amp;rft.au=Navathe%2C+Shamkant+B.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFirst+normal+form" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r886058088">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
-2.  <span class="mw-cite-backlink">**[^](#cite_ref-2 "Jump up")**</span> <span class="reference-text"><cite id="CITEREFE._F._Codd1972" class="citation">E. F. Codd (Oct 1972), _Further normalization of the database relational model_, Courant Institute: Prentice-Hall, [ISBN](/wiki/International_Standard_Book_Number "International Standard Book Number") [<bdi>013196741X</bdi>](/wiki/Special:BookSources/013196741X "Special:BookSources/013196741X"), <q>A relation is in _first normal form_ if it has the property that none of its domains has elements which are themselves sets.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Further+normalization+of+the+database+relational+model&amp;rft.place=Courant+Institute&amp;rft.pub=Prentice-Hall&amp;rft.date=1972-10&amp;rft.isbn=013196741X&amp;rft.au=E.+F.+Codd&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFirst+normal+form" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886058088"></span>
-3.  <span class="mw-cite-backlink">**[^](#cite_ref-3 "Jump up")**</span> <span class="reference-text">[studytonight.com](http://www.studytonight.com/dbms/database-normalization.php)</span>
-4.  <span class="mw-cite-backlink">**[^](#cite_ref-4 "Jump up")**</span> <span class="reference-text">[stackoverflow.com](https://stackoverflow.com/questions/723998/can-someone-please-give-an-example-of-1nf-2nf-and-3nf-in-plain-english)</span>
-5.  <span class="mw-cite-backlink">**[^](#cite_ref-5 "Jump up")**</span> <span class="reference-text">In the "real" world, that would not be a good assumption.</span>
-6.  <span class="mw-cite-backlink">**[^](#cite_ref-CoddAtmReq_6-0 "Jump up")**</span> <span class="reference-text">Codd, E. F. _The Relational Model for Database Management Version 2_ (Addison-Wesley, 1990).</span>
-7.  <span class="mw-cite-backlink">**[^](#cite_ref-CoddAtmDefn_7-0 "Jump up")**</span> <span class="reference-text">Codd, E. F. _The Relational Model for Database Management Version 2_ (Addison-Wesley, 1990), p. 6.</span>
-8.  <span class="mw-cite-backlink">**[^](#cite_ref-Darwen_8-0 "Jump up")**</span> <span class="reference-text">Darwen, Hugh. "Relation-Valued Attributes; or, Will the Real First Normal Form Please Stand Up?", in C. J. Date and Hugh Darwen, _Relational Database Writings 1989-1991_ (Addison-Wesley, 1992).</span>
-9.  <span class="mw-cite-backlink">**[^](#cite_ref-DateConf_9-0 "Jump up")**</span> <span class="reference-text">"[F]or many years," writes Date, "I was as confused as anyone else. What's worse, I did my best (worst?) to spread that confusion through my writings, seminars, and other presentations." Date, C. J. ["What First Normal Form Really Means"] in _Date on Database: Writings 2000-2006_ (Springer-Verlag, 2006), p. 108</span>
-10.  <span class="mw-cite-backlink">**[^](#cite_ref-DateNoAtm_10-0 "Jump up")**</span> <span class="reference-text">Date, C. J. ["What First Normal Form Really Means"] p. 112.</span>
-11.  <span class="mw-cite-backlink">**[^](#cite_ref-Date2015_11-0 "Jump up")**</span> <span class="reference-text"><cite class="citation book">C.J. Date (6 November 2015). [_SQL and Relational Theory: How to Write Accurate SQL Code_](https://books.google.com/books?id=BCjkCgAAQBAJ&pg=PA50). "O'Reilly Media, Inc.". pp. 50–. [ISBN](/wiki/International_Standard_Book_Number "International Standard Book Number") [<bdi>978-1-4919-4115-7</bdi>](/wiki/Special:BookSources/978-1-4919-4115-7 "Special:BookSources/978-1-4919-4115-7")<span class="reference-accessdate">. Retrieved <span class="nowrap">31 October</span> 2018</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=SQL+and+Relational+Theory%3A+How+to+Write+Accurate+SQL+Code&amp;rft.pages=50-&amp;rft.pub=%22O%27Reilly+Media%2C+Inc.%22&amp;rft.date=2015-11-06&amp;rft.isbn=978-1-4919-4115-7&amp;rft.au=C.J.+Date&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DBCjkCgAAQBAJ%26pg%3DPA50&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFirst+normal+form" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886058088"></span>
-12.  <span class="mw-cite-backlink">**[^](#cite_ref-Date5Cr_12-0 "Jump up")**</span> <span class="reference-text">Date, C. J. ["What First Normal Form Really Means"] pp. 127–128.</span>
-13.  <span class="mw-cite-backlink">**[^](#cite_ref-ViewOrder_13-0 "Jump up")**</span> <span class="reference-text">Such views cannot be created using [SQL](/wiki/SQL "SQL") that conforms to the [SQL:2003](/wiki/SQL:2003 "SQL:2003") standard.</span>
-14.  <span class="mw-cite-backlink">**[^](#cite_ref-DateNullsLater_14-0 "Jump up")**</span> <span class="reference-text">"Codd first defined the relational model in 1969 and didn't introduce nulls until 1979" Date, C. J. _SQL and Relational Theory_ (O'Reilly, 2009), Appendix A.2.</span>
-15.  <span class="mw-cite-backlink">**[^](#cite_ref-CoddRule_15-0 "Jump up")**</span> <span class="reference-text">The third of Codd's 12 rules states that "Null values ... [must be] supported in a fully relational DBMS for representing missing information and inapplicable information in a systematic way, independent of data type." Codd, E. F. "Is Your DBMS Really Relational?" _Computerworld_, October 14, 1985.</span>
-16.  <span class="mw-cite-backlink">**[^](#cite_ref-DateRVA_16-0 "Jump up")**</span> <span class="reference-text">Date, C. J. ["What First Normal Form Really Means"] pp. 121–126.</span>
-
-</div>
-
-## <span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span>[edit](/w/index.php?title=First_normal_form&action=edit&section=8 "Edit section: Further reading")<span class="mw-editsection-bracket">]</span></span>
-
-<style data-mw-deduplicate="TemplateStyles:r886047268">.mw-parser-output .refbegin{font-size:90%;margin-bottom:0.5em}.mw-parser-output .refbegin-hanging-indents>ul{list-style-type:none;margin-left:0}.mw-parser-output .refbegin-hanging-indents>ul>li,.mw-parser-output .refbegin-hanging-indents>dl>dd{margin-left:0;padding-left:3.2em;text-indent:-3.2em;list-style:none}.mw-parser-output .refbegin-100{font-size:100%}</style>
-
-<div class="refbegin" style="">
-
-*   Date, C. J., & Lorentzos, N., & Darwen, H. (2002). _[Temporal Data & the Relational Model](http://www.elsevier.com/wps/product/cws_home/680662)<sup class="noprint Inline-Template"><span style="white-space: nowrap;">[_[<span title="&nbsp;Dead link since October 2017">permanent dead link</span>](/wiki/Wikipedia:Link_rot "Wikipedia:Link rot")_]</span></sup>_ (1st ed.). Morgan Kaufmann. <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886058088">[ISBN](/wiki/International_Standard_Book_Number "International Standard Book Number") [1-55860-855-9](/wiki/Special:BookSources/1-55860-855-9 "Special:BookSources/1-55860-855-9").
-*   Date, C. J. (1999), _[An Introduction to Database Systems](https://web.archive.org/web/20050404010227/http://www.aw-bc.com/catalog/academic/product/0,1144,0321197844,00.html)_ (8th ed.). Addison-Wesley Longman. <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886058088">[ISBN](/wiki/International_Standard_Book_Number "International Standard Book Number") [0-321-19784-4](/wiki/Special:BookSources/0-321-19784-4 "Special:BookSources/0-321-19784-4").
-*   Kent, W. (1983) _[A Simple Guide to Five Normal Forms in Relational Database Theory](http://www.bkent.net/Doc/simple5.htm)_, Communications of the ACM, vol. 26, pp. 120–125
-
-</div>
-
-*   Codd, E.F. (1970). A Relational Model of Data for. Large Shared Data Banks. IBM Research Laboratory, San Jose, California.
-*   Codd, E. F. (1971). Further Normalization of the Relational Model. Courant Computer Science Symposium 6 in Data Base Systems edited by Rustin, R.
 
 <div role="navigation" class="navbox" aria-labelledby="Database_normalization" style="padding:3px">
 
@@ -557,24 +530,3 @@ First normal form, as defined by Chris Date, permits relation-valued attributes 
 </div>
 
 </div>
-0 comments on commit 084799b
-@hanweicone
- 
-   
- 
- 
-Leave a comment
-
-Attach files by dragging & dropping, selecting or pasting them.
-© 2019 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
