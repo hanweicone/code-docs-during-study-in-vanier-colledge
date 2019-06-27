@@ -1,12 +1,4 @@
-<div id="bodyContent" class="mw-body-content">
-
-<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
-
-[Jump to navigation](#mw-head) [Jump to search](#p-search)
-
-<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-
-<div class="mw-parser-output">
+## First normal form 
 
 **First normal form** (**1NF**) is a property of a [relation](/wiki/Relation_(database) "Relation (database)") in a [relational database](/wiki/Relational_database "Relational database"). A relation is in first normal form if and only if the [domain](/wiki/Data_domain "Data domain") of each [attribute](/wiki/Column_(database) "Column (database)") contains only [atomic](#Atomicity) (indivisible) values, and the value of each attribute contains only a single value from that domain.<sup id="cite_ref-1" class="reference">[[1]](#cite_note-1)</sup> The first definition of the term, in a 1971 conference paper by [Edgar Codd](/wiki/Edgar_F._Codd "Edgar F. Codd"), defined a relation to be in first normal form when none of its domains have any sets as elements.<sup id="cite_ref-2" class="reference">[[2]](#cite_note-2)</sup>
 
