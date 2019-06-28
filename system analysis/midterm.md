@@ -9,8 +9,7 @@
 ### 1.2 The Systems Development Life Cycle (SDLC) consists of four stages: 
 Planning, Analysis, Design, and Implementation
 ### 1.3 The Major Development Methodologies: 
-* Structured Design
-  * Waterfall Method
+  * Waterfall  Development
     * Parallel Development
     * V-Model
 * Rapid Application Development (RAD)
