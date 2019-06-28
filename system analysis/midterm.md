@@ -29,7 +29,7 @@ Planning, Analysis, Design, and Implementation
 ## 3. Types of Questions
 ###  Closed-Ended Questions
 Specific and precise:How do customers place orders?
-What additional informationwould you like the new systemto provide?
+What additional information would you like the new system to provide?
 
 ### Open-Ended Questions
 Unravel more info,Gives more control:What do you think about the current system?
