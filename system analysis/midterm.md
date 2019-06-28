@@ -11,7 +11,8 @@ Planning, Analysis, Design, and Implementation
 ### 1.3 The Major Development Methodologies: 
 * Structured Design
   * Waterfall Method
-  * Parallel Development
+    * Parallel Development
+    * V-Model
 * Rapid Application Development (RAD)
   * Phased Development
   * Prototyping (system prototyping)
