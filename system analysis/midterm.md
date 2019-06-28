@@ -1,23 +1,23 @@
 ## 1. THE SYSTEMS DEVELOPMENT LIFE CYCLE (SDLC)
 ### 1.1 The object
-Moves systematically through phases where each phase has a standard set of outputs
-Produces project deliverables
-Uses deliverables in implementation
-Results in actual information system
-Uses gradual refinement
+* Moves systematically through phases where each phase has a standard set of outputs
+* Produces project deliverables
+* Uses deliverables in implementation
+* Results in actual information system
+* Uses gradual refinement
 
 ### 1.2 The Systems Development Life Cycle (SDLC) consists of four stages: 
 Planning, Analysis, Design, and Implementation
 ### 1.3 The Major Development Methodologies: 
-Structured Design
-Waterfall Method
-Parallel Development
-Rapid Application Development (RAD)
-Phased Development
-Prototyping (system prototyping)
-Throwaway Prototyping (design prototyping) 
-Agile development
-eXtreme Programming
+* Structured Design
+  * Waterfall Method
+  * Parallel Development
+* Rapid Application Development (RAD)
+  * Phased Development
+  * Prototyping (system prototyping)
+  * Throwaway Prototyping (design prototyping) 
+* Agile development
+  * eXtreme Programming
 
 ## 2. Requirements Gathering Methods
 * Interviews
@@ -62,8 +62,8 @@ only way to deal with someone who dominates is head
 on. During a break, approach the person, thank him
 or her for their insightful comments, and ask them to
 help you make sure that others also participate.
-### Encouraging noncontributors. Drawing out people
-who have participated very little is challenging
+### Encouraging noncontributors
+Drawing out people who have participated very little is challenging
 because you want to bring them into the conversation
 so that they will contribute again. The best approach is
 to ask a direct factual question that you are certain
@@ -74,15 +74,16 @@ time. You’ve probably been in the Shipping Department
 longer than anyone else. Could you help us
 understand exactly what happens when an order is
 received in Shipping?”
-### Side discussions. Sometimes participants engage in
+### Side discussions
+Sometimes participants engage in
 side conversations and fail to pay attention to the
 group. The easiest solution is simply to walk close to
 the people and continue to facilitate right in front of
 them. Few people will continue a side conversion
 when you are two feet from them and the entire
 group’s attention is on you and them.
-### Agenda merry-go-round. The merry-go-round occurs
-when a group member keeps returning to the same
+### Agenda merry-go-round
+The merry-go-round occurs when a group member keeps returning to the same
 issue every few minutes and won’t let go. One solution
 is to let the person have five minutes to ramble on
 about the issue while you carefully write down every
@@ -94,23 +95,24 @@ mention something already on the list, you quickly
 interrupt, point out that it is there, and ask what other
 information to add. Don’t let them repeat the same
 point, but write any new information.
-### Violent agreement. Some of the worst disagreements
-occur when participants really agree on the issues but
+### Violent agreement
+Some of the worst disagreements occur when participants really agree on the issues but
 don’t realize that they agree because they are using different
 terms. An example is arguing whether a glass is
 half empty or half full; they agree on the facts, but can’t
 agree on the words. In this case, the facilitator has to
 translate the terms into different words and find common
 ground so the parties recognize that they really agree.
-### Unresolved conflict. In some cases, participants don’t
-agree and can’t understand how to determine what alternatives
+### Unresolved conflict
+In some cases, participants don’t agree and can’t understand how to determine what alternatives
 are better. You can help by structuring the issue.
 Ask for criteria by which the group will identify a good
 alternative (e.g., “Suppose this idea really did improve
 customer service. How would I recognize the improved
 customer service?”). Then once you have a list of criteria,
 ask the group to assess the alternatives using them.
-### True conflict. Sometimes, despite every attempt, participants
+### True conflict
+Sometimes, despite every attempt, participants
 just can’t agree on an issue. The solution is to
 postpone the discussion and move on. Document the
 issue as an “open issue” and list it prominently on a
@@ -120,7 +122,8 @@ haven’t wasted time on it. If the issue cannot be
 resolved later, move it to the list of issues to be decided
 by the project sponsor or some other more senior member
 of management.
-### Use humor. Humor is one of the most powerful tools a
+### Use humor
+Humor is one of the most powerful tools a
 facilitator has and thus must be used judiciously. The
 best JAD humor is always in context; never tell jokes but
 take the opportunity to find the humor in the situation.
