@@ -13,7 +13,7 @@ Planning, Analysis, Design, and Implementation
     * Parallel Development
     * V-Model
 * Rapid Application Development (RAD)
-  * Phased Development
+  * Iterative development
   * Prototyping (system prototyping)
   * Throwaway Prototyping (design prototyping) 
 * Agile development
@@ -127,7 +127,6 @@ Humor is one of the most powerful tools a
 facilitator has and thus must be used judiciously. The
 best JAD humor is always in context; never tell jokes but
 take the opportunity to find the humor in the situation.
-
 
 
 
