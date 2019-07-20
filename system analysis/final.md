@@ -188,3 +188,24 @@ responsible for the data access logic and data storage
 ## N-Tiered Architecture
 the client is responsible for presentation, database servers are responsible for the data access logic and
 data storage, and the application logic is spread across two or more diff erent sets of servers.
+
+## Client-Server Benefits
+- Scalable
+- Support multiple clients and servers
+- Multiple servers make for a generally more reliable network
+## Client-Server Limitations
+- Complexity
+- Updating the network computers is more complex
+- Development and Installation 
+  	- different on client and server
+	- training for developers
+## functional requirement
+-	what the software should do ( functional requirements): A functional requirement
+-	relates directly to a process the system has to perform as a part of supporting a user task and/or information it needs to provide as the user is performing a task.
+
+## NonFunctional Requirements:
+-	characteristics the system should have (nonfunctional requirements); 
+-	How the system should be built (system requirements). 
+
+
+
