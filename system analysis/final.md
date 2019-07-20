@@ -1,3 +1,40 @@
+## Analysis
+- Requirements determination
+	- Requirements Analysis Techniques
+		- Business Process Automation
+		- Business Process Improvement
+		- Business Process Reengineering
+		-Requirement – Gathering Techniques
+	- Interviews
+		- Joint Application Development
+		- Questionnaires
+		- Document Analysis
+		- Observation
+- Functional modeling
+	- Functional Model describe business processes and the interaction of an information system with the environment.
+	- In object-oriented systems development, two types of models are used to describe the functionality of an information system:
+		- Activity diagrams: support the logical modeling of business processes and workflows
+		- Use cases: are used to describe the basic functions of the information system
+
+	- Both can be used to describe the current as-is system and the to-be system being development.
+
+- Structural modeling
+	- Structural modeling defines the static architecture of a system. 
+	- Structural model represents the framework for the system
+	- The structural model never describes the dynamic behavior of the system. 
+	- It is used to model the “things” that make up a model – the classes, objects, interfaces and physical components. 
+	- Also it is used to model the relationships and dependencies between elements. 
+
+- Behavioral modeling
+	- interaction diagrams (sequence and communication)
+		- There are two types of behavioral models. First, there are behavioral models used to represent
+the underlying details of a business process portrayed by a use-case model. In UML,interaction diagrams (sequence and communication) are used for this type of behavioralmodel. Practically speaking, interaction diagrams allow the analyst to model the distribution
+of the behavior of the system over the actors and objects in the system. In this way, we can
+easily see how actors and objects collaborate to provide the functionality defined in a use case.
+	- behavioral state machines 
+		- Second, a behavioral model is used to represent the changes that occur in the underlying data.
+UML uses behavioral state machines for this.
+
 ## Basic Characteristics of Object Oriented Systems
 - Classes and Objects
 - Methods and Messages
@@ -64,6 +101,7 @@ The behavioral state machine is a dynamic model that shows the different states 
 - sequence diagrams: elements how it works(read lec 6)
 - behavioral state machines (state chart diagrams) elements how it works(read lec 6)
 
+
 ## Avoid Classic Design Mistakes
 
 ### Reducing design time:
@@ -127,10 +165,19 @@ a much higher time cost (usually, at least 10 timesLonger)
 -	Carefully choose vendor
 	Prepare contract and payment style carefully
 	
- **What is normalization?
-When normalization?
-What is denormalization?
-When denormalization?(page 346)** 
+ ## What is normalization?
+ Normalization is a process whereby a series of rules are applied to the RDBMS tables to assess the effi ciency of the tables
+## When normalization?
+Sometimes, however, a project team needs to start with a model that was poorly constructed
+or with one that was created for fi les or a nonrelational type of format. In these cases,
+the project team should follow a series of steps that serve to check the model for storage
+effi ciency. Th ese steps make up a process called normalization.
+## What is denormalization?
+Denormalization reduces the number of joins that need to be performed in a query, thus speeding up access.
+## When denormalization? 
+Aft er the object storage is optimized, the project team may decide that
+increased data retrieval speed is more important than storage effi ciency or data update speed
+and elect to denormalize or add redundancy back into the design.
 ## Problems with RDBMS (Relational database management system)
 -	To access data in multiple tables, the tables must be joined
 -	This can result in many database operations and lead to  huge tables and slow processing
