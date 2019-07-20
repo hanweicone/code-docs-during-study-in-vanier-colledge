@@ -207,5 +207,110 @@ data storage, and the application logic is spread across two or more diff erent 
 -	characteristics the system should have (nonfunctional requirements); 
 -	How the system should be built (system requirements). 
 
+## Conversion Location
+Conversion location refers to the parts of the organization that are converted when the conversion
+occurs. Often, parts of the organization are physically located in different offices(e.g., Toronto,
+Atlanta, Los Angeles). In other cases, location refers to different organizational units located in
+Change management.
+## How to covert old system to new ?
+**Conversion is the technical process of replacing the old system with the new one.  Designers select the method, timing, and location of the conversion process.**
 
+There are three major steps to the conversion plan before commencement of operations:
+Install hardware, install software, and convert data (Figure 13-2). Although it may be possible
+to do some of these steps in parallel, usually they must be done sequentially at any one location.
+
+**The first step** in the conversion plan is to buy and install any needed hardware. In many
+cases, no new hardware is needed, but sometimes the project requires new hardware such as
+servers, client computers, printers, and networking equipment. It is critical to work closely
+with vendors who are supplying needed hardware and software to ensure that the deliveries
+are coordinated with the conversion schedule so that the equipment is available when it is
+needed. Nothing can stop a conversion plan in its tracks as easily as the failure of a vendor to
+deliver needed equipment.
+
+Once the hardware is installed, tested, and certified as being operational, **the second step**
+is to install the software. This includes the to-be system under development and, sometimes,
+additional software that must be installed to make the system operational. At this point, the
+system is usually tested again to ensure that it operates as planned.
+
+**The third step** is to convert the data from the as-is system to the to-be system. Data conversion
+is usually the most technically complicated step in the migration plan. Often, separate programs
+must be written to convert the data from the as-is system to the new formats required in the to-be
+system and store it in the to-be system fi les and databases. Th is process is of en complicated by the
+fact that the fi les and databases in the to-be system do not exactly match the fi les and databases in
+the as-is system (e.g., the to-be system may use several tables in a database to store customer data
+that were contained in one fi le in the as-is system). Formal test plans are always required for data
+conversion efforts (see Chapter 12).Conversion can be thought of along
+
+## Conversion Style
+The conversion style is the way users are switched between the old and new systems. Th ere
+are two fundamentally different approaches to the style of conversion: direct conversion and
+parallel conversion.
+### Direct Conversion
+Direct Conversion With direct conversion (sometimes called cold turkey, big bang, or
+abrupt cutover), the new system instantly replaces the old system. Th e new system is turned
+on, and the old system is immediately turned off . Th is is the approach that we are likely to use
+when we upgrade commercial soft ware (e.g., Microsoft Word) from one version to another;
+we simply begin using the new version and stop using the old version.
+
+Direct conversion is the simplest and most straightforward. However, it is the most risky
+because any problems with the new system that have escaped detection during testing can
+seriously disrupt the organization.
+### Parallel Conversion
+Parallel Conversion With parallel conversion, the new system is operated side by side with
+the old system; both systems are used simultaneously. For example, if a new accounting
+system is installed, the organization enters data into both the old system and the new system
+and then carefully compares the output from both systems to ensure that the new system is
+performing correctly. Aft er some time period (oft en one to two months) of parallel operation
+and intense comparison between the two systems, the old system is turned off and the organization
+continues using the new system.
+
+This approach is more likely to catch any major bugs in the new system and prevent the
+organization from suff ering major problems. If problems are discovered in the new system, the
+system is simply turned off and fi xed and then the conversion process starts again. Th e problem
+with this approach is the added expense of operating two systems that perform the same function.
+
+## Designing Tests
+Understand different types of tests and when to use
+### 1. Unit tests
+Focus on a single unit – the class
+- Black-box Testing
+- White-box Testing
+
+### 2. Integration tests
+How a set of classes work together
+
+Classes pass unit tests first
+- Interface testing
+- Use-Case Testing
+- Interaction Testing
+- System Interface Testing
+
+### 3. System tests
+- Requirements
+- Usability 
+- Security
+- Performance
+- Documentation
+
+### 4. Acceptance tests
+**Alpha**
+
+Conducted by users to ensure they accept the system
+
+**Beta**
+
+Users use real data, not test data
+
+
+## CHANGE MANAGEMENT
+Change management is aimed at helping system users to adopt the new system and use it productively.
+
+## Understanding Resistance to Change
+What is good for the organization, is not necessarily good for the individuals who work there
+Cost versus benefit of transition as well as of to-be system Adapting to new work processes requires effort, for which there may be no additional compensation.
+
+**Training**
+-	Every new system requires new skills
+-	New skills may involve use of the technology itself
+-	New skills may be needed to handle the changed business processes
 
