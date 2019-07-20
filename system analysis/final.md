@@ -126,3 +126,65 @@ a much higher time cost (usually, at least 10 timesLonger)
 -	Never outsource what you don’t understand
 -	Carefully choose vendor
 	Prepare contract and payment style carefully
+	
+ **What is normalization?
+When normalization?
+What is denormalization?
+When denormalization?(page 346)** 
+## Problems with RDBMS (Relational database management system)
+-	To access data in multiple tables, the tables must be joined
+-	This can result in many database operations and lead to  huge tables and slow processing
+### Speeding up access
+-	Denormalization – Adds data from one table to another in order to speed processing and eliminate a join operation
+-	Example: Add customer last name to order table to avoid joining order to customer to get just last name
+## Physical Architecture
+### Software Components
+-	**Data Storage**: Most information systems require data to be stored and retrieved 
+
+-	**Data Access Logic**: the processing required to access data, often meaning database queries in Structured Query Language (SQL).
+
+-	**Application logic**: the logic documented in the DFDs, use cases  and functional requirements.
+
+-	**Presentation logic**: The display of information to the user and the acceptance of the user’s commands (the user interface)
+
+### Hardware Components
+-	Client computers
+-	Servers
+- Connecting network
+
+## server Based Architecture
+very first computing architectures were server based,
+with the server (usually, a central mainframe computer) performing all
+four application functions. 
+
+The clients (usually, terminals) enabled users to send
+and receive messages to and from the server computer
+Limitations? Over loaded systems as the demand increased
+
+## Client Based Architecture
+The clients are microcomputers on a local area network, and the server is a server computer on the same network. 
+
+The application software on the client computers is responsible for the presentation logic, the application logic, 
+and the data access logic;
+### Client based Analysis
+This simple architecture often works very well in situations with low numbers of users or limited data access requirements. 
+
+The fundamental is that all data on the server must travel to the client for processing.
+
+## Client-Server Architectures
+The client is responsible for the presentation logic, whereas the server is responsible for the data access logic and data storage. 
+
+The application logic may reside on the client, reside on the server, or be split between both.
+## 2-Tiered Architecture
+client:presentation logic, the application logic.
+
+server:the data access logic,data storeage.
+
+## 3-Tiered Architecture
+the soft ware on the client computer is responsible for presentation logic, an application server (or
+servers) is responsible for the application logic, and a separate database server (or servers) is
+responsible for the data access logic and data storage
+
+## N-Tiered Architecture
+the client is responsible for presentation, database servers are responsible for the data access logic and
+data storage, and the application logic is spread across two or more diff erent sets of servers.
