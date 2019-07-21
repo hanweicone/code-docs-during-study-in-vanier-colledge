@@ -111,24 +111,22 @@ a much higher time cost (usually, at least 10 timesLonger)
  **Solution:** If time pressure is intense, use rapid application development (RAD) techniques and timeboxing to eliminate functionality or move it into future versions.
 
 ### Feature creep:
-- Even if you are successful at avoiding scope creep, about 25% of system requirements will still change. Changes—big and small—can significantly
-- increase time and cost.
+- Even if you are successful at avoiding scope creep, about 25% of system requirements will still change. 
+- Changes—big and small—can significantly increase time and cost.
 
  **Solution:** Ensure that all changes are vital and that the users are aware of the impact on cost and time. Try to move proposed changes into future versions.
 ### Silver bullet syndrome
--	Analysts sometimes believe the
--	marketing claims that some design tools solve all problems and magically reduce time and costs. 
+-	Analysts sometimes believe the arketing claims that some design tools solve all problems and magically reduce time and costs. 
 -	No one tool or technique can eliminate overall time or
  
  **Solution**	If a design tool has claims that appear too good to be true, just say no.
  ### Switching tools in mid-project
 -	Sometimes, analysts switch to what appears to be a better tool during design in the hopes of saving time or costs.
 -	 Usually, any benefits are outweighed by the need to learn the new tool. 
+-	This also applies to even “minor” upgrades to current tools.
  
  **Solution** 
--	This also applies to even “minor” upgrades to current tools.
--	Solution: Don’t switch or upgrade unless there is a
--	compelling need for specific features in the new tool and it helps with the efficiency. 
+-	Solution: Don’t switch or upgrade unless there is a compelling need for specific features in the new tool and it helps with the efficiency. 
 
 ## DESIGN STRATEGIES
 
