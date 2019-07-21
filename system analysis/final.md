@@ -139,9 +139,33 @@ a much higher time cost (usually, at least 10 timesLonger)
 -	May stretch company’s resources
 -	May add significant risk
 
+Many project teams assume that custom development, or building a new system from scratch,
+is the best way to create a system. For one thing, teams have complete control over the way
+the system looks and functions. Custom development also allows developers to be fl exible
+and creative in the way they solve business problems. Additionally, a custom application is
+easier to change to include components that take advantage of current technologies that can
+support such strategic eff orts.
+
+Building a system in-house also builds technical skills and functional knowledge within
+the company. As developers work with business users, their understanding of the business
+grows and they become better able to align IS with strategies and needs. Th ese same developers
+climb the technology learning curve so that future projects applying similar technology
+require much less eff ort.
+
+Custom application development, however, requires dedicated eff ort that involves long
+hours and hard work. Many companies have a development staff who already is overcommitted
+to fi lling huge backlogs of systems requests and just does not have time for another
+project. Also, a variety of skills—technical, interpersonal, functional, project management,
+and modeling—must be in place for the project to move ahead smoothly. IS professionals,
+especially highly skilled individuals, are quite diffi cult to hire and retain.
+
+The risks associated with building a system from the ground up can be quite high, and
+there is no guarantee that the project will succeed. Developers could be pulled away to work
+on other projects, technical obstacles could cause unexpected delays, and the business users
+could become impatient with a growing timeline.
+
 ### Packaged Software
--	Software already written
--	May be more efficient. Don`t reinvent the wheel.
+-	Software already written May be more efficient. Don`t reinvent the wheel.
 -	May be more thoroughly tested and proven
 -	May range from components to tools to whole enterprise systems
 -	Must accept functionality provided
