@@ -180,25 +180,24 @@ could become impatient with a growing timeline.
 -	Develop “object wrappers”
 
 ### Outsourcing
--	Hire external firm to create system
--	May have more skills
+-	Hire external firm to create system May have more skills
 -	May extend existing resources
 -	Never outsource what you don’t understand
 -	Carefully choose vendor
 	Prepare contract and payment style carefully
 	
  ## What is normalization?
- Normalization is a process whereby a series of rules are applied to the RDBMS tables to assess the effi ciency of the tables
+ Normalization is a process whereby a series of rules are applied to the RDBMS tables to assess the eff ciency of the tables
 ## When normalization?
 Sometimes, however, a project team needs to start with a model that was poorly constructed
 or with one that was created for fi les or a nonrelational type of format. In these cases,
 the project team should follow a series of steps that serve to check the model for storage
-effi ciency. Th ese steps make up a process called normalization.
+efficiency. These steps make up a process called normalization.
 ## What is denormalization?
 Denormalization reduces the number of joins that need to be performed in a query, thus speeding up access.
 ## When denormalization? 
-Aft er the object storage is optimized, the project team may decide that
-increased data retrieval speed is more important than storage effi ciency or data update speed
+After the object storage is optimized, the project team may decide that
+increased data retrieval speed is more important than storage efficiency or data update speed
 and elect to denormalize or add redundancy back into the design.
 ## Problems with RDBMS (Relational database management system)
 -	To access data in multiple tables, the tables must be joined
