@@ -134,3 +134,18 @@ bubblesort(A)
 			do if A[j] > A[j +1]
 				then exchange A[j] ↔ A[j+1]
 ```
+## ArrayList LinkedList增删查时间复杂度分析
+![](https://img-blog.csdnimg.cn/20190109164948676.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5ODk5MDg3,size_16,color_FFFFFF,t_70)
+
+* ArrayList是线性表（动态数组），LinkedList是链表
+* get(index)  根据下标查询，顺序存储知道首个元素的地址，其他的位置很快就能确定，时间复杂度为O(1)
+    链式存储，从首个元素开始查找，直到查找到第 i个位置，时间复杂度为O(n)
+
+* add(E)  直接尾部添加，时间复杂度O(1)
+
+* add(index,E)  顺序存储需要查找到元素然后执行插入或删除，时间复杂度为O(1)+O(n)=O(n);
+链式存储同样需要先查找到元素然后在插入或删除，时间复杂度为O(n)+O(1)=O(n)
+
+* remove(E)  顺序存储删除指定元素，后面元素要向前移动，时间复杂度O(n)
+
+* 链式存储，直接 指针操作（找到前驱节点，再删除），时间复杂度O(1)
