@@ -1,3 +1,4 @@
+## recursive
 ```java
 
 public class Calculation {//递归计算阶乘
@@ -73,4 +74,46 @@ public class Calculation {//递归计算阶乘
         }
         }
   }
+```
+## pseduocode of selection sort
+```
+input array A
+output SELECTION-SORTED A
+	n ← length[A]
+	for j ← 1 to n - 1
+		do smallest ← j
+		      for i ← j + 1 to n
+			   do if A[i] < A[smallest]
+				   then smallest ← i
+		      exchange A[j] ↔ A[smallest]
+```              
+## pseduocode of insertion sort 
+```
+INSERTION-SORT(A)
+	for j ← 2 to n
+		do key ← A[ j ]
+		  Insert A[ j ] into the sorted sequence A[1 . . j -1]
+		     i ← j - 1
+		     while i > 0 and A[i] > key
+			do A[i + 1] ← A[i]
+			      i ← i – 1
+		     A[i + 1] ← key
+
+```
+## pseduocode of binary search
+```
+input array A,array length n,search target T
+output index of T in A
+function binary_search(A, n, T):
+    L := 0
+    R := n − 1
+    while L <= R:
+        m := (L + R) / 2
+        if A[m] < T:
+            L := m + 1
+        else if A[m] > T:
+            R := m - 1
+        else:
+            return m
+    return unsuccessful
 ```
