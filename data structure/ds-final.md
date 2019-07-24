@@ -117,3 +117,20 @@ function binary_search(A, n, T):
             return m
     return unsuccessful
 ```
+## pseduocode of bubble sort
+```
+Alg.: BUBBLESORT(A)
+	for i ← 1 to length[A]
+		do for j ← length[A] downto i + 1
+		          do if A[j] < A[j -1]
+			        then exchange A[j] ↔ A[j-1]
+```
+
+or
+```
+bubblesort(A)
+	for i ← 1 to length[A]
+		do for j ← 1 to length[A] -i
+			do if A[j] > A[j +1]
+				then exchange A[j] ↔ A[j+1]
+```
