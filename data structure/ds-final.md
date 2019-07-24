@@ -10,9 +10,8 @@ public class Calculation {//递归计算阶乘
         }
         return result;
     }
-```
 
-```java
+
     public  int calcFarb(int n){//递归计算斐波那契数列
     int farb=0;
     if(n==0|n==1){
@@ -22,8 +21,8 @@ public class Calculation {//递归计算阶乘
     }
     return farb;
     }
-```
-```java
+
+
     public  int calcFarbIter(int n){//迭代计算斐波那契数列
     int farb = 1;
     int pre=1;
@@ -35,8 +34,8 @@ public class Calculation {//递归计算阶乘
         }
     return farb;
     }
-```
-```java
+
+
     public int calcPlus(int n){//递归计算1+2+...+n
         int result=0;
     if(n==1){
@@ -46,13 +45,13 @@ public class Calculation {//递归计算阶乘
     }
     return result;
     }
-```
-```java
+
+
     public int findMinInArray(int [] a,int n){//递归寻找数列里面的最小值
       return n == 1 ? a[0] : a[n-1] < findMinInArray(a , n-1) ? a[n-1] : findMinInArray(a , n-1);
-}
-```
-```java
+    }
+
+
     public int calcSumofArray(int[] a,int n){//递归计算数列的和
     int result=0;
     if(n==1){
@@ -62,16 +61,16 @@ public class Calculation {//递归计算阶乘
     }
     return result;
     }
-```
-```java
+
+
     public boolean isPalindrome(int [] a,int n){//递归判断一个数列是否是回文数列(Palindrome)
-    //if(n==1||n==0){//also works! 配合下面注释掉的n-2使用
-    if(n==1){
-      return true;   
-    }else{
-     return a[a.length-n]==a[n-1]?isPalindrome(a, n-1):false;
-     //return a[a.length-n]==a[n-1]?isPalindrome(a, n-2):false;//not works!!
-}
-}
-}
+        //if(n==1||n==0){//also works! 配合下面注释掉的n-2使用
+        if(n==1){
+            return true;   
+        }else{
+            return a[a.length-n]==a[n-1]?isPalindrome(a, n-1):false;
+          //return a[a.length-n]==a[n-1]?isPalindrome(a, n-2):false;//not works!!
+        }
+        }
+  }
 ```
