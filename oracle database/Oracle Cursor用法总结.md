@@ -1,8 +1,8 @@
-Oracle Cursor用法总结
+# Oracle Cursor用法总结
 cursor分为三种，一是直接声明为cursor变量，二是首先声明类型再声明变量，三是声明为sys_refcursor。
 
-（1）直接声明
-
+## （1）直接声明
+```sql
 declare
 
  cursor emp_cur  is select *  from emp;
@@ -28,13 +28,14 @@ begin
 end;
 
 /
-
-(2)ref cursor:分为强类型（有return子句的）和弱类型，强类型在使用时，其返回类型必须和return中的类型一致，否则报错，而弱类型可以随意打开任何类型。
+```
+## (2)ref cursor:
+分为强类型（有return子句的）和弱类型，强类型在使用时，其返回类型必须和return中的类型一致，否则报错，而弱类型可以随意打开任何类型。
 
 例如：
 
-强类型
-
+### 强类型
+```sql
 declare
 
  type emp_cur_type  is ref cursor return emp%rowtype;
@@ -66,9 +67,9 @@ begin
 end;
 
 /
-
-弱类型：
-
+```
+### 弱类型：
+```sql
 declare
 
  type emp_cur_type is ref cursor;
@@ -114,9 +115,11 @@ begin
 end;
 
 /
+```
+## （3）sys_refcursor:
+可多次打开，直接声明此类型的变量，不用先定义类型再声明变量。
 
-（3）sys_refcursor:可多次打开，直接声明此类型的变量，不用先定义类型再声明变量。
-
+```sql
 declare
 
  emp_cur sys_refcursor;
@@ -160,11 +163,12 @@ begin
 end;
 
 /
+```
+## 其他总结：
 
-其他总结：
+### 1、游标可以用for循环，但只限于cursor cur_var is ……这种类型，用在其他的里面都是错误的；for本身就包含了打开、关闭游标，此时再显示打开关闭都是错误的。
 
-1、游标可以用for循环，但只限于cursor cur_var is ……这种类型，用在其他的里面都是错误的；for本身就包含了打开、关闭游标，此时再显示打开关闭都是错误的。
-
+```sql
 declare
 
 cursor emp_cur is select *  from emp;
@@ -184,11 +188,11 @@ end loop;
 --close emp_cur; 是错误的，for本身包含了关闭。
 
 end;
-
+```
  
 
---是不是表示：ref cursor变量不支持for打开并循环？
-
+#### --是不是表示：ref cursor变量不支持for打开并循环？
+```sql
 declare
 
 type emp_cur_type  is ref cursor return emp%rowtype;
@@ -208,9 +212,9 @@ loop
 end loop;
 
 end;
-
-2、游标可以带参数
-
+```
+### 2、游标可以带参数
+```sql
 DECLARE
 
   CURSOR c1 (job VARCHAR2, max_wage NUMBER) IS
@@ -230,9 +234,9 @@ BEGIN
   END LOOP;
 
 END;
-
-3、bulk collect批量赋值
-
+```
+### 3、bulk collect批量赋值
+```sql
 declare
 
  type emp_cur_type  is ref cursor;
@@ -268,9 +272,9 @@ begin
 end;
 
 /
-
-4、cursor变量的位置
-
+```
+### 4、cursor变量的位置
+```sql
 CREATE PACKAGE emp_data AS
 
   TYPE EmpCurTyp IS REF CURSOR RETURN employees%ROWTYPE;
@@ -300,8 +304,8 @@ PROCEDURE open_emp_cv  IS
 END  emp_data;
 
 /
-
-5、嵌套cursor
+```
+### 5、嵌套cursor
 
 打开父cursor时，子cursor隐含打开；当
 
@@ -320,6 +324,7 @@ The  parent  cursor  is  closed
 The  parent  cursor  is  canceled
 
 示例；
+```sql
 declare
 
  type emp_cur_type  is ref cursor ;
@@ -368,4 +373,4 @@ begin
 
 end;
 
-If opportunity doesn’t knock, build a door
+```
