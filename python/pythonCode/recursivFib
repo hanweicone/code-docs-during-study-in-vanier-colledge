@@ -1,0 +1,10 @@
+def fib(n):
+    if n <=1:
+        return [1]
+    if n == 2:
+        return [1,1]
+    else:
+        list = fib(n-1)
+        list.append((list[-1]+list[-2]))
+        return list
+print(fib(10))
