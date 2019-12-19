@@ -19,7 +19,28 @@ print(a ^ b)  # letters in a or b but not both
 print('-'*20)
 # set comprehensions
 print({x for x in 'abracadabra' if x not in 'alacazam'})  # a - b
+print(set('abracadabra').difference(set('alacazam')))  # a - b
 print({x for x in 'abracadabra' if x in 'alacazam'})  # a & b
+print(set('alacazam').intersection(set('abracadabra')))  # a & b
+
+def get_duplicates(list):
+    duplicates = []
+    for value in list:
+        if list.count(value) > 1:
+            if value not in duplicates:
+                duplicates.append(value)
+
+    return duplicates
+
+
+def get_duplicates1(list):
+    duplicates = set([x for x in list if list.count(x) > 1])
+    return duplicates
+
+
+l1 = [1, 1, 2, 2, 3, 5, 6, 7]
+print(get_duplicates(l1))
+print(get_duplicates1(l1))
 
 
 

@@ -27,16 +27,17 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\pythonCode\Decorator" />
       <recent name="E:\pythonCode\" />
       <recent name="E:\pythonCode\venv" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.listOfTree">
-    <configuration name="fetchFromMysql" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.testClass3">
+    <configuration name="argusAndKwargus" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pythonCode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -48,7 +49,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fetchFromMysql.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/argusAndKwargus.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -57,7 +58,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="isInMultiDementionList" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="testClass3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pythonCode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -69,7 +70,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/isInMultiDementionList.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testClass3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -78,7 +79,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="listOfTree" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="testFilter" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pythonCode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -90,7 +91,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/listOfTree.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testFilter.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -99,7 +100,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="outputTableFromDataBase" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="testMap" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pythonCode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -111,7 +112,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/outputTableFromDataBase.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testMap.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -120,7 +121,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="testImportDataFromFile" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="testReduce" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pythonCode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -132,7 +133,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testImportDataFromFile.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testReduce.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -143,11 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.listOfTree" />
-        <item itemvalue="Python.outputTableFromDataBase" />
-        <item itemvalue="Python.fetchFromMysql" />
-        <item itemvalue="Python.testImportDataFromFile" />
-        <item itemvalue="Python.isInMultiDementionList" />
+        <item itemvalue="Python.testClass3" />
+        <item itemvalue="Python.testReduce" />
+        <item itemvalue="Python.testFilter" />
+        <item itemvalue="Python.argusAndKwargus" />
+        <item itemvalue="Python.testMap" />
       </list>
     </recent_temporary>
   </component>
@@ -177,39 +178,40 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-889" y="571" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1575843009063">
-      <screen x="-1080" y="0" width="864" height="1536" />
-    </state>
-    <state x="-889" y="571" key="#com.intellij.fileTypes.FileTypeChooser/-1080.0.864.1536/0.0.2048.1152@-1080.0.864.1536" timestamp="1575843009063" />
-    <state x="804" y="330" key="FileChooserDialogImpl" timestamp="1575691800077">
+    <state x="453" y="428" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1576773657424">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="804" y="330" key="FileChooserDialogImpl/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1575691800077" />
-    <state width="843" height="373" key="GridCell.Tab.0.bottom" timestamp="1575901595127">
-      <screen x="-1080" y="0" width="864" height="1536" />
+    <state x="-889" y="571" key="#com.intellij.fileTypes.FileTypeChooser/-1080.0.864.1536/0.0.2048.1152@-1080.0.864.1536" timestamp="1575843009063" />
+    <state x="453" y="428" key="#com.intellij.fileTypes.FileTypeChooser/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1576773657424" />
+    <state x="804" y="330" key="FileChooserDialogImpl" timestamp="1576542366707">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="804" y="330" key="FileChooserDialogImpl/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1576542366707" />
+    <state width="2012" height="370" key="GridCell.Tab.0.bottom" timestamp="1576776524466">
+      <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="843" height="373" key="GridCell.Tab.0.bottom/-1080.0.864.1536/0.0.2048.1152@-1080.0.864.1536" timestamp="1575901595127" />
-    <state width="2027" height="266" key="GridCell.Tab.0.bottom/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1575737062106" />
-    <state width="843" height="373" key="GridCell.Tab.0.center" timestamp="1575901595127">
-      <screen x="-1080" y="0" width="864" height="1536" />
+    <state width="2012" height="370" key="GridCell.Tab.0.bottom/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1576776524466" />
+    <state width="2012" height="370" key="GridCell.Tab.0.center" timestamp="1576776524466">
+      <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="843" height="373" key="GridCell.Tab.0.center/-1080.0.864.1536/0.0.2048.1152@-1080.0.864.1536" timestamp="1575901595127" />
-    <state width="2027" height="266" key="GridCell.Tab.0.center/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1575737062106" />
-    <state width="843" height="373" key="GridCell.Tab.0.left" timestamp="1575901595127">
-      <screen x="-1080" y="0" width="864" height="1536" />
+    <state width="2012" height="370" key="GridCell.Tab.0.center/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1576776524466" />
+    <state width="2012" height="370" key="GridCell.Tab.0.left" timestamp="1576776524466">
+      <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="843" height="373" key="GridCell.Tab.0.left/-1080.0.864.1536/0.0.2048.1152@-1080.0.864.1536" timestamp="1575901595127" />
-    <state width="2027" height="266" key="GridCell.Tab.0.left/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1575737062106" />
-    <state width="843" height="373" key="GridCell.Tab.0.right" timestamp="1575901595127">
-      <screen x="-1080" y="0" width="864" height="1536" />
+    <state width="2012" height="370" key="GridCell.Tab.0.left/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1576776524466" />
+    <state width="2012" height="370" key="GridCell.Tab.0.right" timestamp="1576776524466">
+      <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="843" height="373" key="GridCell.Tab.0.right/-1080.0.864.1536/0.0.2048.1152@-1080.0.864.1536" timestamp="1575901595127" />
-    <state width="2027" height="266" key="GridCell.Tab.0.right/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1575737062106" />
-    <state x="-1080" y="291" key="SettingsEditor" timestamp="1575854617375">
-      <screen x="-1080" y="0" width="864" height="1536" />
+    <state width="2012" height="370" key="GridCell.Tab.0.right/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1576776524466" />
+    <state x="533" y="218" key="SettingsEditor" timestamp="1576679368324">
+      <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="-1080" y="291" key="SettingsEditor/-1080.0.864.1536/0.0.2048.1152@-1080.0.864.1536" timestamp="1575854617375" />
-    <state x="533" y="218" key="SettingsEditor/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1575691761402" />
+    <state x="533" y="218" key="SettingsEditor/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1576679368324" />
     <state x="726" y="400" key="com.intellij.ide.util.TipDialog" timestamp="1575833353445">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>

@@ -9,13 +9,22 @@ import os
 import requests  # do not know if requests is works on python2
 from bs4 import BeautifulSoup
 import csv
-
+from urllib.request import Request  # in python 2 use urllib2 instead of urllib.request
+from urllib.request import urlopen
 
 def download(url):
     print(f"scraping from：{url}")
-    kv = {'user-agent': 'Mozilla/5.0'}
+    kv = {'user-agent': 'Mozilla/5.0'}  # it is better to use header to pretend browser
     html = requests.get(url, headers=kv).text
     soup = BeautifulSoup(html, 'html.parser')
+    '''
+    # use urllib is the same
+    req = Request(url)
+    req.add_header('user-agent', 'Mozilla/5.0')
+    content = urlopen(req).read()
+    soup = BeautifulSoup(content, 'html.parser')
+    '''
+
     imgs = []
     titles = []
     numberofviews = []
@@ -38,16 +47,16 @@ def download(url):
     for x in list3:
         numberofviews.append(x.findChildren('li')[0].text)
 
-    f = open('youtube.csv', 'a', newline='', encoding='utf-8-sig')
+    f = open('youtube.csv', 'a', newline='', encoding='utf-8-sig')  # utf-8-sig for write chinese char to csv
     csv_writer = csv.writer(f)
-    csv_writer.writerow(['title', 'views', 'duaration', 'img url'])
+    csv_writer.writerow(['title', 'views', 'duaration', 'img url'])  # write column name
     for i in range(len(titles)):
         csv_writer.writerow([titles[i], numberofviews[i], duarations[i], imgs[i]])
     f.close()
 
 
 def main():
-    if os.path.exists('youtube.csv'):
+    if os.path.exists('youtube.csv'):  # use 'w' instead 'a' in open() function argument is the same effect
         os.remove('youtube.csv')
     '''
     url could be uploader's  home page or video page

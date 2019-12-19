@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2e476246-7192-4bd8-9af7-e319ee69381a" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1V4NnO55oWOkZTpzxV3tgpIUU0p" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="C:/pythonCode" />
+  </component>
+  <component name="RunManager" selected="Python.relativeImport">
+    <configuration name="relativeImport" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="testSubpackage" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/package2/testRelativeFrom" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/package2/testRelativeFrom/relativeImport.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="testAtrAll" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="testSubpackage" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testAtrAll.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.relativeImport" />
+        <item itemvalue="Python.testAtrAll" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2e476246-7192-4bd8-9af7-e319ee69381a" name="Default Changelist" comment="" />
+      <created>1576508573485</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576508573485</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="805" y="331" key="FileChooserDialogImpl" timestamp="1576513957671">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="805" y="331" key="FileChooserDialogImpl/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1576513957671" />
+    <state width="2027" height="318" key="GridCell.Tab.0.bottom" timestamp="1576513958935">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state width="2027" height="318" key="GridCell.Tab.0.bottom/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1576513958935" />
+    <state width="2027" height="318" key="GridCell.Tab.0.center" timestamp="1576513958935">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state width="2027" height="318" key="GridCell.Tab.0.center/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1576513958935" />
+    <state width="2027" height="318" key="GridCell.Tab.0.left" timestamp="1576513958935">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state width="2027" height="318" key="GridCell.Tab.0.left/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1576513958935" />
+    <state width="2027" height="318" key="GridCell.Tab.0.right" timestamp="1576513958935">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state width="2027" height="318" key="GridCell.Tab.0.right/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1576513958935" />
+  </component>
+</project>

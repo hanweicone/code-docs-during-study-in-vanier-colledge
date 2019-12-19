@@ -22,6 +22,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="C:/pythonCode" />
   </component>
   <component name="RunManager" selected="Python.runMultiTestFile">
     <configuration name="runMultiTestFile" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -121,21 +122,29 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="2027" height="318" key="GridCell.Tab.0.bottom" timestamp="1576033181803">
+    <state x="805" y="331" key="FileChooserDialogImpl" timestamp="1576254464704">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="2027" height="318" key="GridCell.Tab.0.bottom/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1576033181803" />
-    <state width="2027" height="318" key="GridCell.Tab.0.center" timestamp="1576033181803">
+    <state x="805" y="331" key="FileChooserDialogImpl/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1576254464704" />
+    <state width="2027" height="318" key="GridCell.Tab.0.bottom" timestamp="1576037375539">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="2027" height="318" key="GridCell.Tab.0.center/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1576033181803" />
-    <state width="2027" height="318" key="GridCell.Tab.0.left" timestamp="1576033181803">
+    <state width="2027" height="318" key="GridCell.Tab.0.bottom/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1576037375539" />
+    <state width="2027" height="318" key="GridCell.Tab.0.center" timestamp="1576037375539">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="2027" height="318" key="GridCell.Tab.0.left/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1576033181803" />
-    <state width="2027" height="318" key="GridCell.Tab.0.right" timestamp="1576033181803">
+    <state width="2027" height="318" key="GridCell.Tab.0.center/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1576037375539" />
+    <state width="2027" height="318" key="GridCell.Tab.0.left" timestamp="1576037375539">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="2027" height="318" key="GridCell.Tab.0.right/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1576033181803" />
+    <state width="2027" height="318" key="GridCell.Tab.0.left/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1576037375539" />
+    <state width="2027" height="318" key="GridCell.Tab.0.right" timestamp="1576037375539">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state width="2027" height="318" key="GridCell.Tab.0.right/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1576037375539" />
+    <state x="367" y="425" key="com.intellij.ide.util.TipDialog" timestamp="1576254441817">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="367" y="425" key="com.intellij.ide.util.TipDialog/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1576254441817" />
   </component>
 </project>
