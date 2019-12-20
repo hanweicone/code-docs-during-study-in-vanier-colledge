@@ -15,7 +15,7 @@ def importCSV(cursor,sql,file):
             cursor.execute(sql,row)
 
 db=pymysql.connect(host='localhost',user='root',passwd='',db='employees')
-db.autocommit(True)
+db.autocommit(True)  # do not forget commit
 cursor = db.cursor()
 
 sql1 = 'INSERT INTO employees (emp_no,birth_date,first_name,last_name,gender,hire_date) ' \

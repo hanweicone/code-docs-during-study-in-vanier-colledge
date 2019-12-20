@@ -14,7 +14,6 @@ def insertDataToDB(new_database_name, new_table_name, file_path):
 
                                          charset=charSet, cursorclass=cusrorType)
 
-
     cursor = connectionInstance.cursor()
     sqlStatement = "CREATE DATABASE " + new_database_name
     try:
@@ -40,18 +39,17 @@ def insertDataToDB(new_database_name, new_table_name, file_path):
 
     f = open(file_path, 'r')
     json_data = '[' + f.read().replace('(', '{').replace(')', '},').rstrip(',') + ']'
-    json_list = eval(json_data)
-    # sql = "insert into students values ('{gender:s}',{student_id:d},'{last_name:s}','{first_name:s}');"
+    json_list = eval(json_data)  # json_data is a list kind string,eval()parsed and evaluated it as a Python expression
+    # sql = "insert into students values ('{gender:s}',{student_id:d},'{last_name:s}','{first_name:s}');"  # use s d becareful s is str,d is number
     sql = "insert into students values ('{gender}',{student_id},'{last_name}','{first_name}');"
     for x in json_list:
 
         try:
-            cur.execute(sql.format(**x))
+            cur.execute(sql.format(**x))  # x is a dict
             cnx.commit()
             print('values ({gender:s},{student_id:d},{last_name:s},{first_name:s}) inserted'.format(**x))
         except Exception as e:
             print("Exeception occured:{}".format(e))
-
 
 
 insertDataToDB('FINAL', 'students', 'data.txt')

@@ -17,7 +17,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectId" id="1Tq7IXrnIocplfHlYZx1EQO3aHO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -27,7 +31,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -207,14 +211,14 @@
     </state>
     <state width="843" height="373" key="GridCell.Tab.0.right/-1080.0.864.1536/0.0.2048.1152@-1080.0.864.1536" timestamp="1575901595127" />
     <state width="2012" height="370" key="GridCell.Tab.0.right/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1576776524466" />
-    <state x="533" y="218" key="SettingsEditor" timestamp="1576679368324">
+    <state x="533" y="218" key="SettingsEditor" timestamp="1576860549625">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="-1080" y="291" key="SettingsEditor/-1080.0.864.1536/0.0.2048.1152@-1080.0.864.1536" timestamp="1575854617375" />
-    <state x="533" y="218" key="SettingsEditor/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1576679368324" />
-    <state x="726" y="400" key="com.intellij.ide.util.TipDialog" timestamp="1575833353445">
+    <state x="533" y="218" key="SettingsEditor/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1576860549625" />
+    <state x="726" y="400" key="com.intellij.ide.util.TipDialog" timestamp="1576859722062">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="726" y="400" key="com.intellij.ide.util.TipDialog/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1575833353445" />
+    <state x="726" y="400" key="com.intellij.ide.util.TipDialog/-1080.0.864.1536/0.0.2048.1152@0.0.2048.1152" timestamp="1576859722062" />
   </component>
 </project>
